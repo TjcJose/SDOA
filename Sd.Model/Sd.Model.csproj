@@ -57,6 +57,9 @@
     <Compile Include="gsxx.cs">
       <DependentUpon>Server.tt</DependentUpon>
     </Compile>
+    <Compile Include="khxx.cs">
+      <DependentUpon>Server.tt</DependentUpon>
+    </Compile>
     <Compile Include="password.cs">
       <DependentUpon>Server.tt</DependentUpon>
     </Compile>

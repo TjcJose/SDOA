@@ -17,7 +17,7 @@ namespace Sd.UI
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new AuthorityFrm());
+            Application.Run(new MainFrm());
         }
     }
 }

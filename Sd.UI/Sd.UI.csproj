@@ -74,6 +74,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Info\Customer\CustomerFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Info\Customer\CustomerFrm.Designer.cs">
+      <DependentUpon>CustomerFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -108,6 +114,9 @@
     <Compile Include="SystemAdmin\UserAdminFrm.Designer.cs">
       <DependentUpon>UserAdminFrm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Info\Customer\CustomerFrm.resx">
+      <DependentUpon>CustomerFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginFrm.resx">
       <DependentUpon>LoginFrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -187,6 +196,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Icon_222.ico" />
+    <Content Include="img\resultset_next.png" />
     <None Include="img\report_stack.png" />
     <None Include="img\visual_basic.png" />
     <None Include="img\table_money.png" />
@@ -204,7 +214,6 @@
     <None Include="img\loginbag.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Info\Customer\" />
     <Folder Include="Info\Goods\" />
     <Folder Include="Onroad\" />
   </ItemGroup>

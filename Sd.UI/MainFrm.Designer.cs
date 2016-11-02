@@ -38,6 +38,8 @@
             this.报表系统ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.信息系统ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.系统设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.用户管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.权限管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusStrip1 = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel3 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
@@ -51,6 +53,7 @@
             this.toolStripStatusLabel9 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel11 = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslCzy = new System.Windows.Forms.ToolStripStatusLabel();
+            this.客户ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -121,6 +124,8 @@
             // 
             // 信息系统ToolStripMenuItem
             // 
+            this.信息系统ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.客户ToolStripMenuItem});
             this.信息系统ToolStripMenuItem.Image = global::Sd.UI.Properties.Resources.visual_basic;
             this.信息系统ToolStripMenuItem.Name = "信息系统ToolStripMenuItem";
             this.信息系统ToolStripMenuItem.Size = new System.Drawing.Size(109, 36);
@@ -128,10 +133,28 @@
             // 
             // 系统设置ToolStripMenuItem
             // 
+            this.系统设置ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.用户管理ToolStripMenuItem,
+            this.权限管理ToolStripMenuItem});
             this.系统设置ToolStripMenuItem.Image = global::Sd.UI.Properties.Resources.cog_edit;
             this.系统设置ToolStripMenuItem.Name = "系统设置ToolStripMenuItem";
             this.系统设置ToolStripMenuItem.Size = new System.Drawing.Size(109, 36);
             this.系统设置ToolStripMenuItem.Text = "系统设置";
+            // 
+            // 用户管理ToolStripMenuItem
+            // 
+            this.用户管理ToolStripMenuItem.Image = global::Sd.UI.Properties.Resources.resultset_next;
+            this.用户管理ToolStripMenuItem.Name = "用户管理ToolStripMenuItem";
+            this.用户管理ToolStripMenuItem.Size = new System.Drawing.Size(168, 38);
+            this.用户管理ToolStripMenuItem.Text = "用户管理";
+            // 
+            // 权限管理ToolStripMenuItem
+            // 
+            this.权限管理ToolStripMenuItem.Image = global::Sd.UI.Properties.Resources.resultset_next;
+            this.权限管理ToolStripMenuItem.Name = "权限管理ToolStripMenuItem";
+            this.权限管理ToolStripMenuItem.Size = new System.Drawing.Size(168, 38);
+            this.权限管理ToolStripMenuItem.Text = "权限管理";
+            this.权限管理ToolStripMenuItem.Click += new System.EventHandler(this.权限管理ToolStripMenuItem_Click);
             // 
             // statusStrip1
             // 
@@ -279,6 +302,13 @@
             this.tsslCzy.Size = new System.Drawing.Size(43, 21);
             this.tsslCzy.Text = "开票1";
             // 
+            // 客户ToolStripMenuItem
+            // 
+            this.客户ToolStripMenuItem.Image = global::Sd.UI.Properties.Resources.resultset_next;
+            this.客户ToolStripMenuItem.Name = "客户ToolStripMenuItem";
+            this.客户ToolStripMenuItem.Size = new System.Drawing.Size(168, 38);
+            this.客户ToolStripMenuItem.Text = "客户";
+            // 
             // MainFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -293,7 +323,7 @@
             this.MainMenuStrip = this.menuStrip1;
             this.Name = "MainFrm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "MainFrm";
+            this.Text = "主界面";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.FormClosed += new System.Windows.Forms.FormClosedEventHandler(this.MainFrm_FormClosed);
             this.menuStrip1.ResumeLayout(false);
@@ -329,5 +359,8 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel9;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel11;
         public System.Windows.Forms.ToolStripStatusLabel tsslCzy;
+        private System.Windows.Forms.ToolStripMenuItem 用户管理ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 权限管理ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 客户ToolStripMenuItem;
     }
 }

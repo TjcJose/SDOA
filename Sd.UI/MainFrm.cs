@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Windows.Forms;
+using Sd.UI.SystemAdmin;
 
 namespace Sd.UI
 {
@@ -20,6 +21,12 @@ namespace Sd.UI
         private void MainFrm_FormClosed(object sender, FormClosedEventArgs e)
         {
              Application.Exit();
+        }
+
+        private void 权限管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var authorityFrm = new AuthorityFrm();
+            authorityFrm.ShowDialog();
         }
     }
 }
