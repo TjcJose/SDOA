@@ -41,6 +41,72 @@
           <Property Name="id" Type="char" MaxLength="4" />
           <Property Name="hy" Type="varchar" MaxLength="50" />
         </EntityType>
+        <EntityType Name="khxx">
+          <Key>
+            <PropertyRef Name="khid" />
+          </Key>
+          <Property Name="khid" Type="char" MaxLength="8" Nullable="false" />
+          <Property Name="khmc" Type="char" MaxLength="20" Nullable="false" />
+          <Property Name="tel" Type="char" MaxLength="20" />
+          <Property Name="bp" Type="decimal" Precision="12" Scale="4" />
+          <Property Name="sj" Type="char" MaxLength="14" />
+          <Property Name="lxr" Type="char" MaxLength="8" />
+          <Property Name="address" Type="varchar" MaxLength="80" />
+          <Property Name="yb" Type="char" MaxLength="8" />
+          <Property Name="pydm" Type="char" MaxLength="50" />
+          <Property Name="zh" Type="char" MaxLength="20" />
+          <Property Name="khh" Type="char" MaxLength="40" />
+          <Property Name="sh" Type="char" MaxLength="20" />
+          <Property Name="email" Type="char" MaxLength="18" />
+          <Property Name="khqy" Type="char" MaxLength="16" />
+          <Property Name="khxz" Type="char" MaxLength="16" />
+          <Property Name="xzxf" Type="char" MaxLength="16" />
+          <Property Name="gxjb" Type="char" MaxLength="12" />
+          <Property Name="gxxf" Type="char" MaxLength="12" />
+          <Property Name="xqmc" Type="char" MaxLength="20" />
+          <Property Name="scmc" Type="char" MaxLength="20" />
+          <Property Name="zlmc" Type="char" MaxLength="6" />
+          <Property Name="khlx" Type="char" MaxLength="1" />
+          <Property Name="ywy" Type="varchar" MaxLength="10" />
+          <Property Name="xsbmc" Type="varchar" MaxLength="20" />
+          <Property Name="jgzc" Type="varchar" MaxLength="200" />
+          <Property Name="ProjectName" Type="varchar" MaxLength="60" />
+          <Property Name="Developer" Type="varchar" MaxLength="60" />
+          <Property Name="ItemAddress" Type="varchar" MaxLength="60" />
+          <Property Name="Constructor" Type="varchar" MaxLength="60" />
+          <Property Name="Architect" Type="varchar" MaxLength="60" />
+          <Property Name="Supervise" Type="varchar" MaxLength="50" />
+          <Property Name="NamedConsignee" Type="varchar" MaxLength="20" />
+          <Property Name="ShopKeeper" Type="varchar" MaxLength="16" />
+          <Property Name="ShopArea" Type="varchar" MaxLength="20" />
+          <Property Name="ViewArea" Type="varchar" MaxLength="20" />
+          <Property Name="OtherThings" Type="varchar" MaxLength="100" />
+          <Property Name="OperationManager" Type="varchar" MaxLength="16" />
+          <Property Name="pym" Type="varchar" MaxLength="20" />
+          <Property Name="pxbm" Type="varchar" MaxLength="20" />
+          <Property Name="jskhid" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="gllb" Type="varchar" MaxLength="20" />
+          <Property Name="outputTelAndAddress" Type="bit" Nullable="false" />
+          <Property Name="jsghsid" Type="varchar" MaxLength="20" />
+          <Property Name="ghsFlag" Type="char" MaxLength="1" />
+          <Property Name="stevedoreAddress" Type="varchar" MaxLength="60" />
+          <Property Name="stevedorePhoto" Type="varchar" MaxLength="20" />
+          <Property Name="companyFullName" Type="varchar" MaxLength="60" />
+          <Property Name="arrearDay" Type="int" />
+          <Property Name="stopSign" Type="char" MaxLength="1" />
+          <Property Name="arrearMoney" Type="money" />
+          <Property Name="xsdhdYsSign" Type="char" MaxLength="1" />
+          <Property Name="zklFlag" Type="char" MaxLength="1" />
+          <Property Name="zkl" Type="decimal" Precision="19" Scale="7" />
+          <Property Name="KhspdjFlag" Type="char" MaxLength="1" />
+          <Property Name="QdtsjFlag" Type="char" MaxLength="1" />
+          <Property Name="yyy" Type="varchar" MaxLength="8" />
+          <Property Name="sjs" Type="varchar" MaxLength="8" />
+          <Property Name="sxrq" Type="datetime" />
+          <Property Name="sxjsrq" Type="datetime" />
+          <Property Name="sxr" Type="varchar" MaxLength="8" />
+          <Property Name="sxczy" Type="varchar" MaxLength="8" />
+        </EntityType>
         <EntityType Name="password">
           <Key>
             <PropertyRef Name="gh" />
@@ -171,6 +237,7 @@
           <EntitySet Name="CompetenceSet" EntityType="Self.CompetenceSet" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="GroupCompetence" EntityType="Self.GroupCompetence" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="gsxx" EntityType="Self.gsxx" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="khxx" EntityType="Self.khxx" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="password" EntityType="Self.password" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UserCompetence" EntityType="Self.UserCompetence" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UserGroup" EntityType="Self.UserGroup" Schema="dbo" store:Type="Tables" />
@@ -216,6 +283,7 @@
             <End Role="CompetenceSet" EntitySet="CompetenceSet" />
             <End Role="password" EntitySet="password" />
           </AssociationSet>
+          <EntitySet Name="khxx" EntityType="ccxnfModel.khxx" />
         </EntityContainer>
         <EntityType Name="UserGroup">
           <Key>
@@ -329,6 +397,72 @@
           <End Type="ccxnfModel.CompetenceSet" Role="CompetenceSet" Multiplicity="*" />
           <End Type="ccxnfModel.password" Role="password" Multiplicity="*" />
         </Association>
+        <EntityType Name="khxx">
+          <Key>
+            <PropertyRef Name="khid" />
+          </Key>
+          <Property Name="khid" Type="String" Nullable="false" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="khmc" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="tel" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="bp" Type="Decimal" Precision="12" Scale="4" />
+          <Property Name="sj" Type="String" MaxLength="14" FixedLength="true" Unicode="false" />
+          <Property Name="lxr" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="address" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="yb" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="pydm" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="zh" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="khh" Type="String" MaxLength="40" FixedLength="true" Unicode="false" />
+          <Property Name="sh" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="18" FixedLength="true" Unicode="false" />
+          <Property Name="khqy" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+          <Property Name="khxz" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+          <Property Name="xzxf" Type="String" MaxLength="16" FixedLength="true" Unicode="false" />
+          <Property Name="gxjb" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+          <Property Name="gxxf" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+          <Property Name="xqmc" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="scmc" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="zlmc" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="khlx" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="ywy" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="xsbmc" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="jgzc" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="ProjectName" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="Developer" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="ItemAddress" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="Constructor" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="Architect" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="Supervise" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="NamedConsignee" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ShopKeeper" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="ShopArea" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ViewArea" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="OtherThings" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="OperationManager" Type="String" MaxLength="16" FixedLength="false" Unicode="false" />
+          <Property Name="pym" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="pxbm" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="jskhid" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="gllb" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="outputTelAndAddress" Type="Boolean" Nullable="false" />
+          <Property Name="jsghsid" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ghsFlag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="stevedoreAddress" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="stevedorePhoto" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="companyFullName" Type="String" MaxLength="60" FixedLength="false" Unicode="false" />
+          <Property Name="arrearDay" Type="Int32" />
+          <Property Name="stopSign" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="arrearMoney" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="xsdhdYsSign" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="zklFlag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="zkl" Type="Decimal" Precision="19" Scale="7" />
+          <Property Name="KhspdjFlag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="QdtsjFlag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="yyy" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="sjs" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="sxrq" Type="DateTime" Precision="3" />
+          <Property Name="sxjsrq" Type="DateTime" Precision="3" />
+          <Property Name="sxr" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="sxczy" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -441,6 +575,73 @@
               <ScalarProperty Name="CompetenceID" ColumnName="CompetenceID" />
             </EndProperty>
           </AssociationSetMapping>
+          <EntitySetMapping Name="khxx">
+            <EntityTypeMapping TypeName="ccxnfModel.khxx">
+              <MappingFragment StoreEntitySet="khxx">
+                <ScalarProperty Name="sxczy" ColumnName="sxczy" />
+                <ScalarProperty Name="sxr" ColumnName="sxr" />
+                <ScalarProperty Name="sxjsrq" ColumnName="sxjsrq" />
+                <ScalarProperty Name="sxrq" ColumnName="sxrq" />
+                <ScalarProperty Name="sjs" ColumnName="sjs" />
+                <ScalarProperty Name="yyy" ColumnName="yyy" />
+                <ScalarProperty Name="QdtsjFlag" ColumnName="QdtsjFlag" />
+                <ScalarProperty Name="KhspdjFlag" ColumnName="KhspdjFlag" />
+                <ScalarProperty Name="zkl" ColumnName="zkl" />
+                <ScalarProperty Name="zklFlag" ColumnName="zklFlag" />
+                <ScalarProperty Name="xsdhdYsSign" ColumnName="xsdhdYsSign" />
+                <ScalarProperty Name="arrearMoney" ColumnName="arrearMoney" />
+                <ScalarProperty Name="stopSign" ColumnName="stopSign" />
+                <ScalarProperty Name="arrearDay" ColumnName="arrearDay" />
+                <ScalarProperty Name="companyFullName" ColumnName="companyFullName" />
+                <ScalarProperty Name="stevedorePhoto" ColumnName="stevedorePhoto" />
+                <ScalarProperty Name="stevedoreAddress" ColumnName="stevedoreAddress" />
+                <ScalarProperty Name="ghsFlag" ColumnName="ghsFlag" />
+                <ScalarProperty Name="jsghsid" ColumnName="jsghsid" />
+                <ScalarProperty Name="outputTelAndAddress" ColumnName="outputTelAndAddress" />
+                <ScalarProperty Name="gllb" ColumnName="gllb" />
+                <ScalarProperty Name="jskhid" ColumnName="jskhid" />
+                <ScalarProperty Name="pxbm" ColumnName="pxbm" />
+                <ScalarProperty Name="pym" ColumnName="pym" />
+                <ScalarProperty Name="OperationManager" ColumnName="OperationManager" />
+                <ScalarProperty Name="OtherThings" ColumnName="OtherThings" />
+                <ScalarProperty Name="ViewArea" ColumnName="ViewArea" />
+                <ScalarProperty Name="ShopArea" ColumnName="ShopArea" />
+                <ScalarProperty Name="ShopKeeper" ColumnName="ShopKeeper" />
+                <ScalarProperty Name="NamedConsignee" ColumnName="NamedConsignee" />
+                <ScalarProperty Name="Supervise" ColumnName="Supervise" />
+                <ScalarProperty Name="Architect" ColumnName="Architect" />
+                <ScalarProperty Name="Constructor" ColumnName="Constructor" />
+                <ScalarProperty Name="ItemAddress" ColumnName="ItemAddress" />
+                <ScalarProperty Name="Developer" ColumnName="Developer" />
+                <ScalarProperty Name="ProjectName" ColumnName="ProjectName" />
+                <ScalarProperty Name="jgzc" ColumnName="jgzc" />
+                <ScalarProperty Name="xsbmc" ColumnName="xsbmc" />
+                <ScalarProperty Name="ywy" ColumnName="ywy" />
+                <ScalarProperty Name="khlx" ColumnName="khlx" />
+                <ScalarProperty Name="zlmc" ColumnName="zlmc" />
+                <ScalarProperty Name="scmc" ColumnName="scmc" />
+                <ScalarProperty Name="xqmc" ColumnName="xqmc" />
+                <ScalarProperty Name="gxxf" ColumnName="gxxf" />
+                <ScalarProperty Name="gxjb" ColumnName="gxjb" />
+                <ScalarProperty Name="xzxf" ColumnName="xzxf" />
+                <ScalarProperty Name="khxz" ColumnName="khxz" />
+                <ScalarProperty Name="khqy" ColumnName="khqy" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="sh" ColumnName="sh" />
+                <ScalarProperty Name="khh" ColumnName="khh" />
+                <ScalarProperty Name="zh" ColumnName="zh" />
+                <ScalarProperty Name="pydm" ColumnName="pydm" />
+                <ScalarProperty Name="yb" ColumnName="yb" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="lxr" ColumnName="lxr" />
+                <ScalarProperty Name="sj" ColumnName="sj" />
+                <ScalarProperty Name="bp" ColumnName="bp" />
+                <ScalarProperty Name="tel" ColumnName="tel" />
+                <ScalarProperty Name="khmc" ColumnName="khmc" />
+                <ScalarProperty Name="khid" ColumnName="khid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

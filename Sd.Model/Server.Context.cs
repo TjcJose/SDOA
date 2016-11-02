@@ -29,5 +29,6 @@ namespace Sd.Model
         public virtual DbSet<gsxx> gsxx { get; set; }
         public virtual DbSet<CompetenceSet> CompetenceSet { get; set; }
         public virtual DbSet<password> password { get; set; }
+        public virtual DbSet<khxx> khxx { get; set; }
     }
 }
