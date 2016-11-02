@@ -308,6 +308,7 @@
             this.客户ToolStripMenuItem.Name = "客户ToolStripMenuItem";
             this.客户ToolStripMenuItem.Size = new System.Drawing.Size(168, 38);
             this.客户ToolStripMenuItem.Text = "客户";
+            this.客户ToolStripMenuItem.Click += new System.EventHandler(this.客户ToolStripMenuItem_Click);
             // 
             // MainFrm
             // 

@@ -15,12 +15,12 @@ namespace Sd.IBLL
     /// </summary>
     public interface IBaseService<T> where T : class ,new()
     {
-        T Add(T entity);
         /// <summary>
-        /// 查找数据
+        /// 增加
         /// </summary>
-        /// <param name="whereLambda"></param>
-        /// <returns></returns>
+        /// <param name="entity">数据实体</param>
+        /// <returns>返回查询结果</returns>
+        T Add(T entity);
         /// <summary>
         /// 删除
         /// </summary>
@@ -47,11 +47,10 @@ namespace Sd.IBLL
         /// <returns>布尔值</returns>
         bool Exist(Expression<Func<T, bool>> anyLambda);
         /// <summary>
-        /// 添加
+        /// 查询
         /// </summary>
-        /// <param name="entity">数据实体</param>
-        /// <returns>添加后的数据实体</returns>
-
+        /// <param name="whereLambda"></param>
+        /// <returns></returns>
         T Find(Expression<Func<T, bool>> whereLambda);
         /// <summary>
         /// 查找数据列表

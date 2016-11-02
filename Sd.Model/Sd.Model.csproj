@@ -51,6 +51,9 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="bigDepartment.cs">
+      <DependentUpon>Server.tt</DependentUpon>
+    </Compile>
     <Compile Include="CompetenceSet.cs">
       <DependentUpon>Server.tt</DependentUpon>
     </Compile>
@@ -81,6 +84,9 @@
       <DependentUpon>Server.edmx</DependentUpon>
     </Compile>
     <Compile Include="UserGroup.cs">
+      <DependentUpon>Server.tt</DependentUpon>
+    </Compile>
+    <Compile Include="zlb.cs">
       <DependentUpon>Server.tt</DependentUpon>
     </Compile>
   </ItemGroup>

@@ -5,6 +5,17 @@
     <!-- SSDL content -->
     <edmx:StorageModels>
     <Schema Namespace="ccxnfModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="bigDepartment">
+          <Key>
+            <PropertyRef Name="bigDepartmentID" />
+          </Key>
+          <Property Name="bigDepartmentID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="bigDepartmentCode" Type="varchar" MaxLength="20" />
+          <Property Name="bigDepartmentName" Type="varchar" MaxLength="20" />
+          <Property Name="bz" Type="varchar" MaxLength="30" />
+          <Property Name="pym" Type="varchar" MaxLength="20" />
+          <Property Name="pxbm" Type="varchar" MaxLength="20" />
+        </EntityType>
         <EntityType Name="CompetenceSet">
           <Key>
             <PropertyRef Name="CompetenceID" />
@@ -173,6 +184,48 @@
           <Property Name="UserGroupID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="UserGroupName" Type="varchar" MaxLength="100" Nullable="false" />
         </EntityType>
+        <EntityType Name="zlb">
+          <Key>
+            <PropertyRef Name="zldm" />
+          </Key>
+          <Property Name="zldm" Type="char" MaxLength="4" Nullable="false" />
+          <Property Name="zlmc" Type="char" MaxLength="6" />
+          <Property Name="xjbm" Type="char" MaxLength="6" />
+          <Property Name="xjmc" Type="char" MaxLength="12" />
+          <Property Name="sjbm" Type="char" MaxLength="6" />
+          <Property Name="sjmc" Type="char" MaxLength="12" />
+          <Property Name="zdxjbm" Type="char" MaxLength="6" />
+          <Property Name="zdxjmc" Type="char" MaxLength="12" />
+          <Property Name="dbbm" Type="char" MaxLength="6" />
+          <Property Name="dbmc" Type="char" MaxLength="12" />
+          <Property Name="only_flag" Type="varchar" MaxLength="1" />
+          <Property Name="pym" Type="varchar" MaxLength="20" />
+          <Property Name="pxbm" Type="varchar" MaxLength="20" />
+          <Property Name="PrintCheck" Type="bit" Nullable="false" />
+          <Property Name="cxbz" Type="char" MaxLength="1" />
+          <Property Name="xjbm1" Type="char" MaxLength="6" />
+          <Property Name="xjmc1" Type="char" MaxLength="12" />
+          <Property Name="sjbm1" Type="char" MaxLength="6" />
+          <Property Name="sjmc1" Type="char" MaxLength="12" />
+          <Property Name="zdxjbm1" Type="char" MaxLength="6" />
+          <Property Name="zdxjmc1" Type="char" MaxLength="12" />
+          <Property Name="dbbm1" Type="char" MaxLength="6" />
+          <Property Name="dbmc1" Type="char" MaxLength="12" />
+          <Property Name="bighellId" Type="int" />
+          <Property Name="tsxjbm" Type="char" MaxLength="10" />
+          <Property Name="tsxjmc" Type="char" MaxLength="12" />
+          <Property Name="tssjbm" Type="char" MaxLength="10" />
+          <Property Name="tssjmc" Type="char" MaxLength="12" />
+          <Property Name="tsdbbm" Type="char" MaxLength="10" />
+          <Property Name="tsdbmc" Type="char" MaxLength="12" />
+          <Property Name="tszdxjbm" Type="char" MaxLength="10" />
+          <Property Name="tszdxjmc" Type="char" MaxLength="12" />
+          <Property Name="tsSign" Type="char" MaxLength="1" />
+          <Property Name="tsjgbm" Type="int" />
+          <Property Name="tsjgmc" Type="char" MaxLength="12" />
+          <Property Name="sanitationFlag" Type="char" MaxLength="1" />
+          <Property Name="ShowPriceSign" Type="char" MaxLength="1" />
+        </EntityType>
         <Association Name="FK_COMPETEN_REFERENCE_COMPETEN">
           <End Role="CompetenceSet" Type="Self.CompetenceSet" Multiplicity="0..1" />
           <End Role="CompetenceSet1" Type="Self.CompetenceSet" Multiplicity="*" />
@@ -234,6 +287,7 @@
           </ReferentialConstraint>
         </Association>
         <EntityContainer Name="ccxnfModelStoreContainer">
+          <EntitySet Name="bigDepartment" EntityType="Self.bigDepartment" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CompetenceSet" EntityType="Self.CompetenceSet" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="GroupCompetence" EntityType="Self.GroupCompetence" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="gsxx" EntityType="Self.gsxx" Schema="dbo" store:Type="Tables" />
@@ -241,6 +295,7 @@
           <EntitySet Name="password" EntityType="Self.password" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UserCompetence" EntityType="Self.UserCompetence" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UserGroup" EntityType="Self.UserGroup" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="zlb" EntityType="Self.zlb" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_COMPETEN_REFERENCE_COMPETEN" Association="Self.FK_COMPETEN_REFERENCE_COMPETEN">
             <End Role="CompetenceSet" EntitySet="CompetenceSet" />
             <End Role="CompetenceSet1" EntitySet="CompetenceSet" />
@@ -284,6 +339,8 @@
             <End Role="password" EntitySet="password" />
           </AssociationSet>
           <EntitySet Name="khxx" EntityType="ccxnfModel.khxx" />
+          <EntitySet Name="zlb" EntityType="ccxnfModel.zlb" />
+          <EntitySet Name="bigDepartment" EntityType="ccxnfModel.bigDepartment" />
         </EntityContainer>
         <EntityType Name="UserGroup">
           <Key>
@@ -463,6 +520,59 @@
           <Property Name="sxr" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
           <Property Name="sxczy" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
         </EntityType>
+        <EntityType Name="zlb">
+          <Key>
+            <PropertyRef Name="zldm" />
+          </Key>
+          <Property Name="zldm" Type="String" Nullable="false" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Name="zlmc" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="xjbm" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="xjmc" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+          <Property Name="sjbm" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="sjmc" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+          <Property Name="zdxjbm" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="zdxjmc" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+          <Property Name="dbbm" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="dbmc" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+          <Property Name="only_flag" Type="String" MaxLength="1" FixedLength="false" Unicode="false" />
+          <Property Name="pym" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="pxbm" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="PrintCheck" Type="Boolean" Nullable="false" />
+          <Property Name="cxbz" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="xjbm1" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="xjmc1" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+          <Property Name="sjbm1" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="sjmc1" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+          <Property Name="zdxjbm1" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="zdxjmc1" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+          <Property Name="dbbm1" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="dbmc1" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+          <Property Name="bighellId" Type="Int32" />
+          <Property Name="tsxjbm" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="tsxjmc" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+          <Property Name="tssjbm" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="tssjmc" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+          <Property Name="tsdbbm" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="tsdbmc" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+          <Property Name="tszdxjbm" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="tszdxjmc" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+          <Property Name="tsSign" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="tsjgbm" Type="Int32" />
+          <Property Name="tsjgmc" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+          <Property Name="sanitationFlag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="ShowPriceSign" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="bigDepartment">
+          <Key>
+            <PropertyRef Name="bigDepartmentID" />
+          </Key>
+          <Property Name="bigDepartmentID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="bigDepartmentCode" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="bigDepartmentName" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="bz" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="pym" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="pxbm" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -639,6 +749,61 @@
                 <ScalarProperty Name="tel" ColumnName="tel" />
                 <ScalarProperty Name="khmc" ColumnName="khmc" />
                 <ScalarProperty Name="khid" ColumnName="khid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="zlb">
+            <EntityTypeMapping TypeName="ccxnfModel.zlb">
+              <MappingFragment StoreEntitySet="zlb">
+                <ScalarProperty Name="ShowPriceSign" ColumnName="ShowPriceSign" />
+                <ScalarProperty Name="sanitationFlag" ColumnName="sanitationFlag" />
+                <ScalarProperty Name="tsjgmc" ColumnName="tsjgmc" />
+                <ScalarProperty Name="tsjgbm" ColumnName="tsjgbm" />
+                <ScalarProperty Name="tsSign" ColumnName="tsSign" />
+                <ScalarProperty Name="tszdxjmc" ColumnName="tszdxjmc" />
+                <ScalarProperty Name="tszdxjbm" ColumnName="tszdxjbm" />
+                <ScalarProperty Name="tsdbmc" ColumnName="tsdbmc" />
+                <ScalarProperty Name="tsdbbm" ColumnName="tsdbbm" />
+                <ScalarProperty Name="tssjmc" ColumnName="tssjmc" />
+                <ScalarProperty Name="tssjbm" ColumnName="tssjbm" />
+                <ScalarProperty Name="tsxjmc" ColumnName="tsxjmc" />
+                <ScalarProperty Name="tsxjbm" ColumnName="tsxjbm" />
+                <ScalarProperty Name="bighellId" ColumnName="bighellId" />
+                <ScalarProperty Name="dbmc1" ColumnName="dbmc1" />
+                <ScalarProperty Name="dbbm1" ColumnName="dbbm1" />
+                <ScalarProperty Name="zdxjmc1" ColumnName="zdxjmc1" />
+                <ScalarProperty Name="zdxjbm1" ColumnName="zdxjbm1" />
+                <ScalarProperty Name="sjmc1" ColumnName="sjmc1" />
+                <ScalarProperty Name="sjbm1" ColumnName="sjbm1" />
+                <ScalarProperty Name="xjmc1" ColumnName="xjmc1" />
+                <ScalarProperty Name="xjbm1" ColumnName="xjbm1" />
+                <ScalarProperty Name="cxbz" ColumnName="cxbz" />
+                <ScalarProperty Name="PrintCheck" ColumnName="PrintCheck" />
+                <ScalarProperty Name="pxbm" ColumnName="pxbm" />
+                <ScalarProperty Name="pym" ColumnName="pym" />
+                <ScalarProperty Name="only_flag" ColumnName="only_flag" />
+                <ScalarProperty Name="dbmc" ColumnName="dbmc" />
+                <ScalarProperty Name="dbbm" ColumnName="dbbm" />
+                <ScalarProperty Name="zdxjmc" ColumnName="zdxjmc" />
+                <ScalarProperty Name="zdxjbm" ColumnName="zdxjbm" />
+                <ScalarProperty Name="sjmc" ColumnName="sjmc" />
+                <ScalarProperty Name="sjbm" ColumnName="sjbm" />
+                <ScalarProperty Name="xjmc" ColumnName="xjmc" />
+                <ScalarProperty Name="xjbm" ColumnName="xjbm" />
+                <ScalarProperty Name="zlmc" ColumnName="zlmc" />
+                <ScalarProperty Name="zldm" ColumnName="zldm" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="bigDepartment">
+            <EntityTypeMapping TypeName="ccxnfModel.bigDepartment">
+              <MappingFragment StoreEntitySet="bigDepartment">
+                <ScalarProperty Name="pxbm" ColumnName="pxbm" />
+                <ScalarProperty Name="pym" ColumnName="pym" />
+                <ScalarProperty Name="bz" ColumnName="bz" />
+                <ScalarProperty Name="bigDepartmentName" ColumnName="bigDepartmentName" />
+                <ScalarProperty Name="bigDepartmentCode" ColumnName="bigDepartmentCode" />
+                <ScalarProperty Name="bigDepartmentID" ColumnName="bigDepartmentID" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
