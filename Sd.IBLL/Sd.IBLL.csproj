@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IBaseService.cs" />
+    <Compile Include="IDepartmentService.cs" />
+    <Compile Include="ICustomerService.cs" />
     <Compile Include="ISystemProfilesService.cs" />
     <Compile Include="ISysAdminService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

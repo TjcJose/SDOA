@@ -86,7 +86,13 @@
     <Compile Include="UserGroup.cs">
       <DependentUpon>Server.tt</DependentUpon>
     </Compile>
+    <Compile Include="xsbxx.cs">
+      <DependentUpon>Server.tt</DependentUpon>
+    </Compile>
     <Compile Include="zlb.cs">
+      <DependentUpon>Server.tt</DependentUpon>
+    </Compile>
+    <Compile Include="zyxx.cs">
       <DependentUpon>Server.tt</DependentUpon>
     </Compile>
   </ItemGroup>

@@ -44,6 +44,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IBaseDal.cs" />
+    <Compile Include="IDepartmentDa.cs" />
+    <Compile Include="ICustomerDal.cs" />
     <Compile Include="ISystemProfilesDal.cs" />
     <Compile Include="ISysAdminDal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

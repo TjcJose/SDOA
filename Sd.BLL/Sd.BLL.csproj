@@ -42,7 +42,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseService.cs" />
+    <Compile Include="DepartmentService.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="CustomerService.cs" />
     <Compile Include="SystemProfilesService.cs" />
     <Compile Include="SysAdminService.cs" />
   </ItemGroup>

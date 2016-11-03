@@ -4,9 +4,9 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="59078b6179ab4a24bc3f2ddb5af09204" Name="Diagram1" ZoomLevel="81" >
+      <Diagram DiagramId="59078b6179ab4a24bc3f2ddb5af09204" Name="Diagram1" ZoomLevel="71" >
         <EntityTypeShape EntityType="ccxnfModel.UserGroup" Width="1.5" PointX="3.125" PointY="4" />
-        <EntityTypeShape EntityType="ccxnfModel.gsxx" Width="1.5" PointX="10.5" PointY="0.5" />
+        <EntityTypeShape EntityType="ccxnfModel.gsxx" Width="1.5" PointX="9.375" PointY="0.5" />
         <EntityTypeShape EntityType="ccxnfModel.CompetenceSet" Width="1.5" PointX="3.125" PointY="0.5" />
         <AssociationConnector Association="ccxnfModel.FK_COMPETEN_REFERENCE_COMPETEN" />
         <AssociationConnector Association="ccxnfModel.GroupCompetence" />
@@ -14,7 +14,9 @@
         <AssociationConnector Association="ccxnfModel.UserCompetence" />
         <EntityTypeShape EntityType="ccxnfModel.khxx" Width="1.5" PointX="5.375" PointY="0.5" />
         <EntityTypeShape EntityType="ccxnfModel.zlb" Width="1.5" PointX="7.5" PointY="0.5" />
-        <EntityTypeShape EntityType="ccxnfModel.bigDepartment" Width="1.5" PointX="7.375" PointY="9.75" />
+        <EntityTypeShape EntityType="ccxnfModel.bigDepartment" Width="1.5" PointX="9.375" PointY="4.125" />
+        <EntityTypeShape EntityType="ccxnfModel.xsbxx" Width="1.5" PointX="11.125" PointY="0.5" />
+        <EntityTypeShape EntityType="ccxnfModel.zyxx" Width="1.5" PointX="9.375" PointY="6.375" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

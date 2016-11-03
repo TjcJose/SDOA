@@ -184,6 +184,58 @@
           <Property Name="UserGroupID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="UserGroupName" Type="varchar" MaxLength="100" Nullable="false" />
         </EntityType>
+        <EntityType Name="xsbxx">
+          <Key>
+            <PropertyRef Name="xsbid" />
+          </Key>
+          <Property Name="xsbid" Type="char" MaxLength="8" Nullable="false" />
+          <Property Name="xsbmc" Type="char" MaxLength="20" Nullable="false" />
+          <Property Name="bz" Type="char" MaxLength="20" />
+          <Property Name="xsdqz" Type="char" MaxLength="3" />
+          <Property Name="xsdcd" Type="char" MaxLength="2" />
+          <Property Name="xsdcsz" Type="char" MaxLength="10" />
+          <Property Name="ypdqz" Type="char" MaxLength="3" />
+          <Property Name="ypdcd" Type="char" MaxLength="2" />
+          <Property Name="ypdcsz" Type="char" MaxLength="10" />
+          <Property Name="ysdqz" Type="char" MaxLength="3" />
+          <Property Name="ysdcd" Type="char" MaxLength="2" />
+          <Property Name="ysdcsz" Type="char" MaxLength="10" />
+          <Property Name="hkdqz" Type="char" MaxLength="3" />
+          <Property Name="hkdcd" Type="char" MaxLength="2" />
+          <Property Name="hkdcsz" Type="char" MaxLength="10" />
+          <Property Name="hkjsdqz" Type="char" MaxLength="3" />
+          <Property Name="hkjsdcd" Type="char" MaxLength="2" />
+          <Property Name="hkjsdcsz" Type="char" MaxLength="10" />
+          <Property Name="hktzdqz" Type="char" MaxLength="3" />
+          <Property Name="hktzdcd" Type="char" MaxLength="2" />
+          <Property Name="hktzdcsz" Type="char" MaxLength="10" />
+          <Property Name="zxdqz" Type="char" MaxLength="3" />
+          <Property Name="zxdcd" Type="char" MaxLength="2" />
+          <Property Name="zxdcsz" Type="char" MaxLength="10" />
+          <Property Name="jhyfdqz" Type="char" MaxLength="3" />
+          <Property Name="jhyfdcd" Type="char" MaxLength="2" />
+          <Property Name="jhyfdcsz" Type="char" MaxLength="10" />
+          <Property Name="fykzdqz" Type="char" MaxLength="3" />
+          <Property Name="fykzdcd" Type="char" MaxLength="2" />
+          <Property Name="fykzdcsz" Type="char" MaxLength="10" />
+          <Property Name="xsdhdqz" Type="char" MaxLength="3" />
+          <Property Name="xsdhdcd" Type="char" MaxLength="2" />
+          <Property Name="xsdhdcsz" Type="char" MaxLength="10" />
+          <Property Name="pym" Type="varchar" MaxLength="20" />
+          <Property Name="pxbm" Type="varchar" MaxLength="20" />
+          <Property Name="bigDepartmentID" Type="int" Nullable="false" />
+          <Property Name="cwbd" Type="char" MaxLength="1" />
+          <Property Name="dyxz" Type="char" MaxLength="1" />
+          <Property Name="cklx" Type="char" MaxLength="1" />
+          <Property Name="dhjkdqz" Type="char" MaxLength="3" />
+          <Property Name="dhjkdcd" Type="char" MaxLength="2" />
+          <Property Name="dhjkdcsz" Type="char" MaxLength="10" />
+          <Property Name="jgflag" Type="char" MaxLength="1" />
+          <Property Name="bmzkl" Type="decimal" Precision="12" Scale="7" />
+          <Property Name="bmfzr" Type="char" MaxLength="8" />
+          <Property Name="fzrzkl" Type="decimal" Precision="12" Scale="7" />
+          <Property Name="stopsign" Type="char" MaxLength="1" />
+        </EntityType>
         <EntityType Name="zlb">
           <Key>
             <PropertyRef Name="zldm" />
@@ -225,6 +277,36 @@
           <Property Name="tsjgmc" Type="char" MaxLength="12" />
           <Property Name="sanitationFlag" Type="char" MaxLength="1" />
           <Property Name="ShowPriceSign" Type="char" MaxLength="1" />
+        </EntityType>
+        <EntityType Name="zyxx">
+          <Key>
+            <PropertyRef Name="zyid" />
+          </Key>
+          <Property Name="zyid" Type="char" MaxLength="8" Nullable="false" />
+          <Property Name="name" Type="char" MaxLength="8" />
+          <Property Name="bmid" Type="varchar" MaxLength="20" />
+          <Property Name="sex" Type="char" MaxLength="2" />
+          <Property Name="zw" Type="char" MaxLength="20" />
+          <Property Name="tel" Type="char" MaxLength="20" />
+          <Property Name="bp" Type="char" MaxLength="20" />
+          <Property Name="sj" Type="char" MaxLength="14" />
+          <Property Name="sfz" Type="char" MaxLength="18" />
+          <Property Name="address" Type="char" MaxLength="40" />
+          <Property Name="yj" Type="char" MaxLength="20" />
+          <Property Name="yb" Type="char" MaxLength="8" />
+          <Property Name="kjkm" Type="char" MaxLength="50" />
+          <Property Name="yyy" Type="char" MaxLength="1" />
+          <Property Name="ywy" Type="char" MaxLength="1" />
+          <Property Name="syy" Type="char" MaxLength="1" />
+          <Property Name="kpy" Type="char" MaxLength="1" />
+          <Property Name="cgy" Type="char" MaxLength="1" />
+          <Property Name="shr" Type="char" MaxLength="1" />
+          <Property Name="spr" Type="char" MaxLength="1" />
+          <Property Name="pym" Type="varchar" MaxLength="20" />
+          <Property Name="pxbm" Type="varchar" MaxLength="20" />
+          <Property Name="stopSign" Type="char" MaxLength="1" />
+          <Property Name="xye" Type="money" />
+          <Property Name="xyeflag" Type="char" MaxLength="1" />
         </EntityType>
         <Association Name="FK_COMPETEN_REFERENCE_COMPETEN">
           <End Role="CompetenceSet" Type="Self.CompetenceSet" Multiplicity="0..1" />
@@ -295,7 +377,9 @@
           <EntitySet Name="password" EntityType="Self.password" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UserCompetence" EntityType="Self.UserCompetence" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UserGroup" EntityType="Self.UserGroup" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="xsbxx" EntityType="Self.xsbxx" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="zlb" EntityType="Self.zlb" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="zyxx" EntityType="Self.zyxx" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_COMPETEN_REFERENCE_COMPETEN" Association="Self.FK_COMPETEN_REFERENCE_COMPETEN">
             <End Role="CompetenceSet" EntitySet="CompetenceSet" />
             <End Role="CompetenceSet1" EntitySet="CompetenceSet" />
@@ -341,6 +425,8 @@
           <EntitySet Name="khxx" EntityType="ccxnfModel.khxx" />
           <EntitySet Name="zlb" EntityType="ccxnfModel.zlb" />
           <EntitySet Name="bigDepartment" EntityType="ccxnfModel.bigDepartment" />
+          <EntitySet Name="xsbxx" EntityType="ccxnfModel.xsbxx" />
+          <EntitySet Name="zyxx" EntityType="ccxnfModel.zyxx" />
         </EntityContainer>
         <EntityType Name="UserGroup">
           <Key>
@@ -573,6 +659,88 @@
           <Property Name="pym" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="pxbm" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
         </EntityType>
+        <EntityType Name="xsbxx">
+          <Key>
+            <PropertyRef Name="xsbid" />
+          </Key>
+          <Property Name="xsbid" Type="String" Nullable="false" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="xsbmc" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="bz" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="xsdqz" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="xsdcd" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="xsdcsz" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="ypdqz" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="ypdcd" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="ypdcsz" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="ysdqz" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="ysdcd" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="ysdcsz" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="hkdqz" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="hkdcd" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="hkdcsz" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="hkjsdqz" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="hkjsdcd" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="hkjsdcsz" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="hktzdqz" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="hktzdcd" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="hktzdcsz" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="zxdqz" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="zxdcd" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="zxdcsz" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="jhyfdqz" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="jhyfdcd" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="jhyfdcsz" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="fykzdqz" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="fykzdcd" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="fykzdcsz" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="xsdhdqz" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="xsdhdcd" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="xsdhdcsz" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="pym" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="pxbm" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="bigDepartmentID" Type="Int32" Nullable="false" />
+          <Property Name="cwbd" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="dyxz" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="cklx" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="dhjkdqz" Type="String" MaxLength="3" FixedLength="true" Unicode="false" />
+          <Property Name="dhjkdcd" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="dhjkdcsz" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="jgflag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="bmzkl" Type="Decimal" Precision="12" Scale="7" />
+          <Property Name="bmfzr" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="fzrzkl" Type="Decimal" Precision="12" Scale="7" />
+          <Property Name="stopsign" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="zyxx">
+          <Key>
+            <PropertyRef Name="zyid" />
+          </Key>
+          <Property Name="zyid" Type="String" Nullable="false" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="name" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="bmid" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="sex" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="zw" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="tel" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="bp" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="sj" Type="String" MaxLength="14" FixedLength="true" Unicode="false" />
+          <Property Name="sfz" Type="String" MaxLength="18" FixedLength="true" Unicode="false" />
+          <Property Name="address" Type="String" MaxLength="40" FixedLength="true" Unicode="false" />
+          <Property Name="yj" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="yb" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="kjkm" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="yyy" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="ywy" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="syy" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="kpy" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="cgy" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="shr" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="spr" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="pym" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="pxbm" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="stopSign" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="xye" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="xyeflag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+        </EntityType>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -804,6 +972,90 @@
                 <ScalarProperty Name="bigDepartmentName" ColumnName="bigDepartmentName" />
                 <ScalarProperty Name="bigDepartmentCode" ColumnName="bigDepartmentCode" />
                 <ScalarProperty Name="bigDepartmentID" ColumnName="bigDepartmentID" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="xsbxx">
+            <EntityTypeMapping TypeName="ccxnfModel.xsbxx">
+              <MappingFragment StoreEntitySet="xsbxx">
+                <ScalarProperty Name="stopsign" ColumnName="stopsign" />
+                <ScalarProperty Name="fzrzkl" ColumnName="fzrzkl" />
+                <ScalarProperty Name="bmfzr" ColumnName="bmfzr" />
+                <ScalarProperty Name="bmzkl" ColumnName="bmzkl" />
+                <ScalarProperty Name="jgflag" ColumnName="jgflag" />
+                <ScalarProperty Name="dhjkdcsz" ColumnName="dhjkdcsz" />
+                <ScalarProperty Name="dhjkdcd" ColumnName="dhjkdcd" />
+                <ScalarProperty Name="dhjkdqz" ColumnName="dhjkdqz" />
+                <ScalarProperty Name="cklx" ColumnName="cklx" />
+                <ScalarProperty Name="dyxz" ColumnName="dyxz" />
+                <ScalarProperty Name="cwbd" ColumnName="cwbd" />
+                <ScalarProperty Name="bigDepartmentID" ColumnName="bigDepartmentID" />
+                <ScalarProperty Name="pxbm" ColumnName="pxbm" />
+                <ScalarProperty Name="pym" ColumnName="pym" />
+                <ScalarProperty Name="xsdhdcsz" ColumnName="xsdhdcsz" />
+                <ScalarProperty Name="xsdhdcd" ColumnName="xsdhdcd" />
+                <ScalarProperty Name="xsdhdqz" ColumnName="xsdhdqz" />
+                <ScalarProperty Name="fykzdcsz" ColumnName="fykzdcsz" />
+                <ScalarProperty Name="fykzdcd" ColumnName="fykzdcd" />
+                <ScalarProperty Name="fykzdqz" ColumnName="fykzdqz" />
+                <ScalarProperty Name="jhyfdcsz" ColumnName="jhyfdcsz" />
+                <ScalarProperty Name="jhyfdcd" ColumnName="jhyfdcd" />
+                <ScalarProperty Name="jhyfdqz" ColumnName="jhyfdqz" />
+                <ScalarProperty Name="zxdcsz" ColumnName="zxdcsz" />
+                <ScalarProperty Name="zxdcd" ColumnName="zxdcd" />
+                <ScalarProperty Name="zxdqz" ColumnName="zxdqz" />
+                <ScalarProperty Name="hktzdcsz" ColumnName="hktzdcsz" />
+                <ScalarProperty Name="hktzdcd" ColumnName="hktzdcd" />
+                <ScalarProperty Name="hktzdqz" ColumnName="hktzdqz" />
+                <ScalarProperty Name="hkjsdcsz" ColumnName="hkjsdcsz" />
+                <ScalarProperty Name="hkjsdcd" ColumnName="hkjsdcd" />
+                <ScalarProperty Name="hkjsdqz" ColumnName="hkjsdqz" />
+                <ScalarProperty Name="hkdcsz" ColumnName="hkdcsz" />
+                <ScalarProperty Name="hkdcd" ColumnName="hkdcd" />
+                <ScalarProperty Name="hkdqz" ColumnName="hkdqz" />
+                <ScalarProperty Name="ysdcsz" ColumnName="ysdcsz" />
+                <ScalarProperty Name="ysdcd" ColumnName="ysdcd" />
+                <ScalarProperty Name="ysdqz" ColumnName="ysdqz" />
+                <ScalarProperty Name="ypdcsz" ColumnName="ypdcsz" />
+                <ScalarProperty Name="ypdcd" ColumnName="ypdcd" />
+                <ScalarProperty Name="ypdqz" ColumnName="ypdqz" />
+                <ScalarProperty Name="xsdcsz" ColumnName="xsdcsz" />
+                <ScalarProperty Name="xsdcd" ColumnName="xsdcd" />
+                <ScalarProperty Name="xsdqz" ColumnName="xsdqz" />
+                <ScalarProperty Name="bz" ColumnName="bz" />
+                <ScalarProperty Name="xsbmc" ColumnName="xsbmc" />
+                <ScalarProperty Name="xsbid" ColumnName="xsbid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="zyxx">
+            <EntityTypeMapping TypeName="ccxnfModel.zyxx">
+              <MappingFragment StoreEntitySet="zyxx">
+                <ScalarProperty Name="xyeflag" ColumnName="xyeflag" />
+                <ScalarProperty Name="xye" ColumnName="xye" />
+                <ScalarProperty Name="stopSign" ColumnName="stopSign" />
+                <ScalarProperty Name="pxbm" ColumnName="pxbm" />
+                <ScalarProperty Name="pym" ColumnName="pym" />
+                <ScalarProperty Name="spr" ColumnName="spr" />
+                <ScalarProperty Name="shr" ColumnName="shr" />
+                <ScalarProperty Name="cgy" ColumnName="cgy" />
+                <ScalarProperty Name="kpy" ColumnName="kpy" />
+                <ScalarProperty Name="syy" ColumnName="syy" />
+                <ScalarProperty Name="ywy" ColumnName="ywy" />
+                <ScalarProperty Name="yyy" ColumnName="yyy" />
+                <ScalarProperty Name="kjkm" ColumnName="kjkm" />
+                <ScalarProperty Name="yb" ColumnName="yb" />
+                <ScalarProperty Name="yj" ColumnName="yj" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="sfz" ColumnName="sfz" />
+                <ScalarProperty Name="sj" ColumnName="sj" />
+                <ScalarProperty Name="bp" ColumnName="bp" />
+                <ScalarProperty Name="tel" ColumnName="tel" />
+                <ScalarProperty Name="zw" ColumnName="zw" />
+                <ScalarProperty Name="sex" ColumnName="sex" />
+                <ScalarProperty Name="bmid" ColumnName="bmid" />
+                <ScalarProperty Name="name" ColumnName="name" />
+                <ScalarProperty Name="zyid" ColumnName="zyid" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>

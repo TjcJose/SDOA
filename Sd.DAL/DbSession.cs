@@ -11,6 +11,7 @@ namespace Sd.DAL
     /// </summary>
     public static class DbSession
     {
+        #region 系统管理
         /// <summary>
         /// 权限组
         /// <remarks>
@@ -63,5 +64,68 @@ namespace Sd.DAL
                 return new GsxxDal();
             }
         }
+        #endregion
+
+        #region 信息系统
+        /// <summary>
+        /// 客户信息
+        /// <remarks>
+        /// 创建：2016.11.03 高振亮<br />
+        /// 修改：2016.11.03 高振亮
+        /// </remarks>
+        /// </summary>
+        public static ICustomerDal CustomerDal
+        {
+            get
+            {
+                return new CustomerDal();
+            }
+        }
+
+        /// <summary>
+        /// 种类表
+        /// <remarks>
+        /// 创建：2016.11.03 高振亮<br />
+        /// 修改：2016.11.03 高振亮
+        /// </remarks>
+        /// </summary>
+        public static IZlDal ZlDal
+        {
+            get
+            {
+                return new ZlDal();
+            }
+        }
+
+        /// <summary>
+        /// 销售部信息
+        /// <remarks>
+        /// 创建：2016.11.03 高振亮<br />
+        /// 修改：2016.11.03 高振亮
+        /// </remarks>
+        /// </summary>
+        public static IXsbxxDal XsbxxDal
+        {
+            get
+            {
+                return new XsbxxDal();
+            }
+        }
+
+        /// <summary>
+        /// 职员信息
+        /// <remarks>
+        /// 创建：2016.11.03 高振亮<br />
+        /// 修改：2016.11.03 高振亮
+        /// </remarks>
+        /// </summary>
+        public static IZyxxDal ZyxxDal
+        {
+            get
+            {
+                return new ZyxxDal();
+            }
+        }
+        #endregion
     }
 }

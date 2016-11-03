@@ -32,5 +32,7 @@ namespace Sd.Model
         public virtual DbSet<khxx> khxx { get; set; }
         public virtual DbSet<zlb> zlb { get; set; }
         public virtual DbSet<bigDepartment> bigDepartment { get; set; }
+        public virtual DbSet<xsbxx> xsbxx { get; set; }
+        public virtual DbSet<zyxx> zyxx { get; set; }
     }
 }
