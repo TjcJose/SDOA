@@ -28,23 +28,24 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(CustomerFrm));
             this.panel1 = new System.Windows.Forms.Panel();
-            this.lblKhmc = new System.Windows.Forms.Label();
-            this.txtKhmc = new System.Windows.Forms.TextBox();
-            this.txtKhid = new System.Windows.Forms.TextBox();
-            this.lblKhid = new System.Windows.Forms.Label();
-            this.lblZlmc = new System.Windows.Forms.Label();
-            this.combZlmc = new System.Windows.Forms.ComboBox();
-            this.combXqmc = new System.Windows.Forms.ComboBox();
-            this.lblXqmc = new System.Windows.Forms.Label();
-            this.lblJskhmc = new System.Windows.Forms.Label();
-            this.combJskhmc = new System.Windows.Forms.ComboBox();
+            this.txtBp = new System.Windows.Forms.TextBox();
+            this.lblBp = new System.Windows.Forms.Label();
             this.combYwy = new System.Windows.Forms.ComboBox();
             this.lblYwy = new System.Windows.Forms.Label();
             this.combXsbmc = new System.Windows.Forms.ComboBox();
             this.lblXsbmc = new System.Windows.Forms.Label();
-            this.txtBp = new System.Windows.Forms.TextBox();
-            this.lblBp = new System.Windows.Forms.Label();
+            this.combJskhmc = new System.Windows.Forms.ComboBox();
+            this.lblJskhmc = new System.Windows.Forms.Label();
+            this.combXqmc = new System.Windows.Forms.ComboBox();
+            this.lblXqmc = new System.Windows.Forms.Label();
+            this.combZlmc = new System.Windows.Forms.ComboBox();
+            this.lblZlmc = new System.Windows.Forms.Label();
+            this.txtKhid = new System.Windows.Forms.TextBox();
+            this.lblKhid = new System.Windows.Forms.Label();
+            this.txtKhmc = new System.Windows.Forms.TextBox();
+            this.lblKhmc = new System.Windows.Forms.Label();
             this.lblCustomer = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
             this.btnDel = new System.Windows.Forms.Button();
@@ -77,11 +78,11 @@
             this.txtArrearMoney = new System.Windows.Forms.TextBox();
             this.lblArrearMoney = new System.Windows.Forms.Label();
             this.panel3 = new System.Windows.Forms.Panel();
-            this.dgvKh = new System.Windows.Forms.DataGridView();
+            this.dgvCustomer = new System.Windows.Forms.DataGridView();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvKh)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -108,93 +109,29 @@
             this.panel1.Size = new System.Drawing.Size(934, 104);
             this.panel1.TabIndex = 0;
             // 
-            // lblKhmc
+            // txtBp
             // 
-            this.lblKhmc.AutoSize = true;
-            this.lblKhmc.Location = new System.Drawing.Point(30, 21);
-            this.lblKhmc.Name = "lblKhmc";
-            this.lblKhmc.Size = new System.Drawing.Size(65, 12);
-            this.lblKhmc.TabIndex = 0;
-            this.lblKhmc.Text = "客户名称：";
+            this.txtBp.Location = new System.Drawing.Point(761, 65);
+            this.txtBp.Name = "txtBp";
+            this.txtBp.Size = new System.Drawing.Size(131, 21);
+            this.txtBp.TabIndex = 18;
+            this.txtBp.Text = "0";
+            this.txtBp.TextChanged += new System.EventHandler(this.txtBp_TextChanged);
             // 
-            // txtKhmc
+            // lblBp
             // 
-            this.txtKhmc.Location = new System.Drawing.Point(102, 16);
-            this.txtKhmc.Name = "txtKhmc";
-            this.txtKhmc.Size = new System.Drawing.Size(131, 21);
-            this.txtKhmc.TabIndex = 1;
-            // 
-            // txtKhid
-            // 
-            this.txtKhid.Location = new System.Drawing.Point(325, 16);
-            this.txtKhid.Name = "txtKhid";
-            this.txtKhid.Size = new System.Drawing.Size(131, 21);
-            this.txtKhid.TabIndex = 3;
-            // 
-            // lblKhid
-            // 
-            this.lblKhid.AutoSize = true;
-            this.lblKhid.Location = new System.Drawing.Point(259, 21);
-            this.lblKhid.Name = "lblKhid";
-            this.lblKhid.Size = new System.Drawing.Size(65, 12);
-            this.lblKhid.TabIndex = 2;
-            this.lblKhid.Text = "客户编码：";
-            // 
-            // lblZlmc
-            // 
-            this.lblZlmc.AutoSize = true;
-            this.lblZlmc.Location = new System.Drawing.Point(479, 21);
-            this.lblZlmc.Name = "lblZlmc";
-            this.lblZlmc.Size = new System.Drawing.Size(53, 12);
-            this.lblZlmc.TabIndex = 4;
-            this.lblZlmc.Text = "种  类：";
-            // 
-            // combZlmc
-            // 
-            this.combZlmc.FormattingEnabled = true;
-            this.combZlmc.Location = new System.Drawing.Point(548, 17);
-            this.combZlmc.Name = "combZlmc";
-            this.combZlmc.Size = new System.Drawing.Size(121, 20);
-            this.combZlmc.TabIndex = 5;
-            // 
-            // combXqmc
-            // 
-            this.combXqmc.FormattingEnabled = true;
-            this.combXqmc.Location = new System.Drawing.Point(548, 66);
-            this.combXqmc.Name = "combXqmc";
-            this.combXqmc.Size = new System.Drawing.Size(121, 20);
-            this.combXqmc.TabIndex = 7;
-            // 
-            // lblXqmc
-            // 
-            this.lblXqmc.AutoSize = true;
-            this.lblXqmc.Location = new System.Drawing.Point(479, 69);
-            this.lblXqmc.Name = "lblXqmc";
-            this.lblXqmc.Size = new System.Drawing.Size(65, 12);
-            this.lblXqmc.TabIndex = 6;
-            this.lblXqmc.Text = "销区名称：";
-            // 
-            // lblJskhmc
-            // 
-            this.lblJskhmc.AutoSize = true;
-            this.lblJskhmc.Location = new System.Drawing.Point(259, 69);
-            this.lblJskhmc.Name = "lblJskhmc";
-            this.lblJskhmc.Size = new System.Drawing.Size(65, 12);
-            this.lblJskhmc.TabIndex = 10;
-            this.lblJskhmc.Text = "结算客户：";
-            // 
-            // combJskhmc
-            // 
-            this.combJskhmc.FormattingEnabled = true;
-            this.combJskhmc.Location = new System.Drawing.Point(325, 66);
-            this.combJskhmc.Name = "combJskhmc";
-            this.combJskhmc.Size = new System.Drawing.Size(131, 20);
-            this.combJskhmc.TabIndex = 12;
+            this.lblBp.AutoSize = true;
+            this.lblBp.Location = new System.Drawing.Point(687, 69);
+            this.lblBp.Name = "lblBp";
+            this.lblBp.Size = new System.Drawing.Size(65, 12);
+            this.lblBp.TabIndex = 17;
+            this.lblBp.Text = "信 誉 额：";
             // 
             // combYwy
             // 
             this.combYwy.FormattingEnabled = true;
             this.combYwy.Location = new System.Drawing.Point(761, 17);
+            this.combYwy.MaxLength = 10;
             this.combYwy.Name = "combYwy";
             this.combYwy.Size = new System.Drawing.Size(131, 20);
             this.combYwy.TabIndex = 16;
@@ -226,21 +163,95 @@
             this.lblXsbmc.TabIndex = 13;
             this.lblXsbmc.Text = "销 售 部：";
             // 
-            // txtBp
+            // combJskhmc
             // 
-            this.txtBp.Location = new System.Drawing.Point(761, 65);
-            this.txtBp.Name = "txtBp";
-            this.txtBp.Size = new System.Drawing.Size(131, 21);
-            this.txtBp.TabIndex = 18;
+            this.combJskhmc.FormattingEnabled = true;
+            this.combJskhmc.Location = new System.Drawing.Point(325, 66);
+            this.combJskhmc.Name = "combJskhmc";
+            this.combJskhmc.Size = new System.Drawing.Size(131, 20);
+            this.combJskhmc.TabIndex = 12;
             // 
-            // lblBp
+            // lblJskhmc
             // 
-            this.lblBp.AutoSize = true;
-            this.lblBp.Location = new System.Drawing.Point(687, 69);
-            this.lblBp.Name = "lblBp";
-            this.lblBp.Size = new System.Drawing.Size(65, 12);
-            this.lblBp.TabIndex = 17;
-            this.lblBp.Text = "信 誉 额：";
+            this.lblJskhmc.AutoSize = true;
+            this.lblJskhmc.Location = new System.Drawing.Point(259, 69);
+            this.lblJskhmc.Name = "lblJskhmc";
+            this.lblJskhmc.Size = new System.Drawing.Size(65, 12);
+            this.lblJskhmc.TabIndex = 10;
+            this.lblJskhmc.Text = "结算客户：";
+            // 
+            // combXqmc
+            // 
+            this.combXqmc.FormattingEnabled = true;
+            this.combXqmc.Location = new System.Drawing.Point(548, 66);
+            this.combXqmc.Name = "combXqmc";
+            this.combXqmc.Size = new System.Drawing.Size(121, 20);
+            this.combXqmc.TabIndex = 7;
+            // 
+            // lblXqmc
+            // 
+            this.lblXqmc.AutoSize = true;
+            this.lblXqmc.Location = new System.Drawing.Point(479, 69);
+            this.lblXqmc.Name = "lblXqmc";
+            this.lblXqmc.Size = new System.Drawing.Size(65, 12);
+            this.lblXqmc.TabIndex = 6;
+            this.lblXqmc.Text = "销区名称：";
+            // 
+            // combZlmc
+            // 
+            this.combZlmc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.combZlmc.FormattingEnabled = true;
+            this.combZlmc.Location = new System.Drawing.Point(548, 17);
+            this.combZlmc.Name = "combZlmc";
+            this.combZlmc.Size = new System.Drawing.Size(121, 20);
+            this.combZlmc.TabIndex = 5;
+            // 
+            // lblZlmc
+            // 
+            this.lblZlmc.AutoSize = true;
+            this.lblZlmc.Location = new System.Drawing.Point(479, 21);
+            this.lblZlmc.Name = "lblZlmc";
+            this.lblZlmc.Size = new System.Drawing.Size(53, 12);
+            this.lblZlmc.TabIndex = 4;
+            this.lblZlmc.Text = "种  类：";
+            // 
+            // txtKhid
+            // 
+            this.txtKhid.Location = new System.Drawing.Point(325, 16);
+            this.txtKhid.MaxLength = 8;
+            this.txtKhid.Name = "txtKhid";
+            this.txtKhid.ReadOnly = true;
+            this.txtKhid.Size = new System.Drawing.Size(131, 21);
+            this.txtKhid.TabIndex = 3;
+            // 
+            // lblKhid
+            // 
+            this.lblKhid.AutoSize = true;
+            this.lblKhid.Location = new System.Drawing.Point(259, 21);
+            this.lblKhid.Name = "lblKhid";
+            this.lblKhid.Size = new System.Drawing.Size(65, 12);
+            this.lblKhid.TabIndex = 2;
+            this.lblKhid.Text = "客户编码：";
+            // 
+            // txtKhmc
+            // 
+            this.txtKhmc.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
+            this.txtKhmc.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.txtKhmc.Location = new System.Drawing.Point(102, 16);
+            this.txtKhmc.MaxLength = 20;
+            this.txtKhmc.Name = "txtKhmc";
+            this.txtKhmc.Size = new System.Drawing.Size(131, 21);
+            this.txtKhmc.TabIndex = 1;
+            this.txtKhmc.TextChanged += new System.EventHandler(this.txtKhmc_TextChanged);
+            // 
+            // lblKhmc
+            // 
+            this.lblKhmc.AutoSize = true;
+            this.lblKhmc.Location = new System.Drawing.Point(30, 21);
+            this.lblKhmc.Name = "lblKhmc";
+            this.lblKhmc.Size = new System.Drawing.Size(65, 12);
+            this.lblKhmc.TabIndex = 0;
+            this.lblKhmc.Text = "客户名称：";
             // 
             // lblCustomer
             // 
@@ -260,6 +271,7 @@
             this.btnAdd.TabIndex = 2;
             this.btnAdd.Text = "增加";
             this.btnAdd.UseVisualStyleBackColor = true;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // btnDel
             // 
@@ -269,6 +281,7 @@
             this.btnDel.TabIndex = 3;
             this.btnDel.Text = "删除";
             this.btnDel.UseVisualStyleBackColor = true;
+            this.btnDel.Click += new System.EventHandler(this.btnDel_Click);
             // 
             // btnSearch
             // 
@@ -296,6 +309,7 @@
             this.btnExit.TabIndex = 6;
             this.btnExit.Text = "退出";
             this.btnExit.UseVisualStyleBackColor = true;
+            this.btnExit.Click += new System.EventHandler(this.btnExit_Click);
             // 
             // btnQuit
             // 
@@ -333,6 +347,7 @@
             // txtSj
             // 
             this.txtSj.Location = new System.Drawing.Point(102, 17);
+            this.txtSj.MaxLength = 11;
             this.txtSj.Name = "txtSj";
             this.txtSj.Size = new System.Drawing.Size(131, 21);
             this.txtSj.TabIndex = 11;
@@ -348,7 +363,8 @@
             // 
             // txtAddress
             // 
-            this.txtAddress.Location = new System.Drawing.Point(548, 19);
+            this.txtAddress.Location = new System.Drawing.Point(548, 17);
+            this.txtAddress.MaxLength = 80;
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(344, 21);
             this.txtAddress.TabIndex = 13;
@@ -364,7 +380,8 @@
             // 
             // txtLxr
             // 
-            this.txtLxr.Location = new System.Drawing.Point(548, 98);
+            this.txtLxr.Location = new System.Drawing.Point(548, 102);
+            this.txtLxr.MaxLength = 20;
             this.txtLxr.Name = "txtLxr";
             this.txtLxr.Size = new System.Drawing.Size(121, 21);
             this.txtLxr.TabIndex = 15;
@@ -380,7 +397,8 @@
             // 
             // txtTel
             // 
-            this.txtTel.Location = new System.Drawing.Point(325, 19);
+            this.txtTel.Location = new System.Drawing.Point(325, 17);
+            this.txtTel.MaxLength = 13;
             this.txtTel.Name = "txtTel";
             this.txtTel.Size = new System.Drawing.Size(131, 21);
             this.txtTel.TabIndex = 17;
@@ -397,6 +415,7 @@
             // txtKhh
             // 
             this.txtKhh.Location = new System.Drawing.Point(102, 60);
+            this.txtKhh.MaxLength = 40;
             this.txtKhh.Name = "txtKhh";
             this.txtKhh.Size = new System.Drawing.Size(131, 21);
             this.txtKhh.TabIndex = 19;
@@ -413,6 +432,7 @@
             // txtZh
             // 
             this.txtZh.Location = new System.Drawing.Point(325, 60);
+            this.txtZh.MaxLength = 20;
             this.txtZh.Name = "txtZh";
             this.txtZh.Size = new System.Drawing.Size(131, 21);
             this.txtZh.TabIndex = 21;
@@ -428,7 +448,8 @@
             // 
             // txtSh
             // 
-            this.txtSh.Location = new System.Drawing.Point(548, 63);
+            this.txtSh.Location = new System.Drawing.Point(548, 60);
+            this.txtSh.MaxLength = 20;
             this.txtSh.Name = "txtSh";
             this.txtSh.Size = new System.Drawing.Size(121, 21);
             this.txtSh.TabIndex = 23;
@@ -445,6 +466,7 @@
             // txtYb
             // 
             this.txtYb.Location = new System.Drawing.Point(761, 60);
+            this.txtYb.MaxLength = 8;
             this.txtYb.Name = "txtYb";
             this.txtYb.Size = new System.Drawing.Size(131, 21);
             this.txtYb.TabIndex = 25;
@@ -460,7 +482,8 @@
             // 
             // txtEmail
             // 
-            this.txtEmail.Location = new System.Drawing.Point(761, 98);
+            this.txtEmail.Location = new System.Drawing.Point(761, 102);
+            this.txtEmail.MaxLength = 18;
             this.txtEmail.Name = "txtEmail";
             this.txtEmail.Size = new System.Drawing.Size(131, 21);
             this.txtEmail.TabIndex = 27;
@@ -477,9 +500,12 @@
             // txtArrearDay
             // 
             this.txtArrearDay.Location = new System.Drawing.Point(125, 102);
+            this.txtArrearDay.MaxLength = 8;
             this.txtArrearDay.Name = "txtArrearDay";
             this.txtArrearDay.Size = new System.Drawing.Size(108, 21);
             this.txtArrearDay.TabIndex = 29;
+            this.txtArrearDay.Text = "0";
+            this.txtArrearDay.TextChanged += new System.EventHandler(this.txtArrearDay_TextChanged);
             // 
             // lblArrearDay
             // 
@@ -492,10 +518,13 @@
             // 
             // txtArrearMoney
             // 
-            this.txtArrearMoney.Location = new System.Drawing.Point(352, 101);
+            this.txtArrearMoney.Location = new System.Drawing.Point(352, 102);
+            this.txtArrearMoney.MaxLength = 20;
             this.txtArrearMoney.Name = "txtArrearMoney";
             this.txtArrearMoney.Size = new System.Drawing.Size(104, 21);
             this.txtArrearMoney.TabIndex = 31;
+            this.txtArrearMoney.Text = "0";
+            this.txtArrearMoney.TextChanged += new System.EventHandler(this.txtArrearMoney_TextChanged);
             // 
             // lblArrearMoney
             // 
@@ -536,26 +565,28 @@
             this.panel3.Size = new System.Drawing.Size(934, 137);
             this.panel3.TabIndex = 32;
             // 
-            // dgvKh
+            // dgvCustomer
             // 
-            this.dgvKh.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.dgvKh.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvKh.Location = new System.Drawing.Point(20, 387);
-            this.dgvKh.Name = "dgvKh";
-            this.dgvKh.RowTemplate.Height = 23;
-            this.dgvKh.Size = new System.Drawing.Size(932, 236);
-            this.dgvKh.TabIndex = 33;
+            this.dgvCustomer.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.dgvCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvCustomer.Location = new System.Drawing.Point(18, 385);
+            this.dgvCustomer.Name = "dgvCustomer";
+            this.dgvCustomer.RowTemplate.Height = 23;
+            this.dgvCustomer.Size = new System.Drawing.Size(932, 236);
+            this.dgvCustomer.TabIndex = 33;
+            this.dgvCustomer.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCustomer_CellDoubleClick);
             // 
             // CustomerFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(974, 632);
-            this.Controls.Add(this.dgvKh);
+            this.Controls.Add(this.dgvCustomer);
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.lblCustomer);
             this.Controls.Add(this.panel1);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CustomerFrm";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "客户信息";
@@ -565,7 +596,7 @@
             this.panel2.ResumeLayout(false);
             this.panel3.ResumeLayout(false);
             this.panel3.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvKh)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvCustomer)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -622,7 +653,7 @@
         private System.Windows.Forms.Label lblArrearMoney;
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.TextBox txtYb;
-        private System.Windows.Forms.DataGridView dgvKh;
+        private System.Windows.Forms.DataGridView dgvCustomer;
 
     }
 }
