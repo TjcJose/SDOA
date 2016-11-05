@@ -1,0 +1,37 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Microsoft.International.Converters.PinYinConverter;
+
+namespace Sd.Common
+{
+    public class StringUtil
+    {
+        /// <summary> 
+        /// 汉字转化为拼音首字母
+        /// </summary> 
+        /// <param name="str">汉字</param> 
+        /// <returns>首字母</returns> 
+        public static string GetFirstPinyin(string str)
+        {
+            string r = string.Empty;
+            foreach (char obj in str)
+            {
+                try
+                {
+                    
+                    ChineseChar chineseChar = new ChineseChar(obj);
+                    string t = chineseChar.Pinyins[0].ToString();
+                    r += t.Substring(0, 1);
+                }
+                catch
+                {
+                    r += obj.ToString();
+                }
+            }
+            return r;
+        }
+    }
+}
