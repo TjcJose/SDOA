@@ -17,6 +17,7 @@
         <EntityTypeShape EntityType="ccxnfModel.bigDepartment" Width="1.5" PointX="9.375" PointY="4.125" />
         <EntityTypeShape EntityType="ccxnfModel.xsbxx" Width="1.5" PointX="11.125" PointY="0.5" />
         <EntityTypeShape EntityType="ccxnfModel.zyxx" Width="1.5" PointX="9.375" PointY="6.375" />
+        <EntityTypeShape EntityType="ccxnfModel.xqxx" Width="1.5" PointX="7.5" PointY="9" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

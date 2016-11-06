@@ -86,6 +86,9 @@
     <Compile Include="UserGroup.cs">
       <DependentUpon>Server.tt</DependentUpon>
     </Compile>
+    <Compile Include="xqxx.cs">
+      <DependentUpon>Server.tt</DependentUpon>
+    </Compile>
     <Compile Include="xsbxx.cs">
       <DependentUpon>Server.tt</DependentUpon>
     </Compile>

@@ -184,6 +184,28 @@
           <Property Name="UserGroupID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="UserGroupName" Type="varchar" MaxLength="100" Nullable="false" />
         </EntityType>
+        <EntityType Name="xqxx">
+          <Key>
+            <PropertyRef Name="xqid" />
+          </Key>
+          <Property Name="xqid" Type="char" MaxLength="12" Nullable="false" />
+          <Property Name="xqmc" Type="char" MaxLength="20" />
+          <Property Name="tel" Type="char" MaxLength="20" />
+          <Property Name="qyjl" Type="char" MaxLength="8" />
+          <Property Name="fzrsj" Type="char" MaxLength="20" />
+          <Property Name="sj" Type="char" MaxLength="14" />
+          <Property Name="fzr" Type="char" MaxLength="8" />
+          <Property Name="address" Type="char" MaxLength="40" />
+          <Property Name="yb" Type="char" MaxLength="8" />
+          <Property Name="zh" Type="char" MaxLength="20" />
+          <Property Name="khh" Type="char" MaxLength="40" />
+          <Property Name="sh" Type="char" MaxLength="20" />
+          <Property Name="email" Type="char" MaxLength="18" />
+          <Property Name="qyqc" Type="char" MaxLength="40" />
+          <Property Name="bz" Type="varchar" MaxLength="100" />
+          <Property Name="pym" Type="varchar" MaxLength="20" />
+          <Property Name="pxbm" Type="varchar" MaxLength="20" />
+        </EntityType>
         <EntityType Name="xsbxx">
           <Key>
             <PropertyRef Name="xsbid" />
@@ -377,6 +399,7 @@
           <EntitySet Name="password" EntityType="Self.password" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UserCompetence" EntityType="Self.UserCompetence" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="UserGroup" EntityType="Self.UserGroup" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="xqxx" EntityType="Self.xqxx" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="xsbxx" EntityType="Self.xsbxx" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="zlb" EntityType="Self.zlb" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="zyxx" EntityType="Self.zyxx" Schema="dbo" store:Type="Tables" />
@@ -427,6 +450,7 @@
           <EntitySet Name="bigDepartment" EntityType="ccxnfModel.bigDepartment" />
           <EntitySet Name="xsbxx" EntityType="ccxnfModel.xsbxx" />
           <EntitySet Name="zyxx" EntityType="ccxnfModel.zyxx" />
+          <EntitySet Name="xqxx" EntityType="ccxnfModel.xqxx" />
         </EntityContainer>
         <EntityType Name="UserGroup">
           <Key>
@@ -740,6 +764,28 @@
           <Property Name="stopSign" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
           <Property Name="xye" Type="Decimal" Precision="19" Scale="4" />
           <Property Name="xyeflag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="xqxx">
+          <Key>
+            <PropertyRef Name="xqid" />
+          </Key>
+          <Property Name="xqid" Type="String" Nullable="false" MaxLength="12" FixedLength="true" Unicode="false" />
+          <Property Name="xqmc" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="tel" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="qyjl" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="fzrsj" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="sj" Type="String" MaxLength="14" FixedLength="true" Unicode="false" />
+          <Property Name="fzr" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="address" Type="String" MaxLength="40" FixedLength="true" Unicode="false" />
+          <Property Name="yb" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="zh" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="khh" Type="String" MaxLength="40" FixedLength="true" Unicode="false" />
+          <Property Name="sh" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="18" FixedLength="true" Unicode="false" />
+          <Property Name="qyqc" Type="String" MaxLength="40" FixedLength="true" Unicode="false" />
+          <Property Name="bz" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="pym" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="pxbm" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -1056,6 +1102,29 @@
                 <ScalarProperty Name="bmid" ColumnName="bmid" />
                 <ScalarProperty Name="name" ColumnName="name" />
                 <ScalarProperty Name="zyid" ColumnName="zyid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="xqxx">
+            <EntityTypeMapping TypeName="ccxnfModel.xqxx">
+              <MappingFragment StoreEntitySet="xqxx">
+                <ScalarProperty Name="pxbm" ColumnName="pxbm" />
+                <ScalarProperty Name="pym" ColumnName="pym" />
+                <ScalarProperty Name="bz" ColumnName="bz" />
+                <ScalarProperty Name="qyqc" ColumnName="qyqc" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="sh" ColumnName="sh" />
+                <ScalarProperty Name="khh" ColumnName="khh" />
+                <ScalarProperty Name="zh" ColumnName="zh" />
+                <ScalarProperty Name="yb" ColumnName="yb" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="fzr" ColumnName="fzr" />
+                <ScalarProperty Name="sj" ColumnName="sj" />
+                <ScalarProperty Name="fzrsj" ColumnName="fzrsj" />
+                <ScalarProperty Name="qyjl" ColumnName="qyjl" />
+                <ScalarProperty Name="tel" ColumnName="tel" />
+                <ScalarProperty Name="xqmc" ColumnName="xqmc" />
+                <ScalarProperty Name="xqid" ColumnName="xqid" />
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
