@@ -147,7 +147,6 @@
             // 
             // combXsbmc
             // 
-            this.combXsbmc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combXsbmc.FormattingEnabled = true;
             this.combXsbmc.Location = new System.Drawing.Point(102, 66);
             this.combXsbmc.Name = "combXsbmc";
@@ -199,7 +198,6 @@
             // 
             // combZlmc
             // 
-            this.combZlmc.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.combZlmc.FormattingEnabled = true;
             this.combZlmc.Location = new System.Drawing.Point(548, 17);
             this.combZlmc.Name = "combZlmc";

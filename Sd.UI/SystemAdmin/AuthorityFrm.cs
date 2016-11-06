@@ -1,4 +1,11 @@
-﻿using System;
+﻿//-----------------------------------------------
+// 系统管理
+// 权限管理画面
+// 创建：2016.10.30 高振亮
+// 修改：2016.10.30 高振亮
+//-----------------------------------------------
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Windows.Forms;

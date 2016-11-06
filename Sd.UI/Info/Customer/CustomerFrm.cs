@@ -1,10 +1,18 @@
-﻿using System;
+﻿//-----------------------------------------------
+// 信息系统-客户
+// 客户画面
+// 创建：2016.11.03 高振亮
+// 修改：2016.11.03 高振亮
+//-----------------------------------------------
+
+using System;
 using System.Linq;
 using System.Windows.Forms;
 using Sd.BLL;
 using Sd.Common;
 using Sd.IBLL;
 using Sd.Model;
+using Sd.UI.Properties;
 
 namespace Sd.UI.Info.Customer
 {
@@ -39,6 +47,11 @@ namespace Sd.UI.Info.Customer
             combJskhmc.DisplayMember = "khmc";
             combJskhmc.Text = "";
 
+            // 销区名称
+            IXqxxService xqxxService = new XqxxService();
+            combXqmc.DataSource = xqxxService.FindList(u => true, "xqid", true).ToList();
+            combXqmc.DisplayMember = "xqmc";
+
             #endregion
 
             // 客户信息
@@ -53,7 +66,14 @@ namespace Sd.UI.Info.Customer
                 地址 = u.address,
                 开户行 = u.khh,
                 账号 = u.zh,
-                税号 = u.sh
+                税号 = u.sh,
+                信誉额 = u.bp,
+                欠款提醒期限 = u.arrearDay,
+                欠款提醒额度 = u.arrearMoney,
+                销售部 = u.xsbmc,
+                销区名称 = u.xqmc,
+                结算客户 = u.khmc, // TODO
+                联系人 = u.lxr
             }).ToList();
         }
 
@@ -65,6 +85,20 @@ namespace Sd.UI.Info.Customer
         private void btnAdd_Click(object sender, EventArgs e)
         {
             // 画面字段Check
+            if (string.IsNullOrWhiteSpace(combXqmc.Text))
+            {
+                combXqmc.Text = ComValueResx.combTextDefault;
+            }
+
+            if (string.IsNullOrWhiteSpace(combXsbmc.Text))
+            {
+                combXsbmc.Text = ComValueResx.combTextDefault;
+            }
+
+            if (string.IsNullOrWhiteSpace(combZlmc.Text))
+            {
+                combZlmc.Text = ComValueResx.combTextDefault;
+            }
 
             // 
             _customerService.Add(
@@ -94,21 +128,14 @@ namespace Sd.UI.Info.Customer
 
         private void txtKhmc_TextChanged(object sender, EventArgs e)
         {
-            if (string.IsNullOrWhiteSpace(txtKhmc.Text))
-            {
-                txtKhid.Text = "";
-            }
-            else
-            {
-                txtKhid.Text = StringUtil.GetFirstPinyin(txtKhmc.Text);
-            }
+            txtKhid.Text = string.IsNullOrWhiteSpace(txtKhmc.Text) ? "" : StringUtil.GetFirstPinyin(txtKhmc.Text);
         }
 
         private void txtBp_TextChanged(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtBp.Text))
             {
-                txtBp.Text = "0";
+                txtBp.Text = ComValueResx.txtIntDefault;
             }
         }
 
@@ -116,7 +143,7 @@ namespace Sd.UI.Info.Customer
         {
             if (string.IsNullOrWhiteSpace(txtArrearDay.Text))
             {
-                txtArrearDay.Text = "0";
+                txtArrearDay.Text = ComValueResx.txtIntDefault;
             }
         }
 
@@ -124,7 +151,7 @@ namespace Sd.UI.Info.Customer
         {
             if (string.IsNullOrWhiteSpace(txtArrearMoney.Text))
             {
-                txtArrearMoney.Text = "0";
+                txtArrearMoney.Text = ComValueResx.txtIntDefault;
             }
         }
 
@@ -135,13 +162,28 @@ namespace Sd.UI.Info.Customer
 
         private void dgvCustomer_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
         {
+            if (0 > e.RowIndex)
+            {
+                return;
+            }
+
             //txtKhid.Text = dgvCustomer.Rows[e.RowIndex].Cells["客户编码"].Value.ToString();
             txtKhmc.Text = dgvCustomer.Rows[e.RowIndex].Cells["客户名称"].Value.ToString();
             combZlmc.Text = dgvCustomer.Rows[e.RowIndex].Cells["种类"].Value.ToString();
             combYwy.Text = dgvCustomer.Rows[e.RowIndex].Cells["业务员"].Value.ToString();
             combXsbmc.Text = dgvCustomer.Rows[e.RowIndex].Cells["销售部"].Value.ToString();
             combJskhmc.Text = dgvCustomer.Rows[e.RowIndex].Cells["结算客户"].Value.ToString();
-
+            combXqmc.Text = dgvCustomer.Rows[e.RowIndex].Cells["销区名称"].Value.ToString();
+            txtBp.Text = dgvCustomer.Rows[e.RowIndex].Cells["信誉额"].Value.ToString();
+            txtSj.Text = dgvCustomer.Rows[e.RowIndex].Cells["手机"].Value.ToString();
+            txtTel.Text = dgvCustomer.Rows[e.RowIndex].Cells["电话"].Value.ToString();
+            txtAddress.Text = dgvCustomer.Rows[e.RowIndex].Cells["地址"].Value.ToString();
+            txtKhh.Text = dgvCustomer.Rows[e.RowIndex].Cells["开户行"].Value.ToString();
+            txtZh.Text = dgvCustomer.Rows[e.RowIndex].Cells["账号"].Value.ToString();
+            txtSh.Text = dgvCustomer.Rows[e.RowIndex].Cells["税号"].Value.ToString();
+            txtArrearDay.Text = dgvCustomer.Rows[e.RowIndex].Cells["欠款提醒期限"].Value.ToString();
+            txtArrearMoney.Text = dgvCustomer.Rows[e.RowIndex].Cells["欠款提醒额度"].Value.ToString();
+            txtLxr.Text = dgvCustomer.Rows[e.RowIndex].Cells["联系人"].Value.ToString();
         }
     }
 }
