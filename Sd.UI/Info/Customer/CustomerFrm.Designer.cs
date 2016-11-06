@@ -289,6 +289,7 @@
             this.btnSearch.TabIndex = 4;
             this.btnSearch.Text = "查询";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // btnUpdate
             // 
@@ -298,6 +299,7 @@
             this.btnUpdate.TabIndex = 5;
             this.btnUpdate.Text = "修改";
             this.btnUpdate.UseVisualStyleBackColor = true;
+            this.btnUpdate.Click += new System.EventHandler(this.btnUpdate_Click);
             // 
             // btnExit
             // 
@@ -317,6 +319,7 @@
             this.btnQuit.TabIndex = 7;
             this.btnQuit.Text = "放弃";
             this.btnQuit.UseVisualStyleBackColor = true;
+            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
             // btnSave
             // 
@@ -326,6 +329,7 @@
             this.btnSave.TabIndex = 8;
             this.btnSave.Text = "存盘";
             this.btnSave.UseVisualStyleBackColor = true;
+            this.btnSave.Click += new System.EventHandler(this.btnSave_Click);
             // 
             // panel2
             // 
@@ -570,7 +574,7 @@
             this.dgvCustomer.Location = new System.Drawing.Point(18, 385);
             this.dgvCustomer.Name = "dgvCustomer";
             this.dgvCustomer.RowTemplate.Height = 23;
-            this.dgvCustomer.Size = new System.Drawing.Size(932, 236);
+            this.dgvCustomer.Size = new System.Drawing.Size(934, 236);
             this.dgvCustomer.TabIndex = 33;
             this.dgvCustomer.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCustomer_CellDoubleClick);
             // 
@@ -586,6 +590,7 @@
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "CustomerFrm";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "客户信息";
             this.Load += new System.EventHandler(this.CustomerFrm_Load);
