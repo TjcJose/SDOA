@@ -1,8 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿//-----------------------------------------------
+// 公共类
+// 字符相关类
+// 创建：2016.11.05 高振亮
+// 修改：2016.10.05 高振亮
+//-----------------------------------------------
+
 using Microsoft.International.Converters.PinYinConverter;
 
 namespace Sd.Common
