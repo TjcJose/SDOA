@@ -117,6 +117,9 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="confrim_delete" xml:space="preserve">
+    <value>确定删除该数据？</value>
+  </data>
   <data name="login_btn_logining" xml:space="preserve">
     <value>请稍后，登录中。。。</value>
   </data>

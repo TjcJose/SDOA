@@ -70,6 +70,15 @@ namespace Sd.UI.Properties {
         }
         
         /// <summary>
+        ///   查找类似 提示 的本地化字符串。
+        /// </summary>
+        internal static string confrim {
+            get {
+                return ResourceManager.GetString("confrim", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 0 的本地化字符串。
         /// </summary>
         internal static string txtIntDefault {
