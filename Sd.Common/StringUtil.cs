@@ -24,8 +24,8 @@ namespace Sd.Common
                 try
                 {
                     
-                    ChineseChar chineseChar = new ChineseChar(obj);
-                    string t = chineseChar.Pinyins[0].ToString();
+                    var chineseChar = new ChineseChar(obj);
+                    var t = chineseChar.Pinyins[0];
                     r += t.Substring(0, 1);
                 }
                 catch
