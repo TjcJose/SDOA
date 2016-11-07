@@ -61,6 +61,24 @@ namespace Sd.UI.Properties {
         }
         
         /// <summary>
+        ///   查找类似 添加 的本地化字符串。
+        /// </summary>
+        internal static string btn_add_name {
+            get {
+                return ResourceManager.GetString("btn_add_name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 修改 的本地化字符串。
+        /// </summary>
+        internal static string btn_update_name {
+            get {
+                return ResourceManager.GetString("btn_update_name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 - 的本地化字符串。
         /// </summary>
         internal static string combTextDefault {
@@ -70,7 +88,7 @@ namespace Sd.UI.Properties {
         }
         
         /// <summary>
-        ///   查找类似 提示 的本地化字符串。
+        ///   查找类似 追梦软件提示 的本地化字符串。
         /// </summary>
         internal static string confrim {
             get {

@@ -80,6 +80,12 @@
     <Compile Include="Info\Customer\CustomerFrm.Designer.cs">
       <DependentUpon>CustomerFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Info\Department\BigDepartmnetFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Info\Department\BigDepartmnetFrm.Designer.cs">
+      <DependentUpon>BigDepartmnetFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -121,6 +127,9 @@
     </Compile>
     <EmbeddedResource Include="Info\Customer\CustomerFrm.resx">
       <DependentUpon>CustomerFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Info\Department\BigDepartmnetFrm.resx">
+      <DependentUpon>BigDepartmnetFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginFrm.resx">
       <DependentUpon>LoginFrm.cs</DependentUpon>

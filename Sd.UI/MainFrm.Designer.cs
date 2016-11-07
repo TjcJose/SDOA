@@ -37,6 +37,9 @@
             this.财务系统ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.报表系统ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.信息系统ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.客户ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.部门ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.大部门ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.系统设置ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.用户管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.权限管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -53,7 +56,6 @@
             this.toolStripStatusLabel9 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel11 = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslCzy = new System.Windows.Forms.ToolStripStatusLabel();
-            this.客户ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -125,11 +127,37 @@
             // 信息系统ToolStripMenuItem
             // 
             this.信息系统ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.客户ToolStripMenuItem});
+            this.客户ToolStripMenuItem,
+            this.部门ToolStripMenuItem});
             this.信息系统ToolStripMenuItem.Image = global::Sd.UI.Properties.Resources.visual_basic;
             this.信息系统ToolStripMenuItem.Name = "信息系统ToolStripMenuItem";
             this.信息系统ToolStripMenuItem.Size = new System.Drawing.Size(109, 36);
             this.信息系统ToolStripMenuItem.Text = "信息系统";
+            // 
+            // 客户ToolStripMenuItem
+            // 
+            this.客户ToolStripMenuItem.Image = global::Sd.UI.Properties.Resources.resultset_next;
+            this.客户ToolStripMenuItem.Name = "客户ToolStripMenuItem";
+            this.客户ToolStripMenuItem.Size = new System.Drawing.Size(168, 38);
+            this.客户ToolStripMenuItem.Text = "客户";
+            this.客户ToolStripMenuItem.Click += new System.EventHandler(this.客户ToolStripMenuItem_Click);
+            // 
+            // 部门ToolStripMenuItem
+            // 
+            this.部门ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.大部门ToolStripMenuItem});
+            this.部门ToolStripMenuItem.Image = global::Sd.UI.Properties.Resources.resultset_next;
+            this.部门ToolStripMenuItem.Name = "部门ToolStripMenuItem";
+            this.部门ToolStripMenuItem.Size = new System.Drawing.Size(168, 38);
+            this.部门ToolStripMenuItem.Text = "部门";
+            // 
+            // 大部门ToolStripMenuItem
+            // 
+            this.大部门ToolStripMenuItem.Image = global::Sd.UI.Properties.Resources.resultset_next;
+            this.大部门ToolStripMenuItem.Name = "大部门ToolStripMenuItem";
+            this.大部门ToolStripMenuItem.Size = new System.Drawing.Size(168, 38);
+            this.大部门ToolStripMenuItem.Text = "大部门信息";
+            this.大部门ToolStripMenuItem.Click += new System.EventHandler(this.大部门ToolStripMenuItem_Click);
             // 
             // 系统设置ToolStripMenuItem
             // 
@@ -145,14 +173,14 @@
             // 
             this.用户管理ToolStripMenuItem.Image = global::Sd.UI.Properties.Resources.resultset_next;
             this.用户管理ToolStripMenuItem.Name = "用户管理ToolStripMenuItem";
-            this.用户管理ToolStripMenuItem.Size = new System.Drawing.Size(168, 38);
+            this.用户管理ToolStripMenuItem.Size = new System.Drawing.Size(150, 38);
             this.用户管理ToolStripMenuItem.Text = "用户管理";
             // 
             // 权限管理ToolStripMenuItem
             // 
             this.权限管理ToolStripMenuItem.Image = global::Sd.UI.Properties.Resources.resultset_next;
             this.权限管理ToolStripMenuItem.Name = "权限管理ToolStripMenuItem";
-            this.权限管理ToolStripMenuItem.Size = new System.Drawing.Size(168, 38);
+            this.权限管理ToolStripMenuItem.Size = new System.Drawing.Size(150, 38);
             this.权限管理ToolStripMenuItem.Text = "权限管理";
             this.权限管理ToolStripMenuItem.Click += new System.EventHandler(this.权限管理ToolStripMenuItem_Click);
             // 
@@ -302,14 +330,6 @@
             this.tsslCzy.Size = new System.Drawing.Size(43, 21);
             this.tsslCzy.Text = "开票1";
             // 
-            // 客户ToolStripMenuItem
-            // 
-            this.客户ToolStripMenuItem.Image = global::Sd.UI.Properties.Resources.resultset_next;
-            this.客户ToolStripMenuItem.Name = "客户ToolStripMenuItem";
-            this.客户ToolStripMenuItem.Size = new System.Drawing.Size(168, 38);
-            this.客户ToolStripMenuItem.Text = "客户";
-            this.客户ToolStripMenuItem.Click += new System.EventHandler(this.客户ToolStripMenuItem_Click);
-            // 
             // MainFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -363,5 +383,7 @@
         private System.Windows.Forms.ToolStripMenuItem 用户管理ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 权限管理ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 客户ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 部门ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 大部门ToolStripMenuItem;
     }
 }

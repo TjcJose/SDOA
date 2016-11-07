@@ -234,7 +234,7 @@
             // txtKhmc
             // 
             this.txtKhmc.CharacterCasing = System.Windows.Forms.CharacterCasing.Upper;
-            this.txtKhmc.ImeMode = System.Windows.Forms.ImeMode.NoControl;
+            this.txtKhmc.ImeMode = System.Windows.Forms.ImeMode.On;
             this.txtKhmc.Location = new System.Drawing.Point(102, 16);
             this.txtKhmc.MaxLength = 20;
             this.txtKhmc.Name = "txtKhmc";
@@ -245,11 +245,12 @@
             // lblKhmc
             // 
             this.lblKhmc.AutoSize = true;
+            this.lblKhmc.ForeColor = System.Drawing.SystemColors.ControlText;
             this.lblKhmc.Location = new System.Drawing.Point(30, 21);
             this.lblKhmc.Name = "lblKhmc";
-            this.lblKhmc.Size = new System.Drawing.Size(65, 12);
+            this.lblKhmc.Size = new System.Drawing.Size(71, 12);
             this.lblKhmc.TabIndex = 0;
-            this.lblKhmc.Text = "客户名称：";
+            this.lblKhmc.Text = "*客户名称：";
             // 
             // lblCustomer
             // 
@@ -569,14 +570,21 @@
             // 
             // dgvCustomer
             // 
+            this.dgvCustomer.AllowUserToAddRows = false;
+            this.dgvCustomer.AllowUserToDeleteRows = false;
             this.dgvCustomer.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dgvCustomer.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvCustomer.Location = new System.Drawing.Point(18, 385);
+            this.dgvCustomer.MultiSelect = false;
             this.dgvCustomer.Name = "dgvCustomer";
+            this.dgvCustomer.ReadOnly = true;
+            this.dgvCustomer.RowHeadersVisible = false;
             this.dgvCustomer.RowTemplate.Height = 23;
+            this.dgvCustomer.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvCustomer.Size = new System.Drawing.Size(934, 236);
             this.dgvCustomer.TabIndex = 33;
             this.dgvCustomer.CellDoubleClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCustomer_CellDoubleClick);
+            this.dgvCustomer.SelectionChanged += new System.EventHandler(this.dgvCustomer_SelectionChanged);
             // 
             // CustomerFrm
             // 

@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using Sd.UI.Info.Customer;
+using Sd.UI.Info.Department;
 using Sd.UI.SystemAdmin;
 
 namespace Sd.UI
@@ -34,6 +35,12 @@ namespace Sd.UI
         {
             var customerFrm = new CustomerFrm();
             customerFrm.ShowDialog();
+        }
+
+        private void 大部门ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var bigDepartmnetFrm = new BigDepartmnetFrm();
+            bigDepartmnetFrm.ShowDialog();
         }
     }
 }

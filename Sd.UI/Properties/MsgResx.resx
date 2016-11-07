@@ -117,8 +117,23 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="add_fail" xml:space="preserve">
+    <value>添加失败，请检查字段后重试。</value>
+  </data>
+  <data name="add_success" xml:space="preserve">
+    <value>添加成功！</value>
+  </data>
+  <data name="check_pk_null" xml:space="preserve">
+    <value>请输入必填项！</value>
+  </data>
   <data name="confrim_delete" xml:space="preserve">
     <value>确定删除该数据？</value>
+  </data>
+  <data name="delete_fail" xml:space="preserve">
+    <value>删除失败，请检查字段后重试。</value>
+  </data>
+  <data name="delete_success" xml:space="preserve">
+    <value>删除成功！</value>
   </data>
   <data name="login_btn_logining" xml:space="preserve">
     <value>请稍后，登录中。。。</value>
@@ -134,5 +149,11 @@
   </data>
   <data name="login_txt_user_pwd" xml:space="preserve">
     <value>用户名或密码不能为空！</value>
+  </data>
+  <data name="update_fail" xml:space="preserve">
+    <value>修改失败，请检查字段后重试。</value>
+  </data>
+  <data name="update_success" xml:space="preserve">
+    <value>修改成功！</value>
   </data>
 </root>

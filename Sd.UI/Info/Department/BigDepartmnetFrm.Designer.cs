@@ -30,7 +30,6 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(BigDepartmnetFrm));
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.dgvBigDepartment = new System.Windows.Forms.DataGridView();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.txtbz = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
@@ -47,6 +46,7 @@
             this.btnDel = new System.Windows.Forms.Button();
             this.btnCancel = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
+            this.dgvBigDepartment = new System.Windows.Forms.DataGridView();
             this.bigDepartmentID = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bigDepartmentCode = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.bigDepartmentName = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -57,11 +57,11 @@
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
             this.splitContainer1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBigDepartment)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBigDepartment)).BeginInit();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -80,33 +80,6 @@
             this.splitContainer1.Size = new System.Drawing.Size(824, 478);
             this.splitContainer1.SplitterDistance = 313;
             this.splitContainer1.TabIndex = 0;
-            // 
-            // dgvBigDepartment
-            // 
-            this.dgvBigDepartment.AllowUserToAddRows = false;
-            this.dgvBigDepartment.AllowUserToDeleteRows = false;
-            this.dgvBigDepartment.AllowUserToOrderColumns = true;
-            this.dgvBigDepartment.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvBigDepartment.BackgroundColor = System.Drawing.Color.White;
-            this.dgvBigDepartment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvBigDepartment.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.bigDepartmentID,
-            this.bigDepartmentCode,
-            this.bigDepartmentName,
-            this.pym,
-            this.pxbm,
-            this.bz});
-            this.dgvBigDepartment.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvBigDepartment.Location = new System.Drawing.Point(0, 0);
-            this.dgvBigDepartment.MultiSelect = false;
-            this.dgvBigDepartment.Name = "dgvBigDepartment";
-            this.dgvBigDepartment.ReadOnly = true;
-            this.dgvBigDepartment.RowHeadersVisible = false;
-            this.dgvBigDepartment.RowTemplate.Height = 23;
-            this.dgvBigDepartment.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvBigDepartment.Size = new System.Drawing.Size(507, 478);
-            this.dgvBigDepartment.TabIndex = 0;
-            this.dgvBigDepartment.SelectionChanged += new System.EventHandler(this.dgvBigDepartment_SelectionChanged);
             // 
             // splitContainer2
             // 
@@ -190,9 +163,9 @@
             this.label4.AutoSize = true;
             this.label4.Location = new System.Drawing.Point(15, 110);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(77, 12);
+            this.label4.Size = new System.Drawing.Size(83, 12);
             this.label4.TabIndex = 18;
-            this.label4.Text = "大部门名称：";
+            this.label4.Text = "*大部门名称：";
             // 
             // txtpym
             // 
@@ -224,9 +197,9 @@
             this.label2.AutoSize = true;
             this.label2.Location = new System.Drawing.Point(14, 64);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(77, 12);
+            this.label2.Size = new System.Drawing.Size(83, 12);
             this.label2.TabIndex = 14;
-            this.label2.Text = "大部门编码：";
+            this.label2.Text = "*大部门编码：";
             // 
             // txtbigDepartmentID
             // 
@@ -276,6 +249,33 @@
             this.btnAdd.Text = "添加";
             this.btnAdd.UseVisualStyleBackColor = true;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
+            // 
+            // dgvBigDepartment
+            // 
+            this.dgvBigDepartment.AllowUserToAddRows = false;
+            this.dgvBigDepartment.AllowUserToDeleteRows = false;
+            this.dgvBigDepartment.AllowUserToOrderColumns = true;
+            this.dgvBigDepartment.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvBigDepartment.BackgroundColor = System.Drawing.Color.White;
+            this.dgvBigDepartment.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvBigDepartment.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.bigDepartmentID,
+            this.bigDepartmentCode,
+            this.bigDepartmentName,
+            this.pym,
+            this.pxbm,
+            this.bz});
+            this.dgvBigDepartment.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvBigDepartment.Location = new System.Drawing.Point(0, 0);
+            this.dgvBigDepartment.MultiSelect = false;
+            this.dgvBigDepartment.Name = "dgvBigDepartment";
+            this.dgvBigDepartment.ReadOnly = true;
+            this.dgvBigDepartment.RowHeadersVisible = false;
+            this.dgvBigDepartment.RowTemplate.Height = 23;
+            this.dgvBigDepartment.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvBigDepartment.Size = new System.Drawing.Size(507, 478);
+            this.dgvBigDepartment.TabIndex = 0;
+            this.dgvBigDepartment.SelectionChanged += new System.EventHandler(this.dgvBigDepartment_SelectionChanged);
             // 
             // bigDepartmentID
             // 
@@ -337,12 +337,12 @@
             this.splitContainer1.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).EndInit();
             this.splitContainer1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvBigDepartment)).EndInit();
             this.splitContainer2.Panel1.ResumeLayout(false);
             this.splitContainer2.Panel1.PerformLayout();
             this.splitContainer2.Panel2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvBigDepartment)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -61,11 +61,56 @@ namespace Sd.UI.Properties {
         }
         
         /// <summary>
+        ///   查找类似 添加失败，请检查字段后重试。 的本地化字符串。
+        /// </summary>
+        internal static string add_fail {
+            get {
+                return ResourceManager.GetString("add_fail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 添加成功！ 的本地化字符串。
+        /// </summary>
+        internal static string add_success {
+            get {
+                return ResourceManager.GetString("add_success", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 请输入必填项！ 的本地化字符串。
+        /// </summary>
+        internal static string check_pk_null {
+            get {
+                return ResourceManager.GetString("check_pk_null", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 确定删除该数据？ 的本地化字符串。
         /// </summary>
         internal static string confrim_delete {
             get {
                 return ResourceManager.GetString("confrim_delete", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 删除失败，请检查字段后重试。 的本地化字符串。
+        /// </summary>
+        internal static string delete_fail {
+            get {
+                return ResourceManager.GetString("delete_fail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 删除成功！ 的本地化字符串。
+        /// </summary>
+        internal static string delete_success {
+            get {
+                return ResourceManager.GetString("delete_success", resourceCulture);
             }
         }
         
@@ -111,6 +156,24 @@ namespace Sd.UI.Properties {
         internal static string login_txt_user_pwd {
             get {
                 return ResourceManager.GetString("login_txt_user_pwd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 修改失败，请检查字段后重试。 的本地化字符串。
+        /// </summary>
+        internal static string update_fail {
+            get {
+                return ResourceManager.GetString("update_fail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 修改成功！ 的本地化字符串。
+        /// </summary>
+        internal static string update_success {
+            get {
+                return ResourceManager.GetString("update_success", resourceCulture);
             }
         }
     }
