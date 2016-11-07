@@ -141,6 +141,21 @@ namespace Sd.DAL
                 return new XqxxDal();
             }
         }
+        
+        /// <summary>
+        /// 大部门信息
+        /// <remarks>
+        /// 创建：2016.11.06 高振亮<br />
+        /// 修改：2016.11.06 高振亮
+        /// </remarks>
+        /// </summary>
+        public static IBigDepartmentDal BigDepartmentDal
+        {
+            get
+            {
+                return new BigDepartmentDal();
+            }
+        }
         #endregion
     }
 }

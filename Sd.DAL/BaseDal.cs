@@ -22,8 +22,22 @@ namespace Sd.DAL
         public T Add(T entity)
         {
             DContext.Entry(entity).State = EntityState.Added;
-            DContext.SaveChanges();
-            return entity;
+
+            try
+            {
+                DContext.SaveChanges();
+
+                return entity;
+            }
+            catch (Exception)
+            {
+                DContext.Dispose();
+
+                DContext = DbContextFactory.ResetCurrentContext();
+
+                return null;
+            }
+          
         }
 
         public int Count(Expression<Func<T, bool>> predicate)
@@ -50,6 +64,9 @@ namespace Sd.DAL
                         error = string.Format("{0}:{1}\r\n", item2.PropertyName, item2.ErrorMessage);
                     }
                 }*/
+                DContext.Dispose();
+
+                DContext = DbContextFactory.ResetCurrentContext();
 
                 return false;
             }
@@ -59,7 +76,19 @@ namespace Sd.DAL
         {
             DContext.Set<T>().Attach(entity);
             DContext.Entry(entity).State = EntityState.Deleted;
-            return DContext.SaveChanges() > 0;
+
+            try
+            {
+                return DContext.SaveChanges() > 0;
+            }
+            catch (Exception)
+            {
+                DContext.Dispose();
+
+                DContext = DbContextFactory.ResetCurrentContext();
+
+                return false;
+            }
         }
 
         /// <summary>

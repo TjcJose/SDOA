@@ -41,4 +41,15 @@ namespace Sd.IDAL
     public interface IXqxxDal : IBaseDal<xqxx>
     {
     }
+
+    /// <summary>
+    /// 大部门信息
+    /// <remarks>
+    /// 创建：2016.11.06 高振亮
+    /// 修改：2016.11.06 高振亮
+    /// </remarks>
+    /// </summary>
+    public interface IBigDepartmentDal : IBaseDal<bigDepartment>
+    {
+    }
 }

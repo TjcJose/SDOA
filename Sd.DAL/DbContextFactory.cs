@@ -23,5 +23,12 @@ namespace Sd.DAL
             CallContext.SetData("SdContext", dContext);
             return dContext;
         }
+
+        public static DbContext ResetCurrentContext()
+        {
+            var dContext = new DbContext("SdEntities");
+            CallContext.SetData("SdContext", dContext);
+            return dContext;
+        }
     }
 }

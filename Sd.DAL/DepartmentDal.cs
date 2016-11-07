@@ -42,4 +42,15 @@ namespace Sd.DAL
     public class XqxxDal : BaseDal<xqxx>, IXqxxDal
     {
     }
+
+    /// <summary>
+    /// 大部门信息  
+    /// <remarks>
+    /// 创建：2016.11.06 高振亮
+    /// 修改：2016.11.06 高振亮
+    /// </remarks>
+    /// </summary>
+    public class BigDepartmentDal : BaseDal<bigDepartment>, IBigDepartmentDal
+    {
+    }
 }
