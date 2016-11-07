@@ -49,8 +49,8 @@ namespace Sd.UI.Info.Department
         {
             if (dgvBigDepartment.SelectedRows.Count <= 0) return;
 
-            _operationMode = int.Parse(dgvBigDepartment.SelectedRows[0].Cells[0].Value.ToString());
-
+            _operationMode = 1;
+            txtbigDepartmentID.Text = dgvBigDepartment.SelectedRows[0].Cells[0].Value.ToString();
             txtbigDepartmentCode.Text = dgvBigDepartment.SelectedRows[0].Cells[1].Value.ToString();// 大部门编码
             txtbigDepartmentName.Text = dgvBigDepartment.SelectedRows[0].Cells[2].Value.ToString();// 大部门名称
             txtpym.Text = dgvBigDepartment.SelectedRows[0].Cells[3].Value.ToString();//拼音码
@@ -83,7 +83,17 @@ namespace Sd.UI.Info.Department
             if (result != DialogResult.OK) return;
             // 大部门检查并删除 zzj
 
-            if (_bigDepartmentService.Delete(GetBigDepartment()))
+            var deleteEntity = _bigDepartmentService.Find(u => u.bigDepartmentCode.Contains(txtbigDepartmentCode.Text));
+
+            if (null == deleteEntity)
+            {
+                MessageBox.Show(MsgResx.delete_check, ComValueResx.confrim, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                BindBigDepartment();
+                Reset();
+                return;
+            }
+
+            if (_bigDepartmentService.Delete(deleteEntity))
             {
                 MessageBox.Show(MsgResx.delete_success, ComValueResx.confrim, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 BindBigDepartment();
@@ -111,7 +121,15 @@ namespace Sd.UI.Info.Department
             if (_operationMode == 0)
             {
                 // 添加 zzj
-                var addResult =  _bigDepartmentService.Add(GetBigDepartment());
+                var addResult = _bigDepartmentService.Add(new bigDepartment
+                {
+                    bigDepartmentID = int.Parse(txtbigDepartmentID.Text.Trim()),
+                    bigDepartmentCode = txtbigDepartmentCode.Text.Trim(),
+                    bigDepartmentName = txtbigDepartmentName.Text.Trim(),
+                    bz = txtbz.Text.Trim(),
+                    pxbm = txtpxbm.Text.Trim(),
+                    pym = txtpym.Text.Trim()
+                });
 
                 if (null != addResult)
                 {

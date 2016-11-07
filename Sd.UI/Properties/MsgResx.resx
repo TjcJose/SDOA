@@ -129,6 +129,9 @@
   <data name="confrim_delete" xml:space="preserve">
     <value>确定删除该数据？</value>
   </data>
+  <data name="delete_check" xml:space="preserve">
+    <value>该数据已经被删除。</value>
+  </data>
   <data name="delete_fail" xml:space="preserve">
     <value>删除失败，请检查字段后重试。</value>
   </data>

@@ -186,6 +186,7 @@
             // 
             // txtbigDepartmentCode
             // 
+            this.txtbigDepartmentCode.ImeMode = System.Windows.Forms.ImeMode.On;
             this.txtbigDepartmentCode.Location = new System.Drawing.Point(88, 60);
             this.txtbigDepartmentCode.MaxLength = 50;
             this.txtbigDepartmentCode.Name = "txtbigDepartmentCode";

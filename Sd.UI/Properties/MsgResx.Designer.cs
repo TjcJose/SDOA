@@ -97,6 +97,15 @@ namespace Sd.UI.Properties {
         }
         
         /// <summary>
+        ///   查找类似 该数据已经被删除。 的本地化字符串。
+        /// </summary>
+        internal static string delete_check {
+            get {
+                return ResourceManager.GetString("delete_check", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 删除失败，请检查字段后重试。 的本地化字符串。
         /// </summary>
         internal static string delete_fail {
