@@ -7,6 +7,7 @@
 
 using System;
 using System.Linq;
+using System.Threading;
 using System.Windows.Forms;
 using Sd.BLL;
 using Sd.Common;
@@ -19,7 +20,7 @@ namespace Sd.UI.Info.Customer
     public partial class CustomerFrm : Form
     {
         private readonly ICustomerService _customerService = new CustomerService();
-
+        // 操作标识，1：增加，2：删除，3：修改
         private int _operationMode;
 
         public CustomerFrm()
@@ -29,11 +30,67 @@ namespace Sd.UI.Info.Customer
 
         private void CustomerFrm_Load(object sender, EventArgs e)
         {
+            btnDel.Enabled = false;
+            btnUpdate.Enabled = false;
+            btnSave.Enabled = false;
+
             #region combobox绑定数据
+
+            // 客户信息
+            //new Thread(
+            //    delegate()
+            //    {
+            //        dgvCustomer.Invoke((MethodInvoker) delegate
+            //        {
+
+
+            //            // 销区名称
+            //            IXqxxService xqxxService = new XqxxService();
+            //            combXqmc.DataSource = xqxxService.FindList(u => true, "xqid", true).ToList();
+            //            combXqmc.DisplayMember = "xqmc";
+
+            //            dgvCustomer.DataSource = customer.Select(u => new
+            //            {
+            //                客户编码 = u.khid,
+            //                客户名称 = u.khmc,
+            //                业务员 = u.ywy,
+            //                种类 = u.zlmc,
+            //                手机 = u.sj,
+            //                电话 = u.tel,
+            //                地址 = u.address,
+            //                开户行 = u.khh,
+            //                账号 = u.zh,
+            //                税号 = u.sh,
+            //                信誉额 = u.bp,
+            //                欠款提醒期限 = u.arrearDay,
+            //                欠款提醒额度 = u.arrearMoney,
+            //                销售部 = u.xsbmc,
+            //                销区名称 = u.xqmc,
+            //                结算客户 = u.khmc, // TODO
+            //                联系人 = u.lxr,
+            //                邮编 = u.yb,
+            //                邮箱 = u.email
+            //            }).ToList();
+
+            //            dgvCustomer.ClearSelection();
+            //            SetCompetenceEnabled(true);
+            //            ClearFrm();
+
+            //            txtKhmc.Focus();
+            //        });
+            //    }).Start();
+
+            #endregion
+        }
+
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+            _operationMode = 1;
+
             // 种类表
             IZlService zlService = new ZlService();
-            combZlmc.DataSource = zlService.FindList(u => true, "zldm", true).Select(u=>u.zlmc).ToList();
-            
+            combZlmc.DataSource = zlService.FindList(u => true, "zldm", true).Select(u => u.zlmc).ToList();
+
             // 业务员
             IZyxxService zyxxService = new ZyxxService();
             combYwy.DataSource = zyxxService.FindList(u => true, "zyid", true).Select(u => u.name).ToList();
@@ -45,56 +102,9 @@ namespace Sd.UI.Info.Customer
 
             // 结算客户
             var customer = _customerService.FindList(u => true, "khid", true);
-            combJskhmc.DataSource = customer.Select(u => new {u.khid, u.khmc }).ToList();
+            combJskhmc.DataSource = customer.Select(u => new { u.khid, u.khmc }).ToList();
             combJskhmc.DisplayMember = "khmc";
             combJskhmc.Text = "";
-
-            // 销区名称
-            IXqxxService xqxxService = new XqxxService();
-            combXqmc.DataSource = xqxxService.FindList(u => true, "xqid", true).ToList();
-            combXqmc.DisplayMember = "xqmc";
-
-            #endregion
-
-            // 客户信息
-            dgvCustomer.DataSource = customer.Select(u => new
-            {
-                客户编码 = u.khid,
-                客户名称 = u.khmc,
-                业务员 = u.ywy,
-                种类 = u.zlmc,
-                手机 = u.sj,
-                电话 = u.tel,
-                地址 = u.address,
-                开户行 = u.khh,
-                账号 = u.zh,
-                税号 = u.sh,
-                信誉额 = u.bp,
-                欠款提醒期限 = u.arrearDay,
-                欠款提醒额度 = u.arrearMoney,
-                销售部 = u.xsbmc,
-                销区名称 = u.xqmc,
-                结算客户 = u.khmc, // TODO
-                联系人 = u.lxr,
-                邮编 = u.yb,
-                邮箱 = u.email
-            }).ToList();
-
-            dgvCustomer.ClearSelection();
-
-            SetCompetenceEnabled(true);
-
-            ClearFrm();
-        }
-
-        private void btnExit_Click(object sender, EventArgs e)
-        {
-            Close();
-        }
-
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-            _operationMode = 1;
 
             SetCompetenceEnabled(true);
 
@@ -111,38 +121,6 @@ namespace Sd.UI.Info.Customer
             txtKhmc.Focus();
         }
 
-        private void txtKhmc_TextChanged(object sender, EventArgs e)
-        {
-            if (1 == _operationMode)
-            {
-                txtKhid.Text = string.IsNullOrWhiteSpace(txtKhmc.Text) ? "" : StringUtil.GetFirstPinyin(txtKhmc.Text);
-            }
-        }
-
-        private void txtBp_TextChanged(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(txtBp.Text))
-            {
-                txtBp.Text = ComValueResx.txtIntDefault;
-            }
-        }
-
-        private void txtArrearDay_TextChanged(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(txtArrearDay.Text))
-            {
-                txtArrearDay.Text = ComValueResx.txtIntDefault;
-            }
-        }
-
-        private void txtArrearMoney_TextChanged(object sender, EventArgs e)
-        {
-            if (string.IsNullOrWhiteSpace(txtArrearMoney.Text))
-            {
-                txtArrearMoney.Text = ComValueResx.txtIntDefault;
-            }
-        }
-
         private void btnDel_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrWhiteSpace(txtKhmc.Text))
@@ -156,62 +134,46 @@ namespace Sd.UI.Info.Customer
 
             _operationMode = 2;
 
-            var deleteKhxx =  _customerService.Find(u => u.khid.Contains(txtKhid.Text));
+            var deleteKhxx = _customerService.Find(u => u.khid.Contains(txtKhid.Text));
 
-            if (null != deleteKhxx)
+            if (null == deleteKhxx)
             {
-                if (_customerService.Delete(deleteKhxx))
-                {
-                    MessageBox.Show(MsgResx.delete_success, ComValueResx.confrim);
-
-                    var customer = _customerService.FindList(u => true, "khid", true);
-
-                    dgvCustomer.DataSource = customer.Select(u => new
-                    {
-                        客户编码 = u.khid,
-                        客户名称 = u.khmc,
-                        业务员 = u.ywy,
-                        种类 = u.zlmc,
-                        手机 = u.sj,
-                        电话 = u.tel,
-                        地址 = u.address,
-                        开户行 = u.khh,
-                        账号 = u.zh,
-                        税号 = u.sh,
-                        信誉额 = u.bp,
-                        欠款提醒期限 = u.arrearDay,
-                        欠款提醒额度 = u.arrearMoney,
-                        销售部 = u.xsbmc,
-                        销区名称 = u.xqmc,
-                        结算客户 = u.khmc, // TODO
-                        联系人 = u.lxr,
-                        邮编 = u.yb,
-                        邮箱 = u.email
-                    }).ToList();
-                }
-                else
-                {
-                    MessageBox.Show(MsgResx.delete_fail, ComValueResx.confrim);
-                }
+                MessageBox.Show(MsgResx.delete_check);
+                return;
             }
-        }
 
-        private void dgvCustomer_CellDoubleClick(object sender, DataGridViewCellEventArgs e)
-        {
-        }
-
-        private void btnSave_Click(object sender, EventArgs e)
-        {
-            switch (_operationMode)
+            if (_customerService.Delete(deleteKhxx))
             {
-                case 1:
-                    // 添加客户
-                    AddCustomer();
-                    break;
-                case 3:
-                    // 更新客户
-                    UpdateCustomer();
-                    break;
+                MessageBox.Show(MsgResx.delete_success, ComValueResx.confrim);
+
+                var customer = _customerService.FindList(u => true, "khid", true);
+
+                dgvCustomer.DataSource = customer.Select(u => new
+                {
+                    客户编码 = u.khid,
+                    客户名称 = u.khmc,
+                    业务员 = u.ywy,
+                    种类 = u.zlmc,
+                    手机 = u.sj,
+                    电话 = u.tel,
+                    地址 = u.address,
+                    开户行 = u.khh,
+                    账号 = u.zh,
+                    税号 = u.sh,
+                    信誉额 = u.bp,
+                    欠款提醒期限 = u.arrearDay,
+                    欠款提醒额度 = u.arrearMoney,
+                    销售部 = u.xsbmc,
+                    销区名称 = u.xqmc,
+                    结算客户 = u.khmc, // TODO
+                    联系人 = u.lxr,
+                    邮编 = u.yb,
+                    邮箱 = u.email
+                }).ToList();
+            }
+            else
+            {
+                MessageBox.Show(MsgResx.delete_fail, ComValueResx.confrim);
             }
         }
 
@@ -269,7 +231,7 @@ namespace Sd.UI.Info.Customer
                             else
                             {
                                 customer = string.IsNullOrWhiteSpace(txtTel.Text) ?
-                                    _customerService.FindList(u => true, "", true) : 
+                                    _customerService.FindList(u => true, "", true) :
                                     _customerService.FindList(u => u.tel.Contains(txtTel.Text), "", true);
                             }
                         }
@@ -300,6 +262,115 @@ namespace Sd.UI.Info.Customer
                 邮编 = u.yb,
                 邮箱 = u.email
             }).ToList();
+
+            dgvCustomer.ClearSelection();
+            SetCompetenceEnabled(true);
+
+        }
+
+        private void btnSave_Click(object sender, EventArgs e)
+        {
+            switch (_operationMode)
+            {
+                case 1:
+                    // 添加客户
+                    AddCustomer();
+                    break;
+                case 3:
+                    // 更新客户
+                    UpdateCustomer();
+                    break;
+            }
+        }
+
+        private void btnQuit_Click(object sender, EventArgs e)
+        {
+            _operationMode = 0;
+
+            btnAdd.Enabled = true;
+
+            btnDel.Enabled = true;
+
+            btnUpdate.Enabled = true;
+
+            btnSearch.Enabled = true;
+
+            SetCompetenceEnabled(true);
+
+            ClearFrm();
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            Close();
+        }
+
+        private void txtKhmc_TextChanged(object sender, EventArgs e)
+        {
+            if (1 == _operationMode)
+            {
+                txtKhid.Text = string.IsNullOrWhiteSpace(txtKhmc.Text) ? "" : StringUtil.GetFirstPinyin(txtKhmc.Text);
+            }
+        }
+
+        private void txtBp_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtBp.Text))
+            {
+                txtBp.Text = ComValueResx.txtIntDefault;
+            }
+        }
+
+        private void txtArrearDay_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtArrearDay.Text))
+            {
+                txtArrearDay.Text = ComValueResx.txtIntDefault;
+            }
+        }
+
+        private void txtArrearMoney_TextChanged(object sender, EventArgs e)
+        {
+            if (string.IsNullOrWhiteSpace(txtArrearMoney.Text))
+            {
+                txtArrearMoney.Text = ComValueResx.txtIntDefault;
+            }
+        }
+
+        private void dgvCustomer_SelectionChanged(object sender, EventArgs e)
+        {
+            if (0 >= dgvCustomer.SelectedRows.Count)
+            {
+                return;
+            }
+
+            SetCompetenceEnabled(false);
+
+            var dgvCustomerSelectedRow = dgvCustomer.SelectedRows[0];
+
+            txtKhmc.Text = dgvCustomerSelectedRow.Cells["客户名称"].Value.ToString();
+            txtKhid.Text = dgvCustomerSelectedRow.Cells["客户编码"].Value.ToString();
+            combZlmc.Text = dgvCustomerSelectedRow.Cells["种类"].Value.ToString();
+            combYwy.Text = dgvCustomerSelectedRow.Cells["业务员"].Value == null ? "" :
+                dgvCustomerSelectedRow.Cells["业务员"].Value.ToString();
+            combXsbmc.Text = dgvCustomerSelectedRow.Cells["销售部"].Value.ToString();
+            combJskhmc.Text = dgvCustomerSelectedRow.Cells["结算客户"].Value.ToString();
+            combXqmc.Text = dgvCustomerSelectedRow.Cells["销区名称"].Value.ToString();
+            txtBp.Text = dgvCustomerSelectedRow.Cells["信誉额"].Value == null ? "0" : dgvCustomerSelectedRow.Cells["信誉额"].Value.ToString();
+            txtSj.Text = dgvCustomerSelectedRow.Cells["手机"].Value.ToString();
+            txtTel.Text = dgvCustomerSelectedRow.Cells["电话"].Value.ToString();
+            txtAddress.Text = dgvCustomerSelectedRow.Cells["地址"].Value.ToString();
+            txtKhh.Text = dgvCustomerSelectedRow.Cells["开户行"].Value.ToString();
+            txtZh.Text = dgvCustomerSelectedRow.Cells["账号"].Value.ToString();
+            txtSh.Text = dgvCustomerSelectedRow.Cells["税号"].Value.ToString();
+            txtYb.Text = dgvCustomerSelectedRow.Cells["邮编"].Value.ToString();
+            txtArrearDay.Text = dgvCustomerSelectedRow.Cells["欠款提醒期限"].Value.ToString();
+            txtArrearMoney.Text = dgvCustomerSelectedRow.Cells["欠款提醒额度"].Value.ToString();
+            txtLxr.Text = dgvCustomerSelectedRow.Cells["联系人"].Value == null ? "" :
+                dgvCustomerSelectedRow.Cells["联系人"].Value.ToString();
+            txtEmail.Text = dgvCustomerSelectedRow.Cells["邮箱"].Value == null ? "" :
+                dgvCustomerSelectedRow.Cells["邮箱"].Value.ToString();
+
         }
 
         /// <summary>
@@ -380,6 +451,10 @@ namespace Sd.UI.Info.Customer
             };
         }
 
+        /// <summary>
+        /// 设置控件是否可用
+        /// </summary>
+        /// <param name="bEnabled">true：可用</param>
         private void SetCompetenceEnabled(bool bEnabled)
         {
             txtKhmc.Enabled = bEnabled;
@@ -400,60 +475,6 @@ namespace Sd.UI.Info.Customer
             txtLxr.Enabled = bEnabled;
             txtYb.Enabled = bEnabled;
             txtEmail.Enabled = bEnabled;
-        }
-
-        private void btnQuit_Click(object sender, EventArgs e)
-        {
-            _operationMode = 0;
-
-            btnAdd.Enabled = true;
-
-            btnDel.Enabled = true;
-
-            btnUpdate.Enabled = true;
-
-            btnSearch.Enabled = true;
-
-            SetCompetenceEnabled(true);
-
-            ClearFrm();
-            
-        }
-
-        private void dgvCustomer_SelectionChanged(object sender, EventArgs e)
-        {
-            if (0 >= dgvCustomer.SelectedRows.Count)
-            {
-                return;
-            }
-
-            SetCompetenceEnabled(false);
-
-            var dgvCustomerSelectedRow = dgvCustomer.SelectedRows[0];
-
-            txtKhmc.Text = dgvCustomerSelectedRow.Cells["客户名称"].Value.ToString();
-            txtKhid.Text = dgvCustomerSelectedRow.Cells["客户编码"].Value.ToString();
-            combZlmc.Text = dgvCustomerSelectedRow.Cells["种类"].Value.ToString();
-            combYwy.Text = dgvCustomerSelectedRow.Cells["业务员"].Value == null ? "" :
-                dgvCustomerSelectedRow.Cells["业务员"].Value.ToString();
-            combXsbmc.Text = dgvCustomerSelectedRow.Cells["销售部"].Value.ToString();
-            combJskhmc.Text = dgvCustomerSelectedRow.Cells["结算客户"].Value.ToString();
-            combXqmc.Text = dgvCustomerSelectedRow.Cells["销区名称"].Value.ToString();
-            txtBp.Text = dgvCustomerSelectedRow.Cells["信誉额"].Value.ToString();
-            txtSj.Text = dgvCustomerSelectedRow.Cells["手机"].Value.ToString();
-            txtTel.Text = dgvCustomerSelectedRow.Cells["电话"].Value.ToString();
-            txtAddress.Text = dgvCustomerSelectedRow.Cells["地址"].Value.ToString();
-            txtKhh.Text = dgvCustomerSelectedRow.Cells["开户行"].Value.ToString();
-            txtZh.Text = dgvCustomerSelectedRow.Cells["账号"].Value.ToString();
-            txtSh.Text = dgvCustomerSelectedRow.Cells["税号"].Value.ToString();
-            txtYb.Text = dgvCustomerSelectedRow.Cells["邮编"].Value.ToString();
-            txtArrearDay.Text = dgvCustomerSelectedRow.Cells["欠款提醒期限"].Value.ToString();
-            txtArrearMoney.Text = dgvCustomerSelectedRow.Cells["欠款提醒额度"].Value.ToString();
-            txtLxr.Text = dgvCustomerSelectedRow.Cells["联系人"].Value == null ? "" :
-                dgvCustomerSelectedRow.Cells["联系人"].Value.ToString();
-            txtEmail.Text = dgvCustomerSelectedRow.Cells["邮箱"].Value == null ? "" :
-                dgvCustomerSelectedRow.Cells["邮箱"].Value.ToString();
-            
         }
 
         /// <summary>

@@ -86,6 +86,12 @@
     <Compile Include="Info\Department\BigDepartmnetFrm.Designer.cs">
       <DependentUpon>BigDepartmnetFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Info\Goods\GoodsFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Info\Goods\GoodsFrm.Designer.cs">
+      <DependentUpon>GoodsFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="LoginFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -130,6 +136,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Info\Department\BigDepartmnetFrm.resx">
       <DependentUpon>BigDepartmnetFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Info\Goods\GoodsFrm.resx">
+      <DependentUpon>GoodsFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="LoginFrm.resx">
       <DependentUpon>LoginFrm.cs</DependentUpon>
@@ -237,7 +246,7 @@
     <None Include="img\loginbag.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Info\Goods\" />
+    <Folder Include="Info\Supply\" />
     <Folder Include="Onroad\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

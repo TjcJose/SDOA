@@ -35,5 +35,13 @@ namespace Sd.Model
         public virtual DbSet<xsbxx> xsbxx { get; set; }
         public virtual DbSet<zyxx> zyxx { get; set; }
         public virtual DbSet<xqxx> xqxx { get; set; }
+        public virtual DbSet<spxx> spxx { get; set; }
+        public virtual DbSet<spPmlb> spPmlb { get; set; }
+        public virtual DbSet<cpxllx> cpxllx { get; set; }
+        public virtual DbSet<jldwb> jldwb { get; set; }
+        public virtual DbSet<ggxxb> ggxxb { get; set; }
+        public virtual DbSet<cpxl> cpxl { get; set; }
+        public virtual DbSet<ghsxx> ghsxx { get; set; }
+        public virtual DbSet<spfl> spfl { get; set; }
     }
 }

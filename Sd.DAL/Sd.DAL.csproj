@@ -48,6 +48,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BaseDal.cs" />
+    <Compile Include="SupplyDal.cs" />
+    <Compile Include="GoodsDal.cs" />
     <Compile Include="DepartmentDal.cs" />
     <Compile Include="DbContextFactory.cs" />
     <Compile Include="DbSession.cs" />

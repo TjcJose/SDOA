@@ -106,7 +106,7 @@ namespace Sd.UI.Properties {
         }
         
         /// <summary>
-        ///   查找类似 删除失败，请检查字段后重试。 的本地化字符串。
+        ///   查找类似 删除失败，别的表是否正在使用，请检查字段后重试。 的本地化字符串。
         /// </summary>
         internal static string delete_fail {
             get {
@@ -169,7 +169,7 @@ namespace Sd.UI.Properties {
         }
         
         /// <summary>
-        ///   查找类似 修改失败，请检查字段后重试。 的本地化字符串。
+        ///   查找类似 修改失败，该数据可能已被删除，请检查字段后重试。 的本地化字符串。
         /// </summary>
         internal static string update_fail {
             get {

@@ -57,7 +57,22 @@
     <Compile Include="CompetenceSet.cs">
       <DependentUpon>Server.tt</DependentUpon>
     </Compile>
+    <Compile Include="cpxl.cs">
+      <DependentUpon>Server.tt</DependentUpon>
+    </Compile>
+    <Compile Include="cpxllx.cs">
+      <DependentUpon>Server.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ggxxb.cs">
+      <DependentUpon>Server.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ghsxx.cs">
+      <DependentUpon>Server.tt</DependentUpon>
+    </Compile>
     <Compile Include="gsxx.cs">
+      <DependentUpon>Server.tt</DependentUpon>
+    </Compile>
+    <Compile Include="jldwb.cs">
       <DependentUpon>Server.tt</DependentUpon>
     </Compile>
     <Compile Include="khxx.cs">
@@ -82,6 +97,15 @@
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
       <DependentUpon>Server.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="spfl.cs">
+      <DependentUpon>Server.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spPmlb.cs">
+      <DependentUpon>Server.tt</DependentUpon>
+    </Compile>
+    <Compile Include="spxx.cs">
+      <DependentUpon>Server.tt</DependentUpon>
     </Compile>
     <Compile Include="UserGroup.cs">
       <DependentUpon>Server.tt</DependentUpon>

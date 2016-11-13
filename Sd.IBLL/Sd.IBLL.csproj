@@ -42,6 +42,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IBaseService.cs" />
+    <Compile Include="ISupplyService.cs" />
+    <Compile Include="IGoodsService.cs" />
     <Compile Include="IDepartmentService.cs" />
     <Compile Include="ICustomerService.cs" />
     <Compile Include="ISystemProfilesService.cs" />

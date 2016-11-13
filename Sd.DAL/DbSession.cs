@@ -156,6 +156,126 @@ namespace Sd.DAL
                 return new BigDepartmentDal();
             }
         }
+
+        /// <summary>
+        /// 商品信息
+        /// <remarks>
+        /// 创建：2016.11.11 高振亮<br />
+        /// 修改：2016.11.11 高振亮
+        /// </remarks>
+        /// </summary>
+        public static IGoodsDal GoodsDal
+        {
+            get
+            {
+                return new GoodsDal();
+            }
+        }
+
+        /// <summary>
+        /// 商品品牌
+        /// <remarks>
+        /// 创建：2016.11.11 高振亮<br />
+        /// 修改：2016.11.11 高振亮
+        /// </remarks>
+        /// </summary>
+        public static ISpPpDal SpPpDal
+        {
+            get
+            {
+                return new SpPpDal();
+            }
+        }
+
+        /// <summary>
+        /// 产品系列
+        /// <remarks>
+        /// 创建：2016.11.11 高振亮<br />
+        /// 修改：2016.11.11 高振亮
+        /// </remarks>
+        /// </summary>
+        public static ICpXlDal CpXlDal
+        {
+            get
+            {
+                return new CpXlDal();
+            }
+        }
+
+        /// <summary>
+        /// 产品系列类型
+        /// <remarks>
+        /// 创建：2016.11.11 高振亮<br />
+        /// 修改：2016.11.11 高振亮
+        /// </remarks>
+        /// </summary>
+        public static ICpXlLxDal CpXlLxDal
+        {
+            get
+            {
+                return new CpXlLxDal();
+            }
+        }
+
+        /// <summary>
+        /// 商品计量单位
+        /// <remarks>
+        /// 创建：2016.11.11 高振亮<br />
+        /// 修改：2016.11.11 高振亮
+        /// </remarks>
+        /// </summary>
+        public static IJlDwbDal JlDwbDal
+        {
+            get
+            {
+                return new JlDwbDal();
+            }
+        }
+
+        /// <summary>
+        /// 商品分类
+        /// <remarks>
+        /// 创建：2016.11.12 高振亮<br />
+        /// 修改：2016.11.12 高振亮
+        /// </remarks>
+        /// </summary>
+        public static ISpflDal SpflDal
+        {
+            get
+            {
+                return new SpflDal();
+            }
+        }
+
+        /// <summary>
+        /// 产品规格
+        /// <remarks>
+        /// 创建：2016.11.13 高振亮<br />
+        /// 修改：2016.11.13 高振亮
+        /// </remarks>
+        /// </summary>
+        public static IGgxxbDal GgxxbDal
+        {
+            get
+            {
+                return new GgxxbDal();
+            }
+        }
+
+        /// <summary>
+        /// 供货商信息
+        /// <remarks>
+        /// 创建：2016.11.13 高振亮<br />
+        /// 修改：2016.11.13 高振亮
+        /// </remarks>
+        /// </summary>
+        public static IGhsxxDal GhsxxDal
+        {
+            get
+            {
+                return new GhsxxDal();
+            }
+        }
         #endregion
     }
 }

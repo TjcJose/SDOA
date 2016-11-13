@@ -81,7 +81,7 @@ namespace Sd.DAL
             {
                 return DContext.SaveChanges() > 0;
             }
-            catch (Exception)
+            catch (Exception e)
             {
                 DContext.Dispose();
 

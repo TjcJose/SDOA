@@ -2,6 +2,7 @@
 using System.Windows.Forms;
 using Sd.UI.Info.Customer;
 using Sd.UI.Info.Department;
+using Sd.UI.Info.Goods;
 using Sd.UI.SystemAdmin;
 
 namespace Sd.UI
@@ -31,16 +32,22 @@ namespace Sd.UI
             authorityFrm.ShowDialog();
         }
 
-        private void 客户ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            var customerFrm = new CustomerFrm();
-            customerFrm.ShowDialog();
-        }
-
         private void 大部门ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             var bigDepartmnetFrm = new BigDepartmnetFrm();
             bigDepartmnetFrm.ShowDialog();
+        }
+
+        private void 商品信息ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var goodsFrm = new GoodsFrm();
+            goodsFrm.ShowDialog();
+        }
+
+        private void 客户信息ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var customerFrm = new CustomerFrm();
+            customerFrm.ShowDialog();
         }
     }
 }

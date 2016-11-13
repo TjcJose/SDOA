@@ -133,7 +133,7 @@
     <value>该数据已经被删除。</value>
   </data>
   <data name="delete_fail" xml:space="preserve">
-    <value>删除失败，请检查字段后重试。</value>
+    <value>删除失败，别的表是否正在使用，请检查字段后重试。</value>
   </data>
   <data name="delete_success" xml:space="preserve">
     <value>删除成功！</value>
@@ -154,7 +154,7 @@
     <value>用户名或密码不能为空！</value>
   </data>
   <data name="update_fail" xml:space="preserve">
-    <value>修改失败，请检查字段后重试。</value>
+    <value>修改失败，该数据可能已被删除，请检查字段后重试。</value>
   </data>
   <data name="update_success" xml:space="preserve">
     <value>修改成功！</value>
