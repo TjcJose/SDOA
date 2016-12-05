@@ -4,7 +4,7 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="59078b6179ab4a24bc3f2ddb5af09204" Name="Diagram1" ZoomLevel="92" >
+      <Diagram DiagramId="59078b6179ab4a24bc3f2ddb5af09204" Name="Diagram1" ZoomLevel="106" >
         <EntityTypeShape EntityType="ccxnfModel.UserGroup" Width="1.5" PointX="2.25" PointY="4" />
         <EntityTypeShape EntityType="ccxnfModel.gsxx" Width="1.5" PointX="7.25" PointY="0.5" />
         <EntityTypeShape EntityType="ccxnfModel.CompetenceSet" Width="1.5" PointX="2.25" PointY="0.5" />
@@ -18,7 +18,6 @@
         <EntityTypeShape EntityType="ccxnfModel.xsbxx" Width="1.5" PointX="8.875" PointY="0.5" />
         <EntityTypeShape EntityType="ccxnfModel.zyxx" Width="1.5" PointX="7.25" PointY="6.5" />
         <EntityTypeShape EntityType="ccxnfModel.xqxx" Width="1.5" PointX="5.625" PointY="8.75" />
-        <EntityTypeShape EntityType="ccxnfModel.spxx" Width="1.5" PointX="10.5" PointY="0.5" />
         <EntityTypeShape EntityType="ccxnfModel.spPmlb" Width="1.5" PointX="8.875" PointY="10.625" />
         <EntityTypeShape EntityType="ccxnfModel.cpxllx" Width="1.5" PointX="8.875" PointY="13.25" />
         <EntityTypeShape EntityType="ccxnfModel.jldwb" Width="1.5" PointX="8.875" PointY="18" />
@@ -26,6 +25,12 @@
         <EntityTypeShape EntityType="ccxnfModel.cpxl" Width="1.5" PointX="8.875" PointY="15.75" />
         <EntityTypeShape EntityType="ccxnfModel.ghsxx" Width="1.5" PointX="0.5" PointY="10.625" />
         <EntityTypeShape EntityType="ccxnfModel.spfl" Width="1.5" PointX="8.875" PointY="23.25" />
+        <EntityTypeShape EntityType="ccxnfModel.xsd" Width="1.5" PointX="11" PointY="0.5" />
+        <EntityTypeShape EntityType="ccxnfModel.xsdmx" Width="1.5" PointX="13" PointY="0.5" />
+        <AssociationConnector Association="ccxnfModel.FK__xsd__xsbid__0A688BB1" />
+        <AssociationConnector Association="ccxnfModel.FK__xsdmx__xsdid__1F63A897" />
+        <EntityTypeShape EntityType="ccxnfModel.spxx" Width="1.5" PointX="14.875" PointY="0.5" />
+        <AssociationConnector Association="ccxnfModel.FK__xsdmx__spid__1E6F845E" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

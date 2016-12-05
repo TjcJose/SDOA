@@ -14,6 +14,11 @@ namespace Sd.Model
     
     public partial class xsbxx
     {
+        public xsbxx()
+        {
+            this.xsd = new HashSet<xsd>();
+        }
+    
         public string xsbid { get; set; }
         public string xsbmc { get; set; }
         public string bz { get; set; }
@@ -61,5 +66,7 @@ namespace Sd.Model
         public string bmfzr { get; set; }
         public Nullable<decimal> fzrzkl { get; set; }
         public string stopsign { get; set; }
+    
+        public virtual ICollection<xsd> xsd { get; set; }
     }
 }

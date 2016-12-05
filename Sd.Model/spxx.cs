@@ -14,6 +14,11 @@ namespace Sd.Model
     
     public partial class spxx
     {
+        public spxx()
+        {
+            this.xsdmx = new HashSet<xsdmx>();
+        }
+    
         public string spid { get; set; }
         public string dw { get; set; }
         public decimal xs { get; set; }
@@ -337,5 +342,7 @@ namespace Sd.Model
         public string NoStandardSign { get; set; }
         public string sanitationNosetFlag { get; set; }
         public Nullable<int> CpfljgLsh { get; set; }
+    
+        public virtual ICollection<xsdmx> xsdmx { get; set; }
     }
 }

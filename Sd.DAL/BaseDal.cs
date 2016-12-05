@@ -83,6 +83,7 @@ namespace Sd.DAL
             }
             catch (Exception e)
             {
+
                 DContext.Dispose();
 
                 DContext = DbContextFactory.ResetCurrentContext();

@@ -688,6 +688,196 @@
           <Property Name="fzrzkl" Type="decimal" Precision="12" Scale="7" />
           <Property Name="stopsign" Type="char" MaxLength="1" />
         </EntityType>
+        <EntityType Name="xsd">
+          <Key>
+            <PropertyRef Name="xsdid" />
+          </Key>
+          <Property Name="xsdid" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="xsbid" Type="char" MaxLength="8" Nullable="false" />
+          <Property Name="xsrq" Type="datetime" />
+          <Property Name="khid" Type="char" MaxLength="8" Nullable="false" />
+          <Property Name="yyy" Type="char" MaxLength="8" />
+          <Property Name="ywy" Type="char" MaxLength="8" />
+          <Property Name="zl" Type="char" MaxLength="6" />
+          <Property Name="shr" Type="char" MaxLength="8" />
+          <Property Name="syy" Type="char" MaxLength="8" />
+          <Property Name="kpy" Type="char" MaxLength="8" />
+          <Property Name="fzr" Type="char" MaxLength="8" />
+          <Property Name="czy" Type="char" MaxLength="8" />
+          <Property Name="zje" Type="money" Nullable="false" />
+          <Property Name="xj" Type="money" />
+          <Property Name="zz" Type="money" />
+          <Property Name="ys" Type="money" />
+          <Property Name="yus" Type="money" />
+          <Property Name="qt" Type="money" />
+          <Property Name="zph" Type="char" MaxLength="12" />
+          <Property Name="sr" Type="money" />
+          <Property Name="flag" Type="char" MaxLength="1" />
+          <Property Name="khmc" Type="char" MaxLength="20" />
+          <Property Name="sgzphid" Type="char" MaxLength="30" />
+          <Property Name="bz" Type="varchar" MaxLength="50" />
+          <Property Name="xscj" Type="char" MaxLength="8" />
+          <Property Name="xscjl" Type="decimal" Precision="12" Scale="7" />
+          <Property Name="bcxsdid" Type="char" MaxLength="10" />
+          <Property Name="xqid" Type="char" MaxLength="12" />
+          <Property Name="scid" Type="char" MaxLength="12" />
+          <Property Name="xqmc" Type="char" MaxLength="20" />
+          <Property Name="scmc" Type="char" MaxLength="20" />
+          <Property Name="zzl" Type="money" />
+          <Property Name="xszpyk" Type="money" />
+          <Property Name="czlx" Type="varchar" MaxLength="10" />
+          <Property Name="hshkdid" Type="char" MaxLength="10" />
+          <Property Name="ejkh" Type="varchar" MaxLength="50" />
+          <Property Name="tel" Type="char" MaxLength="30" />
+          <Property Name="address" Type="varchar" MaxLength="80" />
+          <Property Name="bmid" Type="varchar" MaxLength="20" />
+          <Property Name="bmmc" Type="varchar" MaxLength="18" />
+          <Property Name="ddh" Type="varchar" MaxLength="15" />
+          <Property Name="fy_yf" Type="money" />
+          <Property Name="y_ysr" Type="varchar" MaxLength="20" />
+          <Property Name="fy_byf" Type="money" />
+          <Property Name="y_byr" Type="varchar" MaxLength="20" />
+          <Property Name="fy_jgf" Type="money" />
+          <Property Name="y_jgs" Type="varchar" MaxLength="20" />
+          <Property Name="fy_hk" Type="money" />
+          <Property Name="y_hkr" Type="varchar" MaxLength="20" />
+          <Property Name="hkl" Type="decimal" Precision="8" Scale="3" />
+          <Property Name="fy_qt" Type="money" />
+          <Property Name="fy_fyhj" Type="money" />
+          <Property Name="dnddh" Type="varchar" MaxLength="10" />
+          <Property Name="spjsbz" Type="varchar" MaxLength="2" />
+          <Property Name="xsjetzr" Type="varchar" MaxLength="10" />
+          <Property Name="fkr" Type="varchar" MaxLength="10" />
+          <Property Name="ysbm" Type="varchar" MaxLength="20" />
+          <Property Name="ysdh" Type="varchar" MaxLength="25" />
+          <Property Name="driver" Type="varchar" MaxLength="10" />
+          <Property Name="sjdh" Type="varchar" MaxLength="25" />
+          <Property Name="xh" Type="varchar" MaxLength="25" />
+          <Property Name="fh" Type="varchar" MaxLength="20" />
+          <Property Name="bz2" Type="varchar" MaxLength="100" />
+          <Property Name="fhrq" Type="datetime" />
+          <Property Name="zzzh" Type="varchar" MaxLength="40" />
+          <Property Name="kpze" Type="money" />
+          <Property Name="jskhid" Type="varchar" MaxLength="20" />
+          <Property Name="ysjzbz" Type="char" MaxLength="1" />
+          <Property Name="sjsid" Type="varchar" MaxLength="20" Nullable="false" />
+          <Property Name="shdd" Type="varchar" MaxLength="30" />
+          <Property Name="fw" Type="varchar" MaxLength="30" />
+          <Property Name="ch" Type="varchar" MaxLength="30" />
+          <Property Name="print_bz" Type="char" MaxLength="2" />
+          <Property Name="cwflag" Type="char" MaxLength="1" />
+          <Property Name="wdthSign" Type="char" MaxLength="1" />
+          <Property Name="cwSaveSign" Type="char" MaxLength="1" />
+          <Property Name="xstime" Type="varchar" MaxLength="8" />
+          <Property Name="sdr" Type="char" MaxLength="8" />
+          <Property Name="sgddh" Type="varchar" MaxLength="40" />
+          <Property Name="printCount" Type="int" />
+          <Property Name="zzkl" Type="decimal" Precision="19" Scale="7" />
+          <Property Name="bzze" Type="money" />
+          <Property Name="ssze" Type="money" />
+          <Property Name="qk" Type="money" />
+          <Property Name="ydj" Type="money" />
+          <Property Name="xjzje" Type="money" />
+          <Property Name="kdqzsyk" Type="money" />
+          <Property Name="wshxsys" Type="money" />
+          <Property Name="kdhzsyk" Type="money" />
+          <Property Name="khxyd" Type="money" />
+          <Property Name="kdqddyk" Type="money" />
+          <Property Name="kdhddyk" Type="money" />
+          <Property Name="czyqx" Type="money" />
+          <Property Name="kdqssyk" Type="money" />
+          <Property Name="kqjye" Type="money" />
+          <Property Name="hkwse" Type="money" />
+          <Property Name="mpssm" Type="char" MaxLength="500" />
+          <Property Name="kdqssyk_dd" Type="money" />
+          <Property Name="kdhssyk_dd" Type="money" />
+          <Property Name="hkwse_dd" Type="money" />
+          <Property Name="wshxsys_dd" Type="money" />
+          <Property Name="fyzczh" Type="varchar" MaxLength="40" />
+          <Property Name="fysh_flag" Type="char" MaxLength="1" />
+          <Property Name="fy_sdr" Type="char" MaxLength="8" />
+          <Property Name="fy_czy" Type="char" MaxLength="8" />
+          <Property Name="hjzje" Type="money" />
+          <Property Name="zczje" Type="money" />
+          <Property Name="bz3" Type="varchar" MaxLength="200" />
+          <Property Name="bz_czy" Type="char" MaxLength="8" />
+          <Property Name="kzl" Type="money" />
+          <Property Name="SZzl" Type="money" />
+          <Property Name="Szl" Type="money" />
+          <Property Name="CzL" Type="money" />
+          <Property Name="QkHkrq" Type="datetime" />
+          <Property Name="QkQrRq" Type="datetime" />
+          <Property Name="QkQrCzy" Type="varchar" MaxLength="8" />
+          <Property Name="QkWkjsr" Type="varchar" MaxLength="8" />
+          <Property Name="QkJqFlag" Type="varchar" MaxLength="2" />
+          <Property Name="jxtcl" Type="decimal" Precision="19" Scale="7" />
+          <Property Name="TcCzy" Type="varchar" MaxLength="8" />
+        </EntityType>
+        <EntityType Name="xsdmx">
+          <Key>
+            <PropertyRef Name="xsdlsh" />
+          </Key>
+          <Property Name="xsdlsh" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="xsdid" Type="char" MaxLength="10" Nullable="false" />
+          <Property Name="spid" Type="char" MaxLength="40" Nullable="false" />
+          <Property Name="dw" Type="char" MaxLength="4" />
+          <Property Name="kqid" Type="char" MaxLength="8" Nullable="false" />
+          <Property Name="xsdj" Type="decimal" Precision="12" Scale="7" Nullable="false" />
+          <Property Name="xssl" Type="decimal" Precision="12" Scale="2" Nullable="false" />
+          <Property Name="xsje" Type="money" Nullable="false" />
+          <Property Name="dwcb" Type="decimal" Precision="12" Scale="7" />
+          <Property Name="zhxs" Type="int" />
+          <Property Name="zhps" Type="decimal" Precision="6" Scale="2" />
+          <Property Name="fhr" Type="char" MaxLength="8" />
+          <Property Name="bz" Type="char" MaxLength="6" />
+          <Property Name="xs" Type="decimal" Precision="8" Scale="4" />
+          <Property Name="flag" Type="char" MaxLength="1" />
+          <Property Name="xsxj" Type="decimal" Precision="12" Scale="7" />
+          <Property Name="dwkg" Type="decimal" Precision="7" Scale="4" />
+          <Property Name="color" Type="char" MaxLength="30" Nullable="false" />
+          <Property Name="xsxl" Type="decimal" Precision="9" Scale="3" />
+          <Property Name="yxsdj" Type="decimal" Precision="12" Scale="7" />
+          <Property Name="yxsje" Type="money" />
+          <Property Name="dhsl" Type="decimal" Precision="12" Scale="2" />
+          <Property Name="xsdhdid" Type="char" MaxLength="10" />
+          <Property Name="dhcolor" Type="varchar" MaxLength="30" />
+          <Property Name="dhkqid" Type="varchar" MaxLength="8" />
+          <Property Name="dhdj" Type="decimal" Precision="12" Scale="7" />
+          <Property Name="spjsbz" Type="varchar" MaxLength="2" />
+          <Property Name="hshkdid" Type="varchar" MaxLength="10" />
+          <Property Name="srl" Type="decimal" Precision="12" Scale="7" />
+          <Property Name="xsjetzbz" Type="smallint" />
+          <Property Name="zdxj" Type="decimal" Precision="19" Scale="7" />
+          <Property Name="dbj" Type="decimal" Precision="19" Scale="7" />
+          <Property Name="fhjysl" Type="decimal" Precision="19" Scale="2" />
+          <Property Name="kpe" Type="money" />
+          <Property Name="fsmc" Type="varchar" MaxLength="50" />
+          <Property Name="zkl" Type="decimal" Precision="19" Scale="7" />
+          <Property Name="yxsdmxlsh" Type="int" />
+          <Property Name="xsxl1" Type="decimal" Precision="9" Scale="3" />
+          <Property Name="xsxl2" Type="decimal" Precision="9" Scale="3" />
+          <Property Name="xsdhdmxlsh" Type="int" />
+          <Property Name="shdwcb" Type="decimal" Precision="12" Scale="7" />
+          <Property Name="tsxsdj" Type="decimal" Precision="12" Scale="7" />
+          <Property Name="NoStandardSign" Type="char" MaxLength="1" />
+          <Property Name="ydhsl" Type="decimal" Precision="12" Scale="2" />
+          <Property Name="fkcFlag" Type="char" MaxLength="2" />
+          <Property Name="NewNodeName" Type="varchar" MaxLength="40" />
+          <Property Name="OldNodeName" Type="varchar" MaxLength="40" />
+          <Property Name="xshFlag" Type="char" MaxLength="2" />
+          <Property Name="bhcolor" Type="char" MaxLength="30" />
+          <Property Name="mxbz" Type="char" MaxLength="50" />
+          <Property Name="xscolor" Type="varchar" MaxLength="150" />
+          <Property Name="zcdj" Type="decimal" Precision="19" Scale="7" />
+          <Property Name="zcje" Type="money" />
+          <Property Name="gg" Type="char" MaxLength="30" />
+          <Property Name="tphkdj" Type="decimal" Precision="19" Scale="7" />
+          <Property Name="tphkje" Type="money" />
+          <Property Name="cjsl" Type="decimal" Precision="12" Scale="2" />
+          <Property Name="scrq2" Type="char" MaxLength="10" />
+          <Property Name="CgspFlag" Type="char" MaxLength="2" />
+          <Property Name="jhddh" Type="varchar" MaxLength="100" />
+        </EntityType>
         <EntityType Name="zlb">
           <Key>
             <PropertyRef Name="zldm" />
@@ -760,6 +950,42 @@
           <Property Name="xye" Type="money" />
           <Property Name="xyeflag" Type="char" MaxLength="1" />
         </EntityType>
+        <Association Name="FK__xsd__xsbid__0A688BB1">
+          <End Role="xsbxx" Type="Self.xsbxx" Multiplicity="1" />
+          <End Role="xsd" Type="Self.xsd" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="xsbxx">
+              <PropertyRef Name="xsbid" />
+            </Principal>
+            <Dependent Role="xsd">
+              <PropertyRef Name="xsbid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__xsdmx__spid__1E6F845E">
+          <End Role="spxx" Type="Self.spxx" Multiplicity="1" />
+          <End Role="xsdmx" Type="Self.xsdmx" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="spxx">
+              <PropertyRef Name="spid" />
+            </Principal>
+            <Dependent Role="xsdmx">
+              <PropertyRef Name="spid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__xsdmx__xsdid__1F63A897">
+          <End Role="xsd" Type="Self.xsd" Multiplicity="1" />
+          <End Role="xsdmx" Type="Self.xsdmx" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="xsd">
+              <PropertyRef Name="xsdid" />
+            </Principal>
+            <Dependent Role="xsdmx">
+              <PropertyRef Name="xsdid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <Association Name="FK_COMPETEN_REFERENCE_COMPETEN">
           <End Role="CompetenceSet" Type="Self.CompetenceSet" Multiplicity="0..1" />
           <End Role="CompetenceSet1" Type="Self.CompetenceSet" Multiplicity="*" />
@@ -820,6 +1046,11 @@
             </Dependent>
           </ReferentialConstraint>
         </Association>
+        <Function Name="proc_PH" Aggregate="false" BuiltIn="false" NiladicFunction="false" IsComposable="false" ParameterTypeSemantics="AllowImplicitConversion" Schema="dbo">
+          <Parameter Name="djlb" Type="char" Mode="In" />
+          <Parameter Name="xsbmc" Type="char" Mode="In" />
+          <Parameter Name="result" Type="char" Mode="InOut" />
+        </Function>
         <EntityContainer Name="ccxnfModelStoreContainer">
           <EntitySet Name="bigDepartment" EntityType="Self.bigDepartment" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="CompetenceSet" EntityType="Self.CompetenceSet" Schema="dbo" store:Type="Tables" />
@@ -839,8 +1070,22 @@
           <EntitySet Name="UserGroup" EntityType="Self.UserGroup" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="xqxx" EntityType="Self.xqxx" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="xsbxx" EntityType="Self.xsbxx" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="xsd" EntityType="Self.xsd" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="xsdmx" EntityType="Self.xsdmx" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="zlb" EntityType="Self.zlb" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="zyxx" EntityType="Self.zyxx" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK__xsd__xsbid__0A688BB1" Association="Self.FK__xsd__xsbid__0A688BB1">
+            <End Role="xsbxx" EntitySet="xsbxx" />
+            <End Role="xsd" EntitySet="xsd" />
+          </AssociationSet>
+          <AssociationSet Name="FK__xsdmx__spid__1E6F845E" Association="Self.FK__xsdmx__spid__1E6F845E">
+            <End Role="spxx" EntitySet="spxx" />
+            <End Role="xsdmx" EntitySet="xsdmx" />
+          </AssociationSet>
+          <AssociationSet Name="FK__xsdmx__xsdid__1F63A897" Association="Self.FK__xsdmx__xsdid__1F63A897">
+            <End Role="xsd" EntitySet="xsd" />
+            <End Role="xsdmx" EntitySet="xsdmx" />
+          </AssociationSet>
           <AssociationSet Name="FK_COMPETEN_REFERENCE_COMPETEN" Association="Self.FK_COMPETEN_REFERENCE_COMPETEN">
             <End Role="CompetenceSet" EntitySet="CompetenceSet" />
             <End Role="CompetenceSet1" EntitySet="CompetenceSet" />
@@ -889,7 +1134,6 @@
           <EntitySet Name="xsbxx" EntityType="ccxnfModel.xsbxx" />
           <EntitySet Name="zyxx" EntityType="ccxnfModel.zyxx" />
           <EntitySet Name="xqxx" EntityType="ccxnfModel.xqxx" />
-          <EntitySet Name="spxx" EntityType="ccxnfModel.spxx" />
           <EntitySet Name="spPmlb" EntityType="ccxnfModel.spPmlb" />
           <EntitySet Name="cpxllx" EntityType="ccxnfModel.cpxllx" />
           <EntitySet Name="jldwb" EntityType="ccxnfModel.jldwb" />
@@ -897,6 +1141,26 @@
           <EntitySet Name="cpxl" EntityType="ccxnfModel.cpxl" />
           <EntitySet Name="ghsxx" EntityType="ccxnfModel.ghsxx" />
           <EntitySet Name="spfl" EntityType="ccxnfModel.spfl" />
+          <EntitySet Name="xsd" EntityType="ccxnfModel.xsd" />
+          <EntitySet Name="xsdmx" EntityType="ccxnfModel.xsdmx" />
+          <AssociationSet Name="FK__xsd__xsbid__0A688BB1" Association="ccxnfModel.FK__xsd__xsbid__0A688BB1">
+            <End Role="xsbxx" EntitySet="xsbxx" />
+            <End Role="xsd" EntitySet="xsd" />
+          </AssociationSet>
+          <AssociationSet Name="FK__xsdmx__xsdid__1F63A897" Association="ccxnfModel.FK__xsdmx__xsdid__1F63A897">
+            <End Role="xsd" EntitySet="xsd" />
+            <End Role="xsdmx" EntitySet="xsdmx" />
+          </AssociationSet>
+          <EntitySet Name="spxx" EntityType="ccxnfModel.spxx" />
+          <AssociationSet Name="FK__xsdmx__spid__1E6F845E" Association="ccxnfModel.FK__xsdmx__spid__1E6F845E">
+            <End Role="spxx" EntitySet="spxx" />
+            <End Role="xsdmx" EntitySet="xsdmx" />
+          </AssociationSet>
+          <FunctionImport Name="proc_PH" ReturnType="Collection(String)">
+            <Parameter Name="djlb" Mode="In" Type="String" />
+            <Parameter Name="xsbmc" Mode="In" Type="String" />
+            <Parameter Name="result" Mode="InOut" Type="String" />
+          </FunctionImport>
         </EntityContainer>
         <EntityType Name="UserGroup">
           <Key>
@@ -1180,6 +1444,7 @@
           <Property Name="bmfzr" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
           <Property Name="fzrzkl" Type="Decimal" Precision="12" Scale="7" />
           <Property Name="stopsign" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <NavigationProperty Name="xsd" Relationship="ccxnfModel.FK__xsd__xsbid__0A688BB1" FromRole="xsbxx" ToRole="xsd" />
         </EntityType>
         <EntityType Name="zyxx">
           <Key>
@@ -1233,6 +1498,326 @@
           <Property Name="pym" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
           <Property Name="pxbm" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
         </EntityType>
+        <EntityType Name="spPmlb">
+          <Key>
+            <PropertyRef Name="pmmc" />
+          </Key>
+          <Property Name="pmmc" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="pmbm" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="pym" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="pxbm" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="jgflag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="pmzkl" Type="Decimal" Precision="12" Scale="7" />
+          <Property Name="pmfzr" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="fzrzkl" Type="Decimal" Precision="12" Scale="7" />
+        </EntityType>
+        <EntityType Name="cpxllx">
+          <Key>
+            <PropertyRef Name="lsh" />
+          </Key>
+          <Property Name="lsh" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="cpxllxbm" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="cpxllxmc" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="pym" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="pxbm" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="xshpm" Type="Decimal" Precision="12" Scale="7" />
+          <Property Name="zcfhs_flag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="jldwb">
+          <Key>
+            <PropertyRef Name="dwdm" />
+          </Key>
+          <Property Name="dwdm" Type="String" Nullable="false" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Name="dw" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Name="pym" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="pxbm" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="ggxxb">
+          <Key>
+            <PropertyRef Name="gg" />
+          </Key>
+          <Property Name="gg" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="cphgl" Type="Decimal" Precision="12" Scale="4" />
+          <Property Name="yjl" Type="Decimal" Precision="12" Scale="4" />
+          <Property Name="rcl" Type="Decimal" Precision="12" Scale="4" />
+          <Property Name="clj" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="clf" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="ccjs" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="zlj" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="zlf" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="zdxj" Type="Decimal" Precision="19" Scale="6" />
+          <Property Name="zxdj" Type="Decimal" Precision="12" Scale="6" />
+          <Property Name="pxbm" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="cpxl">
+          <Key>
+            <PropertyRef Name="lsh" />
+          </Key>
+          <Property Name="lsh" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="cpxlbm" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="cpxlmc" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="pym" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="pxbm" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="cpxllxmc" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="ghsxx">
+          <Key>
+            <PropertyRef Name="ghsid" />
+          </Key>
+          <Property Name="ghsid" Type="String" Nullable="false" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="ghsmc" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="tel" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="bp" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="sj" Type="String" MaxLength="14" FixedLength="true" Unicode="false" />
+          <Property Name="lxr" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="address" Type="String" MaxLength="40" FixedLength="true" Unicode="false" />
+          <Property Name="yb" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="pydm" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="zh" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="khh" Type="String" MaxLength="40" FixedLength="true" Unicode="false" />
+          <Property Name="sh" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="email" Type="String" MaxLength="18" FixedLength="true" Unicode="false" />
+          <Property Name="ghsqc" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="ghspj" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="clghsFlag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="ghsjb" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="pym" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="pxbm" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="khFlag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="khid" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ghsFlag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="jsghsid" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="StopSign" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="jslx" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+        </EntityType>
+        <EntityType Name="spfl">
+          <Key>
+            <PropertyRef Name="lsh" />
+          </Key>
+          <Property Name="lsh" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="spflbm" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="spflmc" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="pym" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="pxbm" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+        </EntityType>
+        <EntityType Name="xsd">
+          <Key>
+            <PropertyRef Name="xsdid" />
+          </Key>
+          <Property Name="xsdid" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="xsbid" Type="String" Nullable="false" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="xsrq" Type="DateTime" Precision="3" />
+          <Property Name="khid" Type="String" Nullable="false" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="yyy" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="ywy" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="zl" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="shr" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="syy" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="kpy" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="fzr" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="czy" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="zje" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="xj" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="zz" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="ys" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="yus" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="qt" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="zph" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+          <Property Name="sr" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="flag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="khmc" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="sgzphid" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="bz" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="xscj" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="xscjl" Type="Decimal" Precision="12" Scale="7" />
+          <Property Name="bcxsdid" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="xqid" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+          <Property Name="scid" Type="String" MaxLength="12" FixedLength="true" Unicode="false" />
+          <Property Name="xqmc" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="scmc" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
+          <Property Name="zzl" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="xszpyk" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="czlx" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="hshkdid" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="ejkh" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="tel" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="address" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
+          <Property Name="bmid" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="bmmc" Type="String" MaxLength="18" FixedLength="false" Unicode="false" />
+          <Property Name="ddh" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+          <Property Name="fy_yf" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="y_ysr" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="fy_byf" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="y_byr" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="fy_jgf" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="y_jgs" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="fy_hk" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="y_hkr" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="hkl" Type="Decimal" Precision="8" Scale="3" />
+          <Property Name="fy_qt" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="fy_fyhj" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="dnddh" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="spjsbz" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="xsjetzr" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="fkr" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="ysbm" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ysdh" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="driver" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="sjdh" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="xh" Type="String" MaxLength="25" FixedLength="false" Unicode="false" />
+          <Property Name="fh" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="bz2" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <Property Name="fhrq" Type="DateTime" Precision="3" />
+          <Property Name="zzzh" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="kpze" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="jskhid" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="ysjzbz" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="sjsid" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
+          <Property Name="shdd" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="fw" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="ch" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="print_bz" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="cwflag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="wdthSign" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="cwSaveSign" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="xstime" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="sdr" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="sgddh" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="printCount" Type="Int32" />
+          <Property Name="zzkl" Type="Decimal" Precision="19" Scale="7" />
+          <Property Name="bzze" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="ssze" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="qk" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="ydj" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="xjzje" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="kdqzsyk" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="wshxsys" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="kdhzsyk" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="khxyd" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="kdqddyk" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="kdhddyk" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="czyqx" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="kdqssyk" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="kqjye" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="hkwse" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="mpssm" Type="String" MaxLength="500" FixedLength="true" Unicode="false" />
+          <Property Name="kdqssyk_dd" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="kdhssyk_dd" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="hkwse_dd" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="wshxsys_dd" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="fyzczh" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="fysh_flag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="fy_sdr" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="fy_czy" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="hjzje" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="zczje" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="bz3" Type="String" MaxLength="200" FixedLength="false" Unicode="false" />
+          <Property Name="bz_czy" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="kzl" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="SZzl" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="Szl" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="CzL" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="QkHkrq" Type="DateTime" Precision="3" />
+          <Property Name="QkQrRq" Type="DateTime" Precision="3" />
+          <Property Name="QkQrCzy" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="QkWkjsr" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="QkJqFlag" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="jxtcl" Type="Decimal" Precision="19" Scale="7" />
+          <Property Name="TcCzy" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="xsbxx" Relationship="ccxnfModel.FK__xsd__xsbid__0A688BB1" FromRole="xsd" ToRole="xsbxx" />
+          <NavigationProperty Name="xsdmx" Relationship="ccxnfModel.FK__xsdmx__xsdid__1F63A897" FromRole="xsd" ToRole="xsdmx" />
+        </EntityType>
+        <EntityType Name="xsdmx">
+          <Key>
+            <PropertyRef Name="xsdlsh" />
+          </Key>
+          <Property Name="xsdlsh" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="xsdid" Type="String" Nullable="false" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="spid" Type="String" Nullable="false" MaxLength="40" FixedLength="true" Unicode="false" />
+          <Property Name="dw" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
+          <Property Name="kqid" Type="String" Nullable="false" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="xsdj" Type="Decimal" Nullable="false" Precision="12" Scale="7" />
+          <Property Name="xssl" Type="Decimal" Nullable="false" Precision="12" Scale="2" />
+          <Property Name="xsje" Type="Decimal" Nullable="false" Precision="19" Scale="4" />
+          <Property Name="dwcb" Type="Decimal" Precision="12" Scale="7" />
+          <Property Name="zhxs" Type="Int32" />
+          <Property Name="zhps" Type="Decimal" Precision="6" Scale="2" />
+          <Property Name="fhr" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
+          <Property Name="bz" Type="String" MaxLength="6" FixedLength="true" Unicode="false" />
+          <Property Name="xs" Type="Decimal" Precision="8" Scale="4" />
+          <Property Name="flag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="xsxj" Type="Decimal" Precision="12" Scale="7" />
+          <Property Name="dwkg" Type="Decimal" Precision="7" Scale="4" />
+          <Property Name="color" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="xsxl" Type="Decimal" Precision="9" Scale="3" />
+          <Property Name="yxsdj" Type="Decimal" Precision="12" Scale="7" />
+          <Property Name="yxsje" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="dhsl" Type="Decimal" Precision="12" Scale="2" />
+          <Property Name="xsdhdid" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="dhcolor" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+          <Property Name="dhkqid" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
+          <Property Name="dhdj" Type="Decimal" Precision="12" Scale="7" />
+          <Property Name="spjsbz" Type="String" MaxLength="2" FixedLength="false" Unicode="false" />
+          <Property Name="hshkdid" Type="String" MaxLength="10" FixedLength="false" Unicode="false" />
+          <Property Name="srl" Type="Decimal" Precision="12" Scale="7" />
+          <Property Name="xsjetzbz" Type="Int16" />
+          <Property Name="zdxj" Type="Decimal" Precision="19" Scale="7" />
+          <Property Name="dbj" Type="Decimal" Precision="19" Scale="7" />
+          <Property Name="fhjysl" Type="Decimal" Precision="19" Scale="2" />
+          <Property Name="kpe" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="fsmc" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
+          <Property Name="zkl" Type="Decimal" Precision="19" Scale="7" />
+          <Property Name="yxsdmxlsh" Type="Int32" />
+          <Property Name="xsxl1" Type="Decimal" Precision="9" Scale="3" />
+          <Property Name="xsxl2" Type="Decimal" Precision="9" Scale="3" />
+          <Property Name="xsdhdmxlsh" Type="Int32" />
+          <Property Name="shdwcb" Type="Decimal" Precision="12" Scale="7" />
+          <Property Name="tsxsdj" Type="Decimal" Precision="12" Scale="7" />
+          <Property Name="NoStandardSign" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
+          <Property Name="ydhsl" Type="Decimal" Precision="12" Scale="2" />
+          <Property Name="fkcFlag" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="NewNodeName" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="OldNodeName" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+          <Property Name="xshFlag" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="bhcolor" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="mxbz" Type="String" MaxLength="50" FixedLength="true" Unicode="false" />
+          <Property Name="xscolor" Type="String" MaxLength="150" FixedLength="false" Unicode="false" />
+          <Property Name="zcdj" Type="Decimal" Precision="19" Scale="7" />
+          <Property Name="zcje" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="gg" Type="String" MaxLength="30" FixedLength="true" Unicode="false" />
+          <Property Name="tphkdj" Type="Decimal" Precision="19" Scale="7" />
+          <Property Name="tphkje" Type="Decimal" Precision="19" Scale="4" />
+          <Property Name="cjsl" Type="Decimal" Precision="12" Scale="2" />
+          <Property Name="scrq2" Type="String" MaxLength="10" FixedLength="true" Unicode="false" />
+          <Property Name="CgspFlag" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
+          <Property Name="jhddh" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+          <NavigationProperty Name="xsd" Relationship="ccxnfModel.FK__xsdmx__xsdid__1F63A897" FromRole="xsdmx" ToRole="xsd" />
+          <NavigationProperty Name="spxx" Relationship="ccxnfModel.FK__xsdmx__spid__1E6F845E" FromRole="xsdmx" ToRole="spxx" />
+        </EntityType>
+        <Association Name="FK__xsd__xsbid__0A688BB1">
+          <End Type="ccxnfModel.xsbxx" Role="xsbxx" Multiplicity="1" />
+          <End Type="ccxnfModel.xsd" Role="xsd" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="xsbxx">
+              <PropertyRef Name="xsbid" />
+            </Principal>
+            <Dependent Role="xsd">
+              <PropertyRef Name="xsbid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK__xsdmx__xsdid__1F63A897">
+          <End Type="ccxnfModel.xsd" Role="xsd" Multiplicity="1" />
+          <End Type="ccxnfModel.xsdmx" Role="xsdmx" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="xsd">
+              <PropertyRef Name="xsdid" />
+            </Principal>
+            <Dependent Role="xsdmx">
+              <PropertyRef Name="xsdid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
         <EntityType Name="spxx">
           <Key>
             <PropertyRef Name="spid" />
@@ -1560,109 +2145,20 @@
           <Property Name="NoStandardSign" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
           <Property Name="sanitationNosetFlag" Type="String" MaxLength="2" FixedLength="true" Unicode="false" />
           <Property Name="CpfljgLsh" Type="Int32" />
+          <NavigationProperty Name="xsdmx" Relationship="ccxnfModel.FK__xsdmx__spid__1E6F845E" FromRole="spxx" ToRole="xsdmx" />
         </EntityType>
-        <EntityType Name="spPmlb">
-          <Key>
-            <PropertyRef Name="pmmc" />
-          </Key>
-          <Property Name="pmmc" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="pmbm" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="pym" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="pxbm" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="jgflag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
-          <Property Name="pmzkl" Type="Decimal" Precision="12" Scale="7" />
-          <Property Name="pmfzr" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
-          <Property Name="fzrzkl" Type="Decimal" Precision="12" Scale="7" />
-        </EntityType>
-        <EntityType Name="cpxllx">
-          <Key>
-            <PropertyRef Name="lsh" />
-          </Key>
-          <Property Name="lsh" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="cpxllxbm" Type="String" MaxLength="8" FixedLength="false" Unicode="false" />
-          <Property Name="cpxllxmc" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-          <Property Name="pym" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="pxbm" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="xshpm" Type="Decimal" Precision="12" Scale="7" />
-          <Property Name="zcfhs_flag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
-        </EntityType>
-        <EntityType Name="jldwb">
-          <Key>
-            <PropertyRef Name="dwdm" />
-          </Key>
-          <Property Name="dwdm" Type="String" Nullable="false" MaxLength="4" FixedLength="true" Unicode="false" />
-          <Property Name="dw" Type="String" MaxLength="4" FixedLength="true" Unicode="false" />
-          <Property Name="pym" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="pxbm" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-        </EntityType>
-        <EntityType Name="ggxxb">
-          <Key>
-            <PropertyRef Name="gg" />
-          </Key>
-          <Property Name="gg" Type="String" Nullable="false" MaxLength="30" FixedLength="true" Unicode="false" />
-          <Property Name="cphgl" Type="Decimal" Precision="12" Scale="4" />
-          <Property Name="yjl" Type="Decimal" Precision="12" Scale="4" />
-          <Property Name="rcl" Type="Decimal" Precision="12" Scale="4" />
-          <Property Name="clj" Type="Decimal" Precision="19" Scale="4" />
-          <Property Name="clf" Type="Decimal" Precision="19" Scale="4" />
-          <Property Name="ccjs" Type="Decimal" Precision="19" Scale="4" />
-          <Property Name="zlj" Type="Decimal" Precision="19" Scale="4" />
-          <Property Name="zlf" Type="Decimal" Precision="19" Scale="4" />
-          <Property Name="zdxj" Type="Decimal" Precision="19" Scale="6" />
-          <Property Name="zxdj" Type="Decimal" Precision="12" Scale="6" />
-          <Property Name="pxbm" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-        </EntityType>
-        <EntityType Name="cpxl">
-          <Key>
-            <PropertyRef Name="lsh" />
-          </Key>
-          <Property Name="lsh" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="cpxlbm" Type="String" Nullable="false" MaxLength="8" FixedLength="false" Unicode="false" />
-          <Property Name="cpxlmc" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="pym" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="pxbm" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="cpxllxmc" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
-        </EntityType>
-        <EntityType Name="ghsxx">
-          <Key>
-            <PropertyRef Name="ghsid" />
-          </Key>
-          <Property Name="ghsid" Type="String" Nullable="false" MaxLength="8" FixedLength="true" Unicode="false" />
-          <Property Name="ghsmc" Type="String" Nullable="false" MaxLength="20" FixedLength="true" Unicode="false" />
-          <Property Name="tel" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
-          <Property Name="bp" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
-          <Property Name="sj" Type="String" MaxLength="14" FixedLength="true" Unicode="false" />
-          <Property Name="lxr" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
-          <Property Name="address" Type="String" MaxLength="40" FixedLength="true" Unicode="false" />
-          <Property Name="yb" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
-          <Property Name="pydm" Type="String" MaxLength="8" FixedLength="true" Unicode="false" />
-          <Property Name="zh" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
-          <Property Name="khh" Type="String" MaxLength="40" FixedLength="true" Unicode="false" />
-          <Property Name="sh" Type="String" MaxLength="20" FixedLength="true" Unicode="false" />
-          <Property Name="email" Type="String" MaxLength="18" FixedLength="true" Unicode="false" />
-          <Property Name="ghsqc" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
-          <Property Name="ghspj" Type="String" MaxLength="80" FixedLength="false" Unicode="false" />
-          <Property Name="clghsFlag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
-          <Property Name="ghsjb" Type="String" MaxLength="50" FixedLength="false" Unicode="false" />
-          <Property Name="pym" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="pxbm" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="khFlag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
-          <Property Name="khid" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="ghsFlag" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
-          <Property Name="jsghsid" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="StopSign" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
-          <Property Name="jslx" Type="String" MaxLength="1" FixedLength="true" Unicode="false" />
-        </EntityType>
-        <EntityType Name="spfl">
-          <Key>
-            <PropertyRef Name="lsh" />
-          </Key>
-          <Property Name="lsh" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-          <Property Name="spflbm" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="spflmc" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="pym" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-          <Property Name="pxbm" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
-        </EntityType>
+        <Association Name="FK__xsdmx__spid__1E6F845E">
+          <End Type="ccxnfModel.spxx" Role="spxx" Multiplicity="1" />
+          <End Type="ccxnfModel.xsdmx" Role="xsdmx" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="spxx">
+              <PropertyRef Name="spid" />
+            </Principal>
+            <Dependent Role="xsdmx">
+              <PropertyRef Name="spid" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
       </Schema>
     </edmx:ConceptualModels>
     <!-- C-S mapping content -->
@@ -2004,6 +2500,307 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="spPmlb">
+            <EntityTypeMapping TypeName="ccxnfModel.spPmlb">
+              <MappingFragment StoreEntitySet="spPmlb">
+                <ScalarProperty Name="fzrzkl" ColumnName="fzrzkl" />
+                <ScalarProperty Name="pmfzr" ColumnName="pmfzr" />
+                <ScalarProperty Name="pmzkl" ColumnName="pmzkl" />
+                <ScalarProperty Name="jgflag" ColumnName="jgflag" />
+                <ScalarProperty Name="pxbm" ColumnName="pxbm" />
+                <ScalarProperty Name="pym" ColumnName="pym" />
+                <ScalarProperty Name="pmbm" ColumnName="pmbm" />
+                <ScalarProperty Name="pmmc" ColumnName="pmmc" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="cpxllx">
+            <EntityTypeMapping TypeName="ccxnfModel.cpxllx">
+              <MappingFragment StoreEntitySet="cpxllx">
+                <ScalarProperty Name="zcfhs_flag" ColumnName="zcfhs_flag" />
+                <ScalarProperty Name="xshpm" ColumnName="xshpm" />
+                <ScalarProperty Name="pxbm" ColumnName="pxbm" />
+                <ScalarProperty Name="pym" ColumnName="pym" />
+                <ScalarProperty Name="cpxllxmc" ColumnName="cpxllxmc" />
+                <ScalarProperty Name="cpxllxbm" ColumnName="cpxllxbm" />
+                <ScalarProperty Name="lsh" ColumnName="lsh" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="jldwb">
+            <EntityTypeMapping TypeName="ccxnfModel.jldwb">
+              <MappingFragment StoreEntitySet="jldwb">
+                <ScalarProperty Name="pxbm" ColumnName="pxbm" />
+                <ScalarProperty Name="pym" ColumnName="pym" />
+                <ScalarProperty Name="dw" ColumnName="dw" />
+                <ScalarProperty Name="dwdm" ColumnName="dwdm" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ggxxb">
+            <EntityTypeMapping TypeName="ccxnfModel.ggxxb">
+              <MappingFragment StoreEntitySet="ggxxb">
+                <ScalarProperty Name="pxbm" ColumnName="pxbm" />
+                <ScalarProperty Name="zxdj" ColumnName="zxdj" />
+                <ScalarProperty Name="zdxj" ColumnName="zdxj" />
+                <ScalarProperty Name="zlf" ColumnName="zlf" />
+                <ScalarProperty Name="zlj" ColumnName="zlj" />
+                <ScalarProperty Name="ccjs" ColumnName="ccjs" />
+                <ScalarProperty Name="clf" ColumnName="clf" />
+                <ScalarProperty Name="clj" ColumnName="clj" />
+                <ScalarProperty Name="rcl" ColumnName="rcl" />
+                <ScalarProperty Name="yjl" ColumnName="yjl" />
+                <ScalarProperty Name="cphgl" ColumnName="cphgl" />
+                <ScalarProperty Name="gg" ColumnName="gg" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="cpxl">
+            <EntityTypeMapping TypeName="ccxnfModel.cpxl">
+              <MappingFragment StoreEntitySet="cpxl">
+                <ScalarProperty Name="cpxllxmc" ColumnName="cpxllxmc" />
+                <ScalarProperty Name="pxbm" ColumnName="pxbm" />
+                <ScalarProperty Name="pym" ColumnName="pym" />
+                <ScalarProperty Name="cpxlmc" ColumnName="cpxlmc" />
+                <ScalarProperty Name="cpxlbm" ColumnName="cpxlbm" />
+                <ScalarProperty Name="lsh" ColumnName="lsh" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="ghsxx">
+            <EntityTypeMapping TypeName="ccxnfModel.ghsxx">
+              <MappingFragment StoreEntitySet="ghsxx">
+                <ScalarProperty Name="jslx" ColumnName="jslx" />
+                <ScalarProperty Name="StopSign" ColumnName="StopSign" />
+                <ScalarProperty Name="jsghsid" ColumnName="jsghsid" />
+                <ScalarProperty Name="ghsFlag" ColumnName="ghsFlag" />
+                <ScalarProperty Name="khid" ColumnName="khid" />
+                <ScalarProperty Name="khFlag" ColumnName="khFlag" />
+                <ScalarProperty Name="pxbm" ColumnName="pxbm" />
+                <ScalarProperty Name="pym" ColumnName="pym" />
+                <ScalarProperty Name="ghsjb" ColumnName="ghsjb" />
+                <ScalarProperty Name="clghsFlag" ColumnName="clghsFlag" />
+                <ScalarProperty Name="ghspj" ColumnName="ghspj" />
+                <ScalarProperty Name="ghsqc" ColumnName="ghsqc" />
+                <ScalarProperty Name="email" ColumnName="email" />
+                <ScalarProperty Name="sh" ColumnName="sh" />
+                <ScalarProperty Name="khh" ColumnName="khh" />
+                <ScalarProperty Name="zh" ColumnName="zh" />
+                <ScalarProperty Name="pydm" ColumnName="pydm" />
+                <ScalarProperty Name="yb" ColumnName="yb" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="lxr" ColumnName="lxr" />
+                <ScalarProperty Name="sj" ColumnName="sj" />
+                <ScalarProperty Name="bp" ColumnName="bp" />
+                <ScalarProperty Name="tel" ColumnName="tel" />
+                <ScalarProperty Name="ghsmc" ColumnName="ghsmc" />
+                <ScalarProperty Name="ghsid" ColumnName="ghsid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="spfl">
+            <EntityTypeMapping TypeName="ccxnfModel.spfl">
+              <MappingFragment StoreEntitySet="spfl">
+                <ScalarProperty Name="pxbm" ColumnName="pxbm" />
+                <ScalarProperty Name="pym" ColumnName="pym" />
+                <ScalarProperty Name="spflmc" ColumnName="spflmc" />
+                <ScalarProperty Name="spflbm" ColumnName="spflbm" />
+                <ScalarProperty Name="lsh" ColumnName="lsh" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="xsd">
+            <EntityTypeMapping TypeName="ccxnfModel.xsd">
+              <MappingFragment StoreEntitySet="xsd">
+                <ScalarProperty Name="TcCzy" ColumnName="TcCzy" />
+                <ScalarProperty Name="jxtcl" ColumnName="jxtcl" />
+                <ScalarProperty Name="QkJqFlag" ColumnName="QkJqFlag" />
+                <ScalarProperty Name="QkWkjsr" ColumnName="QkWkjsr" />
+                <ScalarProperty Name="QkQrCzy" ColumnName="QkQrCzy" />
+                <ScalarProperty Name="QkQrRq" ColumnName="QkQrRq" />
+                <ScalarProperty Name="QkHkrq" ColumnName="QkHkrq" />
+                <ScalarProperty Name="CzL" ColumnName="CzL" />
+                <ScalarProperty Name="Szl" ColumnName="Szl" />
+                <ScalarProperty Name="SZzl" ColumnName="SZzl" />
+                <ScalarProperty Name="kzl" ColumnName="kzl" />
+                <ScalarProperty Name="bz_czy" ColumnName="bz_czy" />
+                <ScalarProperty Name="bz3" ColumnName="bz3" />
+                <ScalarProperty Name="zczje" ColumnName="zczje" />
+                <ScalarProperty Name="hjzje" ColumnName="hjzje" />
+                <ScalarProperty Name="fy_czy" ColumnName="fy_czy" />
+                <ScalarProperty Name="fy_sdr" ColumnName="fy_sdr" />
+                <ScalarProperty Name="fysh_flag" ColumnName="fysh_flag" />
+                <ScalarProperty Name="fyzczh" ColumnName="fyzczh" />
+                <ScalarProperty Name="wshxsys_dd" ColumnName="wshxsys_dd" />
+                <ScalarProperty Name="hkwse_dd" ColumnName="hkwse_dd" />
+                <ScalarProperty Name="kdhssyk_dd" ColumnName="kdhssyk_dd" />
+                <ScalarProperty Name="kdqssyk_dd" ColumnName="kdqssyk_dd" />
+                <ScalarProperty Name="mpssm" ColumnName="mpssm" />
+                <ScalarProperty Name="hkwse" ColumnName="hkwse" />
+                <ScalarProperty Name="kqjye" ColumnName="kqjye" />
+                <ScalarProperty Name="kdqssyk" ColumnName="kdqssyk" />
+                <ScalarProperty Name="czyqx" ColumnName="czyqx" />
+                <ScalarProperty Name="kdhddyk" ColumnName="kdhddyk" />
+                <ScalarProperty Name="kdqddyk" ColumnName="kdqddyk" />
+                <ScalarProperty Name="khxyd" ColumnName="khxyd" />
+                <ScalarProperty Name="kdhzsyk" ColumnName="kdhzsyk" />
+                <ScalarProperty Name="wshxsys" ColumnName="wshxsys" />
+                <ScalarProperty Name="kdqzsyk" ColumnName="kdqzsyk" />
+                <ScalarProperty Name="xjzje" ColumnName="xjzje" />
+                <ScalarProperty Name="ydj" ColumnName="ydj" />
+                <ScalarProperty Name="qk" ColumnName="qk" />
+                <ScalarProperty Name="ssze" ColumnName="ssze" />
+                <ScalarProperty Name="bzze" ColumnName="bzze" />
+                <ScalarProperty Name="zzkl" ColumnName="zzkl" />
+                <ScalarProperty Name="printCount" ColumnName="printCount" />
+                <ScalarProperty Name="sgddh" ColumnName="sgddh" />
+                <ScalarProperty Name="sdr" ColumnName="sdr" />
+                <ScalarProperty Name="xstime" ColumnName="xstime" />
+                <ScalarProperty Name="cwSaveSign" ColumnName="cwSaveSign" />
+                <ScalarProperty Name="wdthSign" ColumnName="wdthSign" />
+                <ScalarProperty Name="cwflag" ColumnName="cwflag" />
+                <ScalarProperty Name="print_bz" ColumnName="print_bz" />
+                <ScalarProperty Name="ch" ColumnName="ch" />
+                <ScalarProperty Name="fw" ColumnName="fw" />
+                <ScalarProperty Name="shdd" ColumnName="shdd" />
+                <ScalarProperty Name="sjsid" ColumnName="sjsid" />
+                <ScalarProperty Name="ysjzbz" ColumnName="ysjzbz" />
+                <ScalarProperty Name="jskhid" ColumnName="jskhid" />
+                <ScalarProperty Name="kpze" ColumnName="kpze" />
+                <ScalarProperty Name="zzzh" ColumnName="zzzh" />
+                <ScalarProperty Name="fhrq" ColumnName="fhrq" />
+                <ScalarProperty Name="bz2" ColumnName="bz2" />
+                <ScalarProperty Name="fh" ColumnName="fh" />
+                <ScalarProperty Name="xh" ColumnName="xh" />
+                <ScalarProperty Name="sjdh" ColumnName="sjdh" />
+                <ScalarProperty Name="driver" ColumnName="driver" />
+                <ScalarProperty Name="ysdh" ColumnName="ysdh" />
+                <ScalarProperty Name="ysbm" ColumnName="ysbm" />
+                <ScalarProperty Name="fkr" ColumnName="fkr" />
+                <ScalarProperty Name="xsjetzr" ColumnName="xsjetzr" />
+                <ScalarProperty Name="spjsbz" ColumnName="spjsbz" />
+                <ScalarProperty Name="dnddh" ColumnName="dnddh" />
+                <ScalarProperty Name="fy_fyhj" ColumnName="fy_fyhj" />
+                <ScalarProperty Name="fy_qt" ColumnName="fy_qt" />
+                <ScalarProperty Name="hkl" ColumnName="hkl" />
+                <ScalarProperty Name="y_hkr" ColumnName="y_hkr" />
+                <ScalarProperty Name="fy_hk" ColumnName="fy_hk" />
+                <ScalarProperty Name="y_jgs" ColumnName="y_jgs" />
+                <ScalarProperty Name="fy_jgf" ColumnName="fy_jgf" />
+                <ScalarProperty Name="y_byr" ColumnName="y_byr" />
+                <ScalarProperty Name="fy_byf" ColumnName="fy_byf" />
+                <ScalarProperty Name="y_ysr" ColumnName="y_ysr" />
+                <ScalarProperty Name="fy_yf" ColumnName="fy_yf" />
+                <ScalarProperty Name="ddh" ColumnName="ddh" />
+                <ScalarProperty Name="bmmc" ColumnName="bmmc" />
+                <ScalarProperty Name="bmid" ColumnName="bmid" />
+                <ScalarProperty Name="address" ColumnName="address" />
+                <ScalarProperty Name="tel" ColumnName="tel" />
+                <ScalarProperty Name="ejkh" ColumnName="ejkh" />
+                <ScalarProperty Name="hshkdid" ColumnName="hshkdid" />
+                <ScalarProperty Name="czlx" ColumnName="czlx" />
+                <ScalarProperty Name="xszpyk" ColumnName="xszpyk" />
+                <ScalarProperty Name="zzl" ColumnName="zzl" />
+                <ScalarProperty Name="scmc" ColumnName="scmc" />
+                <ScalarProperty Name="xqmc" ColumnName="xqmc" />
+                <ScalarProperty Name="scid" ColumnName="scid" />
+                <ScalarProperty Name="xqid" ColumnName="xqid" />
+                <ScalarProperty Name="bcxsdid" ColumnName="bcxsdid" />
+                <ScalarProperty Name="xscjl" ColumnName="xscjl" />
+                <ScalarProperty Name="xscj" ColumnName="xscj" />
+                <ScalarProperty Name="bz" ColumnName="bz" />
+                <ScalarProperty Name="sgzphid" ColumnName="sgzphid" />
+                <ScalarProperty Name="khmc" ColumnName="khmc" />
+                <ScalarProperty Name="flag" ColumnName="flag" />
+                <ScalarProperty Name="sr" ColumnName="sr" />
+                <ScalarProperty Name="zph" ColumnName="zph" />
+                <ScalarProperty Name="qt" ColumnName="qt" />
+                <ScalarProperty Name="yus" ColumnName="yus" />
+                <ScalarProperty Name="ys" ColumnName="ys" />
+                <ScalarProperty Name="zz" ColumnName="zz" />
+                <ScalarProperty Name="xj" ColumnName="xj" />
+                <ScalarProperty Name="zje" ColumnName="zje" />
+                <ScalarProperty Name="czy" ColumnName="czy" />
+                <ScalarProperty Name="fzr" ColumnName="fzr" />
+                <ScalarProperty Name="kpy" ColumnName="kpy" />
+                <ScalarProperty Name="syy" ColumnName="syy" />
+                <ScalarProperty Name="shr" ColumnName="shr" />
+                <ScalarProperty Name="zl" ColumnName="zl" />
+                <ScalarProperty Name="ywy" ColumnName="ywy" />
+                <ScalarProperty Name="yyy" ColumnName="yyy" />
+                <ScalarProperty Name="khid" ColumnName="khid" />
+                <ScalarProperty Name="xsrq" ColumnName="xsrq" />
+                <ScalarProperty Name="xsbid" ColumnName="xsbid" />
+                <ScalarProperty Name="xsdid" ColumnName="xsdid" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="xsdmx">
+            <EntityTypeMapping TypeName="ccxnfModel.xsdmx">
+              <MappingFragment StoreEntitySet="xsdmx">
+                <ScalarProperty Name="jhddh" ColumnName="jhddh" />
+                <ScalarProperty Name="CgspFlag" ColumnName="CgspFlag" />
+                <ScalarProperty Name="scrq2" ColumnName="scrq2" />
+                <ScalarProperty Name="cjsl" ColumnName="cjsl" />
+                <ScalarProperty Name="tphkje" ColumnName="tphkje" />
+                <ScalarProperty Name="tphkdj" ColumnName="tphkdj" />
+                <ScalarProperty Name="gg" ColumnName="gg" />
+                <ScalarProperty Name="zcje" ColumnName="zcje" />
+                <ScalarProperty Name="zcdj" ColumnName="zcdj" />
+                <ScalarProperty Name="xscolor" ColumnName="xscolor" />
+                <ScalarProperty Name="mxbz" ColumnName="mxbz" />
+                <ScalarProperty Name="bhcolor" ColumnName="bhcolor" />
+                <ScalarProperty Name="xshFlag" ColumnName="xshFlag" />
+                <ScalarProperty Name="OldNodeName" ColumnName="OldNodeName" />
+                <ScalarProperty Name="NewNodeName" ColumnName="NewNodeName" />
+                <ScalarProperty Name="fkcFlag" ColumnName="fkcFlag" />
+                <ScalarProperty Name="ydhsl" ColumnName="ydhsl" />
+                <ScalarProperty Name="NoStandardSign" ColumnName="NoStandardSign" />
+                <ScalarProperty Name="tsxsdj" ColumnName="tsxsdj" />
+                <ScalarProperty Name="shdwcb" ColumnName="shdwcb" />
+                <ScalarProperty Name="xsdhdmxlsh" ColumnName="xsdhdmxlsh" />
+                <ScalarProperty Name="xsxl2" ColumnName="xsxl2" />
+                <ScalarProperty Name="xsxl1" ColumnName="xsxl1" />
+                <ScalarProperty Name="yxsdmxlsh" ColumnName="yxsdmxlsh" />
+                <ScalarProperty Name="zkl" ColumnName="zkl" />
+                <ScalarProperty Name="fsmc" ColumnName="fsmc" />
+                <ScalarProperty Name="kpe" ColumnName="kpe" />
+                <ScalarProperty Name="fhjysl" ColumnName="fhjysl" />
+                <ScalarProperty Name="dbj" ColumnName="dbj" />
+                <ScalarProperty Name="zdxj" ColumnName="zdxj" />
+                <ScalarProperty Name="xsjetzbz" ColumnName="xsjetzbz" />
+                <ScalarProperty Name="srl" ColumnName="srl" />
+                <ScalarProperty Name="hshkdid" ColumnName="hshkdid" />
+                <ScalarProperty Name="spjsbz" ColumnName="spjsbz" />
+                <ScalarProperty Name="dhdj" ColumnName="dhdj" />
+                <ScalarProperty Name="dhkqid" ColumnName="dhkqid" />
+                <ScalarProperty Name="dhcolor" ColumnName="dhcolor" />
+                <ScalarProperty Name="xsdhdid" ColumnName="xsdhdid" />
+                <ScalarProperty Name="dhsl" ColumnName="dhsl" />
+                <ScalarProperty Name="yxsje" ColumnName="yxsje" />
+                <ScalarProperty Name="yxsdj" ColumnName="yxsdj" />
+                <ScalarProperty Name="xsxl" ColumnName="xsxl" />
+                <ScalarProperty Name="color" ColumnName="color" />
+                <ScalarProperty Name="dwkg" ColumnName="dwkg" />
+                <ScalarProperty Name="xsxj" ColumnName="xsxj" />
+                <ScalarProperty Name="flag" ColumnName="flag" />
+                <ScalarProperty Name="xs" ColumnName="xs" />
+                <ScalarProperty Name="bz" ColumnName="bz" />
+                <ScalarProperty Name="fhr" ColumnName="fhr" />
+                <ScalarProperty Name="zhps" ColumnName="zhps" />
+                <ScalarProperty Name="zhxs" ColumnName="zhxs" />
+                <ScalarProperty Name="dwcb" ColumnName="dwcb" />
+                <ScalarProperty Name="xsje" ColumnName="xsje" />
+                <ScalarProperty Name="xssl" ColumnName="xssl" />
+                <ScalarProperty Name="xsdj" ColumnName="xsdj" />
+                <ScalarProperty Name="kqid" ColumnName="kqid" />
+                <ScalarProperty Name="dw" ColumnName="dw" />
+                <ScalarProperty Name="spid" ColumnName="spid" />
+                <ScalarProperty Name="xsdid" ColumnName="xsdid" />
+                <ScalarProperty Name="xsdlsh" ColumnName="xsdlsh" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
           <EntitySetMapping Name="spxx">
             <EntityTypeMapping TypeName="ccxnfModel.spxx">
               <MappingFragment StoreEntitySet="spxx">
@@ -2333,115 +3130,7 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
-          <EntitySetMapping Name="spPmlb">
-            <EntityTypeMapping TypeName="ccxnfModel.spPmlb">
-              <MappingFragment StoreEntitySet="spPmlb">
-                <ScalarProperty Name="fzrzkl" ColumnName="fzrzkl" />
-                <ScalarProperty Name="pmfzr" ColumnName="pmfzr" />
-                <ScalarProperty Name="pmzkl" ColumnName="pmzkl" />
-                <ScalarProperty Name="jgflag" ColumnName="jgflag" />
-                <ScalarProperty Name="pxbm" ColumnName="pxbm" />
-                <ScalarProperty Name="pym" ColumnName="pym" />
-                <ScalarProperty Name="pmbm" ColumnName="pmbm" />
-                <ScalarProperty Name="pmmc" ColumnName="pmmc" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="cpxllx">
-            <EntityTypeMapping TypeName="ccxnfModel.cpxllx">
-              <MappingFragment StoreEntitySet="cpxllx">
-                <ScalarProperty Name="zcfhs_flag" ColumnName="zcfhs_flag" />
-                <ScalarProperty Name="xshpm" ColumnName="xshpm" />
-                <ScalarProperty Name="pxbm" ColumnName="pxbm" />
-                <ScalarProperty Name="pym" ColumnName="pym" />
-                <ScalarProperty Name="cpxllxmc" ColumnName="cpxllxmc" />
-                <ScalarProperty Name="cpxllxbm" ColumnName="cpxllxbm" />
-                <ScalarProperty Name="lsh" ColumnName="lsh" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="jldwb">
-            <EntityTypeMapping TypeName="ccxnfModel.jldwb">
-              <MappingFragment StoreEntitySet="jldwb">
-                <ScalarProperty Name="pxbm" ColumnName="pxbm" />
-                <ScalarProperty Name="pym" ColumnName="pym" />
-                <ScalarProperty Name="dw" ColumnName="dw" />
-                <ScalarProperty Name="dwdm" ColumnName="dwdm" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="ggxxb">
-            <EntityTypeMapping TypeName="ccxnfModel.ggxxb">
-              <MappingFragment StoreEntitySet="ggxxb">
-                <ScalarProperty Name="pxbm" ColumnName="pxbm" />
-                <ScalarProperty Name="zxdj" ColumnName="zxdj" />
-                <ScalarProperty Name="zdxj" ColumnName="zdxj" />
-                <ScalarProperty Name="zlf" ColumnName="zlf" />
-                <ScalarProperty Name="zlj" ColumnName="zlj" />
-                <ScalarProperty Name="ccjs" ColumnName="ccjs" />
-                <ScalarProperty Name="clf" ColumnName="clf" />
-                <ScalarProperty Name="clj" ColumnName="clj" />
-                <ScalarProperty Name="rcl" ColumnName="rcl" />
-                <ScalarProperty Name="yjl" ColumnName="yjl" />
-                <ScalarProperty Name="cphgl" ColumnName="cphgl" />
-                <ScalarProperty Name="gg" ColumnName="gg" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="cpxl">
-            <EntityTypeMapping TypeName="ccxnfModel.cpxl">
-              <MappingFragment StoreEntitySet="cpxl">
-                <ScalarProperty Name="cpxllxmc" ColumnName="cpxllxmc" />
-                <ScalarProperty Name="pxbm" ColumnName="pxbm" />
-                <ScalarProperty Name="pym" ColumnName="pym" />
-                <ScalarProperty Name="cpxlmc" ColumnName="cpxlmc" />
-                <ScalarProperty Name="cpxlbm" ColumnName="cpxlbm" />
-                <ScalarProperty Name="lsh" ColumnName="lsh" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="ghsxx">
-            <EntityTypeMapping TypeName="ccxnfModel.ghsxx">
-              <MappingFragment StoreEntitySet="ghsxx">
-                <ScalarProperty Name="jslx" ColumnName="jslx" />
-                <ScalarProperty Name="StopSign" ColumnName="StopSign" />
-                <ScalarProperty Name="jsghsid" ColumnName="jsghsid" />
-                <ScalarProperty Name="ghsFlag" ColumnName="ghsFlag" />
-                <ScalarProperty Name="khid" ColumnName="khid" />
-                <ScalarProperty Name="khFlag" ColumnName="khFlag" />
-                <ScalarProperty Name="pxbm" ColumnName="pxbm" />
-                <ScalarProperty Name="pym" ColumnName="pym" />
-                <ScalarProperty Name="ghsjb" ColumnName="ghsjb" />
-                <ScalarProperty Name="clghsFlag" ColumnName="clghsFlag" />
-                <ScalarProperty Name="ghspj" ColumnName="ghspj" />
-                <ScalarProperty Name="ghsqc" ColumnName="ghsqc" />
-                <ScalarProperty Name="email" ColumnName="email" />
-                <ScalarProperty Name="sh" ColumnName="sh" />
-                <ScalarProperty Name="khh" ColumnName="khh" />
-                <ScalarProperty Name="zh" ColumnName="zh" />
-                <ScalarProperty Name="pydm" ColumnName="pydm" />
-                <ScalarProperty Name="yb" ColumnName="yb" />
-                <ScalarProperty Name="address" ColumnName="address" />
-                <ScalarProperty Name="lxr" ColumnName="lxr" />
-                <ScalarProperty Name="sj" ColumnName="sj" />
-                <ScalarProperty Name="bp" ColumnName="bp" />
-                <ScalarProperty Name="tel" ColumnName="tel" />
-                <ScalarProperty Name="ghsmc" ColumnName="ghsmc" />
-                <ScalarProperty Name="ghsid" ColumnName="ghsid" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
-          <EntitySetMapping Name="spfl">
-            <EntityTypeMapping TypeName="ccxnfModel.spfl">
-              <MappingFragment StoreEntitySet="spfl">
-                <ScalarProperty Name="pxbm" ColumnName="pxbm" />
-                <ScalarProperty Name="pym" ColumnName="pym" />
-                <ScalarProperty Name="spflmc" ColumnName="spflmc" />
-                <ScalarProperty Name="spflbm" ColumnName="spflbm" />
-                <ScalarProperty Name="lsh" ColumnName="lsh" />
-              </MappingFragment>
-            </EntityTypeMapping>
-          </EntitySetMapping>
+          <FunctionImportMapping FunctionImportName="proc_PH" FunctionName="ccxnfModel.Store.proc_PH" />
           </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>

@@ -277,5 +277,36 @@ namespace Sd.DAL
             }
         }
         #endregion
+        #region 销售系统
+        /// <summary>
+        /// 销售单
+        /// <remarks>
+        /// 创建：2016.11.30 高振亮<br />
+        /// 修改：2016.11.30 高振亮
+        /// </remarks>
+        /// </summary>
+        public static IXsdDal XsdDal
+        {
+            get
+            {
+                return new XsdDal();
+            }
+        }
+
+        /// <summary>
+        /// 销售单明细
+        /// <remarks>
+        /// 创建：2016.11.30 高振亮<br />
+        /// 修改：2016.11.30 高振亮
+        /// </remarks>
+        /// </summary>
+        public static IXsdmxDal XsdmxDal
+        {
+            get
+            {
+                return new XsdmxDal();
+            }
+        }
+        #endregion
     }
 }

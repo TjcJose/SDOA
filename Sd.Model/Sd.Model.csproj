@@ -116,6 +116,12 @@
     <Compile Include="xsbxx.cs">
       <DependentUpon>Server.tt</DependentUpon>
     </Compile>
+    <Compile Include="xsd.cs">
+      <DependentUpon>Server.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xsdmx.cs">
+      <DependentUpon>Server.tt</DependentUpon>
+    </Compile>
     <Compile Include="zlb.cs">
       <DependentUpon>Server.tt</DependentUpon>
     </Compile>

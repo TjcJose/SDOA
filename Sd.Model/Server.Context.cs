@@ -12,6 +12,8 @@ namespace Sd.Model
     using System;
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
+    using System.Data.Entity.Core.Objects;
+    using System.Linq;
     
     public partial class SdEntities : DbContext
     {
@@ -35,7 +37,6 @@ namespace Sd.Model
         public virtual DbSet<xsbxx> xsbxx { get; set; }
         public virtual DbSet<zyxx> zyxx { get; set; }
         public virtual DbSet<xqxx> xqxx { get; set; }
-        public virtual DbSet<spxx> spxx { get; set; }
         public virtual DbSet<spPmlb> spPmlb { get; set; }
         public virtual DbSet<cpxllx> cpxllx { get; set; }
         public virtual DbSet<jldwb> jldwb { get; set; }
@@ -43,5 +44,21 @@ namespace Sd.Model
         public virtual DbSet<cpxl> cpxl { get; set; }
         public virtual DbSet<ghsxx> ghsxx { get; set; }
         public virtual DbSet<spfl> spfl { get; set; }
+        public virtual DbSet<xsd> xsd { get; set; }
+        public virtual DbSet<xsdmx> xsdmx { get; set; }
+        public virtual DbSet<spxx> spxx { get; set; }
+    
+        public virtual ObjectResult<string> proc_PH(string djlb, string xsbmc, ObjectParameter result)
+        {
+            var djlbParameter = djlb != null ?
+                new ObjectParameter("djlb", djlb) :
+                new ObjectParameter("djlb", typeof(string));
+    
+            var xsbmcParameter = xsbmc != null ?
+                new ObjectParameter("xsbmc", xsbmc) :
+                new ObjectParameter("xsbmc", typeof(string));
+    
+            return ((IObjectContextAdapter)this).ObjectContext.ExecuteFunction<string>("proc_PH", djlbParameter, xsbmcParameter, result);
+        }
     }
 }

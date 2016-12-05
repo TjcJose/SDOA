@@ -3,6 +3,7 @@ using System.Windows.Forms;
 using Sd.UI.Info.Customer;
 using Sd.UI.Info.Department;
 using Sd.UI.Info.Goods;
+using Sd.UI.Selling;
 using Sd.UI.SystemAdmin;
 
 namespace Sd.UI
@@ -12,13 +13,15 @@ namespace Sd.UI
         public MainFrm()
         {
             InitializeComponent();
-           
-            //加载皮肤 Application.StartupPath.Substring(0,Application.StartupPath.LastIndexOf(@"\"));           
-            skinEngine.SkinFile = Application.StartupPath.Substring(0, Application.StartupPath.LastIndexOf(@"\", StringComparison.Ordinal)) +  @"\Skins\office2007.ssk";
-            //MainFrmResx.FrmSkinPath;
-            skinEngine.Active = true;
             // 开启双缓存，解决加载图片闪烁
-            this.SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.UserPaint | ControlStyles.OptimizedDoubleBuffer, true);
+            SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.UserPaint | ControlStyles.OptimizedDoubleBuffer, true);
+        }
+        private void MainFrm_Load(object sender, EventArgs e)
+        {
+            //加载皮肤 Application.StartupPath.Substring(0,Application.StartupPath.LastIndexOf(@"\"));           
+            skinEngine.SkinFile = Application.StartupPath.Substring(0, Application.StartupPath.LastIndexOf(@"\", StringComparison.Ordinal)) + @"\Skins\office2007.ssk";
+            //MainFrmResx.FrmSkinPath;
+            skinEngine.Active = false;
         }
 
         private void MainFrm_FormClosed(object sender, FormClosedEventArgs e)
@@ -48,6 +51,16 @@ namespace Sd.UI
         {
             var customerFrm = new CustomerFrm();
             customerFrm.ShowDialog();
+        }
+
+        private void 销售单ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var sellingFrm = new SellingFrm();
+            sellingFrm.ShowDialog();
+        }
+
+        private void 用户管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
         }
     }
 }

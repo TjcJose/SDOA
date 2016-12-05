@@ -44,6 +44,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="IBaseDal.cs" />
+    <Compile Include="ICommonDal.cs" />
+    <Compile Include="ISellingDal.cs" />
     <Compile Include="ISupplyDal.cs" />
     <Compile Include="IGoodsDal.cs" />
     <Compile Include="IDepartmentDa.cs" />
