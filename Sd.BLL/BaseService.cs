@@ -29,11 +29,26 @@ namespace Sd.BLL
             return CurrentDal.Update(entity);
         }
 
+        public bool NewUpdate(Expression<Func<T, bool>> whereLambda, Expression<Func<T, T>> entity)
+        {
+            return CurrentDal.NewUpdate(whereLambda, entity);
+        }
+
+        public bool PatchUpdate(Expression<Func<T, T>> entity)
+        {
+            return CurrentDal.PatchUpdate(entity);
+        }
+
         public bool Delete(T entity)
         {
             return CurrentDal.Delete(entity);
         }
 
+        public bool PatchDelete(Expression<Func<T, bool>> whereLambda)
+        {
+            return CurrentDal.PatchDelete(whereLambda);
+        }
+        
         /// <summary>
         /// 批处理操作
         /// </summary>
