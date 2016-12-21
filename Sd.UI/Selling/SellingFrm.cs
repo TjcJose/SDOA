@@ -448,8 +448,10 @@ namespace Sd.UI.Selling
                 return;
             }
 
-            var comPrint = new ComPrint();
-            comPrint.Run("SellingPrintRdlc.rdlc", "SellingDetailDs", GetDgvToList(dgvXsdmx));
+            /*var comPrint = new ComPrint();
+            comPrint.Run("SellingPrintRdlc.rdlc", "SellingDetailDs", GetDgvToList(dgvXsdmx));*/
+            var printFrm = new SellingPrintFrm(GetDgvToList(dgvXsdmx));
+            printFrm.ShowDialog();
         }
 
         #endregion

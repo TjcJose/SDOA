@@ -78,6 +78,12 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Common\ComPrint.cs" />
+    <Compile Include="Finance\CostFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finance\CostFrm.Designer.cs">
+      <DependentUpon>CostFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Info\Customer\CustomerFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -159,6 +165,9 @@
     <Compile Include="SystemAdmin\UserAdminFrm.Designer.cs">
       <DependentUpon>UserAdminFrm.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="Finance\CostFrm.resx">
+      <DependentUpon>CostFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Info\Customer\CustomerFrm.resx">
       <DependentUpon>CustomerFrm.cs</DependentUpon>
     </EmbeddedResource>
