@@ -88,11 +88,29 @@ namespace Sd.UI.Properties {
         }
         
         /// <summary>
+        ///   查找类似  为必填项, 请重新输入 的本地化字符串。
+        /// </summary>
+        internal static string comp_not_null {
+            get {
+                return ResourceManager.GetString("comp_not_null", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 追梦软件提示 的本地化字符串。
         /// </summary>
         internal static string confrim {
             get {
                 return ResourceManager.GetString("confrim", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 请输入整数 的本地化字符串。
+        /// </summary>
+        internal static string input_int {
+            get {
+                return ResourceManager.GetString("input_int", resourceCulture);
             }
         }
         

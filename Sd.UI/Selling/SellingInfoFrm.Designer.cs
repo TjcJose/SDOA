@@ -47,7 +47,6 @@
             this.dgvXsdInfo.Size = new System.Drawing.Size(1002, 580);
             this.dgvXsdInfo.TabIndex = 0;
             this.dgvXsdInfo.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvXsdInfo_CellMouseDoubleClick);
-            this.dgvXsdInfo.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.dgvXsdInfo_KeyPress);
             this.dgvXsdInfo.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.dgvXsdInfo_PreviewKeyDown);
             // 
             // SellingInfoFrm

@@ -59,35 +59,7 @@ namespace Sd.UI.Selling
 
         private void dgvXsdInfo_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
         {
-            if (null == dgvXsdInfo.CurrentRow)
-            {
-                return;
-            }
-
-            _sellingFrm.XsdInfo =
-                _xsdInfos.First(u => u.xsdid.Equals(dgvXsdInfo.CurrentRow.Cells["销售单编号"].Value));
-
-            Close();
-        }
-
-        private void dgvXsdInfo_KeyPress(object sender, KeyPressEventArgs e)
-        {
-            if (e.KeyChar != 13)
-            {
-                return;
-            }
-
-            e.Handled = true;
-
-            if (null == dgvXsdInfo.CurrentRow)
-            {
-                return;
-            }
-
-            _sellingFrm.XsdInfo =
-                _xsdInfos.First(u => u.xsdid.Equals(dgvXsdInfo.CurrentRow.Cells["销售单编号"].Value));
-
-            Close();
+            XsdInfoSelected();
         }
 
         private void dgvXsdInfo_PreviewKeyDown(object sender, PreviewKeyDownEventArgs e)
@@ -97,6 +69,11 @@ namespace Sd.UI.Selling
                 return;
             }
 
+            XsdInfoSelected();
+        }
+
+        private void XsdInfoSelected()
+        {
             if (null == dgvXsdInfo.CurrentRow)
             {
                 return;

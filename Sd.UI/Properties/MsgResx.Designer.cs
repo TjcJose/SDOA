@@ -106,6 +106,15 @@ namespace Sd.UI.Properties {
         }
         
         /// <summary>
+        ///   查找类似 是否删除本单？ 的本地化字符串。
+        /// </summary>
+        internal static string delete_confirm {
+            get {
+                return ResourceManager.GetString("delete_confirm", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 删除失败，别的表是否正在使用，请检查字段后重试。 的本地化字符串。
         /// </summary>
         internal static string delete_fail {
@@ -120,6 +129,42 @@ namespace Sd.UI.Properties {
         internal static string delete_success {
             get {
                 return ResourceManager.GetString("delete_success", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 合计金额不对，请重修该单子 的本地化字符串。
+        /// </summary>
+        internal static string hjzje_error {
+            get {
+                return ResourceManager.GetString("hjzje_error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 该单号不存在，请重新输入 的本地化字符串。
+        /// </summary>
+        internal static string input_id_null {
+            get {
+                return ResourceManager.GetString("input_id_null", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 请正确输入金额— 的本地化字符串。
+        /// </summary>
+        internal static string input_money_chk {
+            get {
+                return ResourceManager.GetString("input_money_chk", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 现金+转账+应收 ！= 实付金额，请修改 的本地化字符串。
+        /// </summary>
+        internal static string input_money_ssze {
+            get {
+                return ResourceManager.GetString("input_money_ssze", resourceCulture);
             }
         }
         
@@ -169,6 +214,69 @@ namespace Sd.UI.Properties {
         }
         
         /// <summary>
+        ///   查找类似 本单已经打印，不能重复打印！ 的本地化字符串。
+        /// </summary>
+        internal static string print_already {
+            get {
+                return ResourceManager.GetString("print_already", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 没有找到打印机 的本地化字符串。
+        /// </summary>
+        internal static string print_noprinter {
+            get {
+                return ResourceManager.GetString("print_noprinter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 本单已审核 的本地化字符串。
+        /// </summary>
+        internal static string review_already {
+            get {
+                return ResourceManager.GetString("review_already", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 审核失败，请重新审核 的本地化字符串。
+        /// </summary>
+        internal static string review_faild {
+            get {
+                return ResourceManager.GetString("review_faild", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 审核完了 的本地化字符串。
+        /// </summary>
+        internal static string review_success {
+            get {
+                return ResourceManager.GetString("review_success", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 满足条件的结果为【0】，请重新输入 的本地化字符串。
+        /// </summary>
+        internal static string search_result_null {
+            get {
+                return ResourceManager.GetString("search_result_null", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 本单已审核，无法修改！ 的本地化字符串。
+        /// </summary>
+        internal static string update_chk_reviewed {
+            get {
+                return ResourceManager.GetString("update_chk_reviewed", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 修改失败，该数据可能已被删除，请检查字段后重试。 的本地化字符串。
         /// </summary>
         internal static string update_fail {
@@ -183,6 +291,15 @@ namespace Sd.UI.Properties {
         internal static string update_success {
             get {
                 return ResourceManager.GetString("update_success", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 销售明细为空，请重新输入 的本地化字符串。
+        /// </summary>
+        internal static string xsdmx_null {
+            get {
+                return ResourceManager.GetString("xsdmx_null", resourceCulture);
             }
         }
     }

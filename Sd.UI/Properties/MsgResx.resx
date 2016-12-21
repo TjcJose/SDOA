@@ -132,11 +132,26 @@
   <data name="delete_check" xml:space="preserve">
     <value>该数据已经被删除。</value>
   </data>
+  <data name="delete_confirm" xml:space="preserve">
+    <value>是否删除本单？</value>
+  </data>
   <data name="delete_fail" xml:space="preserve">
     <value>删除失败，别的表是否正在使用，请检查字段后重试。</value>
   </data>
   <data name="delete_success" xml:space="preserve">
     <value>删除成功！</value>
+  </data>
+  <data name="hjzje_error" xml:space="preserve">
+    <value>合计金额不对，请重修该单子</value>
+  </data>
+  <data name="input_id_null" xml:space="preserve">
+    <value>该单号不存在，请重新输入</value>
+  </data>
+  <data name="input_money_chk" xml:space="preserve">
+    <value>请正确输入金额—</value>
+  </data>
+  <data name="input_money_ssze" xml:space="preserve">
+    <value>现金+转账+应收 ！= 实付金额，请修改</value>
   </data>
   <data name="login_btn_logining" xml:space="preserve">
     <value>请稍后，登录中。。。</value>
@@ -153,10 +168,34 @@
   <data name="login_txt_user_pwd" xml:space="preserve">
     <value>用户名或密码不能为空！</value>
   </data>
+  <data name="print_already" xml:space="preserve">
+    <value>本单已经打印，不能重复打印！</value>
+  </data>
+  <data name="print_noprinter" xml:space="preserve">
+    <value>没有找到打印机</value>
+  </data>
+  <data name="review_already" xml:space="preserve">
+    <value>本单已审核</value>
+  </data>
+  <data name="review_faild" xml:space="preserve">
+    <value>审核失败，请重新审核</value>
+  </data>
+  <data name="review_success" xml:space="preserve">
+    <value>审核完了</value>
+  </data>
+  <data name="search_result_null" xml:space="preserve">
+    <value>满足条件的结果为【0】，请重新输入</value>
+  </data>
+  <data name="update_chk_reviewed" xml:space="preserve">
+    <value>本单已审核，无法修改！</value>
+  </data>
   <data name="update_fail" xml:space="preserve">
     <value>修改失败，该数据可能已被删除，请检查字段后重试。</value>
   </data>
   <data name="update_success" xml:space="preserve">
     <value>修改成功！</value>
+  </data>
+  <data name="xsdmx_null" xml:space="preserve">
+    <value>销售明细为空，请重新输入</value>
   </data>
 </root>

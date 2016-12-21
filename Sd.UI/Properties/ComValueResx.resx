@@ -126,8 +126,14 @@
   <data name="combTextDefault" xml:space="preserve">
     <value>-</value>
   </data>
+  <data name="comp_not_null" xml:space="preserve">
+    <value> 为必填项, 请重新输入</value>
+  </data>
   <data name="confrim" xml:space="preserve">
     <value>追梦软件提示</value>
+  </data>
+  <data name="input_int" xml:space="preserve">
+    <value>请输入整数</value>
   </data>
   <data name="txtIntDefault" xml:space="preserve">
     <value>0</value>

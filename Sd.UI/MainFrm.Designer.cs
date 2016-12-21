@@ -60,6 +60,7 @@
             this.toolStripStatusLabel9 = new System.Windows.Forms.ToolStripStatusLabel();
             this.toolStripStatusLabel11 = new System.Windows.Forms.ToolStripStatusLabel();
             this.tsslCzy = new System.Windows.Forms.ToolStripStatusLabel();
+            this.退出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.statusStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -84,7 +85,8 @@
             this.财务系统ToolStripMenuItem,
             this.报表系统ToolStripMenuItem,
             this.信息系统ToolStripMenuItem,
-            this.系统设置ToolStripMenuItem});
+            this.系统设置ToolStripMenuItem,
+            this.退出ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1584, 40);
@@ -369,6 +371,14 @@
             this.tsslCzy.Size = new System.Drawing.Size(43, 21);
             this.tsslCzy.Text = "开票1";
             // 
+            // 退出ToolStripMenuItem
+            // 
+            this.退出ToolStripMenuItem.Image = global::Sd.UI.Properties.Resources.cancel;
+            this.退出ToolStripMenuItem.Name = "退出ToolStripMenuItem";
+            this.退出ToolStripMenuItem.Size = new System.Drawing.Size(81, 36);
+            this.退出ToolStripMenuItem.Text = "退出";
+            this.退出ToolStripMenuItem.Click += new System.EventHandler(this.退出ToolStripMenuItem_Click);
+            // 
             // MainFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -429,5 +439,6 @@
         private System.Windows.Forms.ToolStripMenuItem 客户信息ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 销售单ToolStripMenuItem;
         public Sunisoft.IrisSkin.SkinEngine skinEngine;
+        private System.Windows.Forms.ToolStripMenuItem 退出ToolStripMenuItem;
     }
 }

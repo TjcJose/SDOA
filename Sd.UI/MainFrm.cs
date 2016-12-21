@@ -62,5 +62,10 @@ namespace Sd.UI
         private void 用户管理ToolStripMenuItem_Click(object sender, EventArgs e)
         {
         }
+
+        private void 退出ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
+        }
     }
 }

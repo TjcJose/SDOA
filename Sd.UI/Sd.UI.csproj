@@ -61,9 +61,12 @@
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\dll\IrisSkin4.dll</HintPath>
     </Reference>
+    <Reference Include="Microsoft.ReportViewer.Common, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
+    <Reference Include="Microsoft.ReportViewer.WinForms, Version=11.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91" />
     <Reference Include="System" />
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Web.Services" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -74,6 +77,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Common\ComPrint.cs" />
     <Compile Include="Info\Customer\CustomerFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -127,6 +131,18 @@
     </Compile>
     <Compile Include="Selling\SellingInfoFrm.Designer.cs">
       <DependentUpon>SellingInfoFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Selling\SellingPrintFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Selling\SellingPrintFrm.Designer.cs">
+      <DependentUpon>SellingPrintFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Selling\SellingSearchFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Selling\SellingSearchFrm.Designer.cs">
+      <DependentUpon>SellingSearchFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="SystemAdmin\AuthorityFrm.cs">
       <SubType>Form</SubType>
@@ -184,6 +200,13 @@
     <EmbeddedResource Include="Selling\SellingInfoFrm.resx">
       <DependentUpon>SellingInfoFrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Selling\SellingPrintFrm.resx">
+      <DependentUpon>SellingPrintFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Selling\SellingPrintRdlc.rdlc" />
+    <EmbeddedResource Include="Selling\SellingSearchFrm.resx">
+      <DependentUpon>SellingSearchFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="SystemAdmin\AuthorityFrm.resx">
       <DependentUpon>AuthorityFrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -191,6 +214,7 @@
       <DependentUpon>UserAdminFrm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\Sd.Model.Rdlc.SellingDetail.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
