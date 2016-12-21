@@ -5,6 +5,8 @@
 // 修改：2016.11.30 高振亮
 //-----------------------------------------------
 
+using System.Data.Entity;
+using EntityFramework.Extensions;
 using Sd.IDAL;
 using Sd.Model;
 

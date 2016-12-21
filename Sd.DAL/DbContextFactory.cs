@@ -1,4 +1,5 @@
 ﻿using System.Data.Entity;
+using EntityFramework.Extensions;
 using System.Runtime.Remoting.Messaging;
 
 namespace Sd.DAL
@@ -17,6 +18,7 @@ namespace Sd.DAL
         /// <returns></returns>
         public static DbContext GetCurrentContext()
         {
+            
             var dContext = CallContext.GetData("SdContext") as DbContext;
             if (dContext != null) return dContext;
             dContext = new DbContext("SdEntities");

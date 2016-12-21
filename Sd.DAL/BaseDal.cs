@@ -1,9 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Data.Entity;
-using System.Data.Entity.Validation;
 using System.Linq;
 using System.Linq.Expressions;
+using EntityFramework.Extensions;
 using Sd.IDAL;
 
 namespace Sd.DAL
@@ -18,6 +18,7 @@ namespace Sd.DAL
     /// </summary>
     public class BaseDal<T> : IBaseDal<T> where T : class ,new()
     {
+
         protected DbContext DContext = DbContextFactory.GetCurrentContext();
         public T Add(T entity)
         {
@@ -45,16 +46,27 @@ namespace Sd.DAL
             return DContext.Set<T>().Count(predicate);
         }
 
+        public bool NewUpdate(Expression<Func<T, bool>> whereLambda, Expression<Func<T, T>> entity)
+        {
+            return 0 < DContext.Set<T>().Where(whereLambda).Update(entity);
+        }
+
+        public bool PatchUpdate(Expression<Func<T, T>> entity)
+        {
+            return 0 < DContext.Set<T>().Update(entity);
+        }
+
         public bool Update(T entity)
         {
-            DContext.Set<T>().Attach(entity);
-            DContext.Entry(entity).State = EntityState.Modified;
-
             try
             {
+                DContext.Set<T>().Attach(entity);
+                DContext.Entry(entity).State = EntityState.Modified;
+
+
                 return DContext.SaveChanges() > 0;
             }
-            catch (DbEntityValidationException)
+            catch (Exception)
             {
                 /*var error = "";
                 foreach (var item in ex.EntityValidationErrors)
@@ -68,12 +80,13 @@ namespace Sd.DAL
 
                 DContext = DbContextFactory.ResetCurrentContext();
 
-                return false;
+                return Update(entity);
             }
         }
 
         public bool Delete(T entity)
         {
+            DContext.Set<T>().Remove(DContext.Set<T>().First());
             DContext.Set<T>().Attach(entity);
             DContext.Entry(entity).State = EntityState.Deleted;
 
@@ -90,6 +103,11 @@ namespace Sd.DAL
 
                 return false;
             }
+        }
+
+        public bool PatchDelete(Expression<Func<T, bool>> whereLambda)
+        {
+            return 0 < DContext.Set<T>().Where(whereLambda).Delete();
         }
 
         /// <summary>
