@@ -34,6 +34,25 @@ namespace Sd.IBLL
         /// <returns>是否成功</returns>
         bool Update(T entity);
         /// <summary>
+        /// 拓展更新
+        /// </summary>
+        /// <param name="whereLambda">过滤条件</param>
+        /// <param name="updateLambda">更新实体</param>
+        /// <returns></returns>
+        bool NewUpdate(Expression<Func<T, bool>> whereLambda, Expression<Func<T, T>> updateLambda);
+        /// <summary>
+        /// 批量更新
+        /// </summary>
+        /// <param name="entity">更新内容</param>
+        /// <returns></returns>
+        bool PatchUpdate(Expression<Func<T, T>> entity);
+        /// <summary>
+        /// 批量删除
+        /// </summary>
+        /// <param name="whereLambda">删除条件</param>
+        /// <returns></returns>
+        bool PatchDelete(Expression<Func<T, bool>> whereLambda);
+        /// <summary>
         /// 批处理操作
         /// </summary>
         /// <param name="entityList">数据实体集</param>
