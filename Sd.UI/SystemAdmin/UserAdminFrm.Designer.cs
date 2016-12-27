@@ -39,7 +39,7 @@
             this.button3 = new System.Windows.Forms.Button();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnAdd = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.SuspendLayout();
@@ -147,15 +147,15 @@
             this.label4.TabIndex = 9;
             this.label4.Text = "姓  名";
             // 
-            // button4
+            // btnAdd
             // 
-            this.button4.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button4.Location = new System.Drawing.Point(48, 222);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(86, 32);
-            this.button4.TabIndex = 11;
-            this.button4.Text = "增加";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnAdd.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnAdd.Location = new System.Drawing.Point(48, 222);
+            this.btnAdd.Name = "btnAdd";
+            this.btnAdd.Size = new System.Drawing.Size(86, 32);
+            this.btnAdd.TabIndex = 11;
+            this.btnAdd.Text = "增加";
+            this.btnAdd.UseVisualStyleBackColor = true;
             // 
             // button5
             // 
@@ -184,7 +184,7 @@
             this.ClientSize = new System.Drawing.Size(443, 336);
             this.Controls.Add(this.button6);
             this.Controls.Add(this.button5);
-            this.Controls.Add(this.button4);
+            this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.textBox3);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.button3);
@@ -216,7 +216,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnAdd;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
     }
