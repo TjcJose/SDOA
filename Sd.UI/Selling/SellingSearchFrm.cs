@@ -43,7 +43,9 @@ namespace Sd.UI.Selling
                     .ToList();
             combKhid.DisplayMember = "khmc";
 
-            dtpXsrqFrom.Value = DateTime.Parse(DateTime.Now.ToString("yyyy-MM-01")).AddYears(-1);  
+            combKhid.Text = "";
+            //dtpXsrqFrom.Value = DateTime.Parse(DateTime.Now.ToString("yyyy-MM-01")).AddYears(-1);  
+
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -59,7 +61,7 @@ namespace Sd.UI.Selling
             if (chkXsrq.Checked)
             {
                 xsdList = xsdService.FindList(u =>
-                    (u.xsdid.Contains(txtTyphcc.Text) || u.sgddh.Contains(txtTyphcc.Text)) &&
+                    (u.xsdid.Contains(txtTyphcc.Text) || u.sgddh.Contains(txtTyphcc.Text) || u.bz.Contains(txtTyphcc.Text)) &&
                     u.khmc.Contains(combKhid.Text) &&
                     u.ejkh.Contains(txtEjkh.Text) &&
                     u.tel.Contains(txtTel.Text) &&
@@ -70,7 +72,7 @@ namespace Sd.UI.Selling
             else
             {
                 xsdList = xsdService.FindList(u =>
-                    (u.xsdid.Contains(txtTyphcc.Text) || u.sgddh.Contains(txtTyphcc.Text)) &&
+                    (u.xsdid.Contains(txtTyphcc.Text) || u.sgddh.Contains(txtTyphcc.Text) || u.bz.Contains(txtTyphcc.Text)) &&
                     u.khmc.Contains(combKhid.Text) &&
                     u.ejkh.Contains(txtEjkh.Text) &&
                     u.tel.Contains(txtTel.Text) &&

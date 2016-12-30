@@ -7,21 +7,13 @@
 
 using System;
 using System.Collections.Generic;
-using System.Data;
-using System.Drawing;
-using System.Drawing.Imaging;
-using System.Drawing.Printing;
-using System.IO;
 using System.Linq;
-using System.Text;
 using System.Windows.Forms;
 using Sd.BLL;
 using Sd.IBLL;
 using System.Threading;
-using Microsoft.Reporting.WinForms;
 using Sd.Model;
 using Sd.Model.Rdlc;
-using Sd.UI.Common;
 using Sd.UI.Properties;
 
 namespace Sd.UI.Selling
@@ -45,6 +37,136 @@ namespace Sd.UI.Selling
         }
 
         #region 重写事件
+
+        protected override bool ProcessCmdKey(ref Message msg, Keys keyData)
+        {
+            if (keyData == Keys.Enter && dgvXsdmx.IsCurrentCellInEditMode)
+            {
+                if (null == dgvXsdmx.CurrentCell)
+                {
+                    return true;
+                }
+
+                // 增加和更新时处理
+                if (_operationMode != 1 && _operationMode != 2 && _operationMode != 3)
+                {
+                    return true;
+                }
+
+                if (dgvXsdmx.CurrentCell.EditedFormattedValue == null)
+                {
+                    MessageBox.Show(dgvXsdmx.CurrentCell.OwningColumn.Name + ComValueResx.comp_not_null);
+                    dgvXsdmx.BeginEdit(true);
+                    return true;
+                }
+
+                switch (dgvXsdmx.CurrentCell.ColumnIndex)
+                {
+                    case 0:
+                        IGoodsService goodsService = new GoodsService();
+
+                        var spxx = goodsService.Find(u => u.spid.Contains(dgvXsdmx.CurrentCell.EditedFormattedValue.ToString().Trim()));
+
+                        if (null == spxx)
+                        {
+                            dgvXsdmx.BeginEdit(true);
+                            return true;
+                        }
+
+                        dgvXsdmx.CurrentCell.Value = spxx.spid.TrimEnd(); // 商品编码
+                        dgvXsdmx.Rows[dgvXsdmx.CurrentCell.RowIndex].Cells[1].Value = spxx.pm.TrimEnd(); // 编码型号
+                        dgvXsdmx.Rows[dgvXsdmx.CurrentCell.RowIndex].Cells[2].Value =
+                            null == spxx.db1 ? "0" : spxx.db1.Value.ToString("F1"); // 原价
+                        dgvXsdmx.Rows[dgvXsdmx.CurrentCell.RowIndex].Cells[3].Value =
+                            null == spxx.zkl1 ? "0" : spxx.zkl1.Value.ToString("F1"); // 折扣
+                        dgvXsdmx.Rows[dgvXsdmx.CurrentCell.RowIndex].Cells[4].Value =
+                            null == spxx.xsj ? "0" : spxx.xsj.Value.ToString("F1"); // 销售价
+                        dgvXsdmx.Rows[dgvXsdmx.CurrentCell.RowIndex].Cells[5].Value = spxx.dw.TrimEnd(); // 单位
+
+                        dgvXsdmx.CurrentCell =
+                            dgvXsdmx.Rows[dgvXsdmx.CurrentCell.RowIndex].Cells["数量"];
+                        dgvXsdmx.BeginEdit(true);
+                        break;
+                    case 6:
+                        if (dgvXsdmx.CurrentRow == null)
+                        {
+                            return true;
+                        }
+                        long iSl;
+
+                        if (
+                            !long.TryParse(dgvXsdmx.CurrentCell.EditedFormattedValue.ToString(), out iSl))
+                        {
+                            MessageBox.Show(ComValueResx.input_int);
+                            dgvXsdmx.BeginEdit(true);
+                            return true;
+                        }
+
+                        if (null == dgvXsdmx.Rows[dgvXsdmx.CurrentCell.RowIndex].Cells[4].Value)
+                        {
+                            MessageBox.Show(dgvXsdmx.CurrentCell.OwningColumn.Name + ComValueResx.comp_not_null);
+                            return true;
+                        }
+
+                        dgvXsdmx.Rows[dgvXsdmx.CurrentCell.RowIndex].Cells["金额"].Value =
+                            decimal.Parse(dgvXsdmx.Rows[dgvXsdmx.CurrentCell.RowIndex].Cells[4].Value.ToString()) *
+                            int.Parse(dgvXsdmx.CurrentCell.EditedFormattedValue.ToString());
+
+                        dgvXsdmx.CurrentCell =
+                            dgvXsdmx.Rows[dgvXsdmx.CurrentCell.RowIndex].Cells["金额"];
+
+                        var sum = GetHjzje();
+
+                        if (null == sum)
+                        {
+                            return true;
+                        }
+
+                        txtHjzje.Text = sum;
+
+                        break;
+
+                    case 7:
+                        if (dgvXsdmx.CurrentRow == null)
+                        {
+                            return true;
+                        }
+
+                        for (var i = 0; i < dgvXsdmx.CurrentRow.Cells.Count; i++)
+                        {
+                            var cell = dgvXsdmx.CurrentRow.Cells[i];
+                            if (null != cell.Value)
+                            {
+                                continue;
+                            }
+
+                            dgvXsdmx.CurrentCell = cell;
+                            dgvXsdmx.BeginEdit(true);
+                            return true;
+                        }
+
+                        dgvXsdmx.Rows.Add();
+
+                        dgvXsdmx.CurrentCell =
+                            dgvXsdmx.Rows[dgvXsdmx.CurrentCell.RowIndex + 1].Cells[0];
+
+                        break;
+
+                    default:
+                        dgvXsdmx.CurrentCell =
+                            dgvXsdmx.Rows[dgvXsdmx.CurrentCell.RowIndex].Cells[dgvXsdmx.CurrentCell.ColumnIndex + 1];
+                        break;
+                }
+
+                return true;
+            }
+            else
+            {
+                return false;
+            }
+
+        }
+
 
         /// <summary>
         /// 重写ProcessDialogKey，主要用于【回车】切换控件
@@ -85,6 +207,8 @@ namespace Sd.UI.Selling
                         dgvXsdmx.BeginEdit(true);
                         return true;
                     }
+                    break;
+                default:
                     break;
             }
 
@@ -129,7 +253,7 @@ namespace Sd.UI.Selling
         private void btnDel_Click(object sender, EventArgs e)
         {
             // 增加和更新时处理
-            if (_operationMode != 1 && _operationMode != 3)
+            if (_operationMode != 1 && _operationMode != 2 && _operationMode != 3)
             {
                 return;
             }
@@ -144,6 +268,12 @@ namespace Sd.UI.Selling
             if (dgvXsdmx.RowCount != 0)
             {
                 return;
+            }
+
+            // 处于退货模式下，删除全部数据时，重置画面
+            if (2 == _operationMode)
+            {
+                FrmReset();
             }
 
             if (DialogResult.Yes == MessageBox.Show(MsgResx.delete_confirm, ComValueResx.confrim, MessageBoxButtons.YesNo))
@@ -192,6 +322,58 @@ namespace Sd.UI.Selling
                 dgvXsdmx.Rows.Add();
                 dgvXsdmx.BeginEdit(true);
             }
+        }
+
+        /// <summary>
+        /// 退货处理
+        /// </summary>
+        /// <param name="sender"></param>
+        /// <param name="e"></param>
+        private void btnRefund_Click(object sender, EventArgs e)
+        {
+            _operationMode = 2;
+
+            btnAdd.Enabled = false;
+
+            btnRefund.Enabled = false;
+
+            btnUpdate.Enabled = false;
+
+            btnReview.Enabled = false;
+
+            btnSearch.Enabled = false;
+
+            btnPrint.Enabled = false;
+
+            dgvXsdmx.ReadOnly = false;
+
+            foreach (DataGridViewRow dgvRow in dgvXsdmx.Rows)
+            {
+                dgvRow.Cells["商品编码"].ReadOnly = true;
+                dgvRow.Cells["数量"].Value = "0";
+                dgvRow.Cells["金额"].Value = "0";
+            }
+
+            txtHjzje.Text = ComValueResx.txtIntDefault;
+            txtSr.Text = ComValueResx.txtIntDefault;
+            txtSsze.Text = ComValueResx.txtIntDefault;
+            txtXj.Text = ComValueResx.txtIntDefault;
+            txtZz.Text = ComValueResx.txtIntDefault;
+            txtYs.Text = ComValueResx.txtIntDefault;
+            txtBz.Text = txtXsdid.Text.Trim();
+
+            var strXsdid = txtSgddh.Text.Trim();
+
+            if (string.IsNullOrWhiteSpace(strXsdid))
+            {
+                strXsdid = txtXsdid.Text.Trim();
+            }
+
+            SetTxtXsdidFromDb();
+
+            txtSgddh.Text = strXsdid;
+
+            dgvXsdmx.Focus();
         }
 
         private void btnUpdate_Click(object sender, EventArgs e)
@@ -244,13 +426,16 @@ namespace Sd.UI.Selling
                 return;
             }
 
+            // 是否已经审核，1：已审核
             if ("1".Equals(XsdInfo.flag))
             {
+                btnRefund.Enabled = true;
                 btnUpdate.Enabled = false;
                 btnReview.Enabled = false;
             }
             else
             {
+                btnRefund.Enabled = false;
                 btnUpdate.Enabled = true;
                 btnReview.Enabled = true;
             }
@@ -273,6 +458,7 @@ namespace Sd.UI.Selling
             txtZz.Text = null == XsdInfo.zz ? "0" : XsdInfo.zz.Value.ToString("F1");
             txtYs.Text = null == XsdInfo.ys ? "0" : XsdInfo.ys.Value.ToString("F1");
             txtSdr.Text = XsdInfo.sdr;
+            txtBz.Text = XsdInfo.bz;
 
             var xsdid = XsdInfo.xsdid.TrimEnd();
 
@@ -318,7 +504,7 @@ namespace Sd.UI.Selling
         {
             // check
             // 增加和更新时处理
-            if (_operationMode != 1 && _operationMode != 3)
+            if (_operationMode != 1 && _operationMode != 2 && _operationMode != 3)
             {
                 return;
             }
@@ -390,16 +576,21 @@ namespace Sd.UI.Selling
                 return;
             }
 
-            
-            if (1 == _operationMode)
+            // ReSharper disable once SwitchStatementMissingSomeCases
+            switch (_operationMode)
             {
-                // 添加销售单信息
-                AddXsdInfo();
-            }
-            else
-            {
-                // 更新销售单信息
-                UpdateXsdInfo();
+                case 1:
+                    // 添加销售单信息
+                    AddXsdInfo();
+                    break;
+                case 2:
+                    // 退货
+                    RefundXsdInfo();
+                    break;
+                case 3:
+                    // 更新销售单信息
+                    UpdateXsdInfo();
+                    break;
             }
         }
 
@@ -586,8 +777,45 @@ namespace Sd.UI.Selling
 
         private void dgvXsdmx_KeyUp(object sender, KeyEventArgs e)
         {
+            // 
+            /*if (2 == _operationMode)
+            {
+                if (dgvXsdmx.CurrentRow == null)
+                {
+                    return;
+                }
+                long iSl;
+
+                if (
+                    !long.TryParse(dgvXsdmx.Rows[dgvXsdmx.CurrentCell.RowIndex].Cells["数量"].Value.ToString(), out iSl))
+                {
+                    MessageBox.Show(ComValueResx.input_int);
+                    dgvXsdmx.BeginEdit(true);
+                    return;
+                }
+
+                if (null == dgvXsdmx.Rows[dgvXsdmx.CurrentCell.RowIndex].Cells[4].Value)
+                {
+                    MessageBox.Show(dgvXsdmx.CurrentCell.OwningColumn.Name + ComValueResx.comp_not_null);
+                    return;
+                }
+
+                dgvXsdmx.Rows[dgvXsdmx.CurrentCell.RowIndex].Cells["金额"].Value =
+                    decimal.Parse(dgvXsdmx.Rows[dgvXsdmx.CurrentCell.RowIndex].Cells[4].Value.ToString()) *
+                    int.Parse(dgvXsdmx.Rows[dgvXsdmx.CurrentCell.RowIndex].Cells["数量"].Value.ToString());
+
+                var sum = GetHjzje();
+
+                if (null == sum)
+                {
+                    return;
+                }
+
+                txtHjzje.Text = sum;
+            }*/
+
             // 增加和更新时处理
-            if (_operationMode != 1 && _operationMode != 3)
+           /* if (_operationMode != 1 && _operationMode != 2 && _operationMode != 3)
             {
                 return;
             }
@@ -640,10 +868,10 @@ namespace Sd.UI.Selling
                     {
                         return;
                     }
-                    int iSl;
+                    long iSl;
 
                     if (
-                        !int.TryParse(dgvXsdmx.Rows[dgvXsdmx.CurrentCell.RowIndex].Cells["数量"].Value.ToString(), out iSl))
+                        !long.TryParse(dgvXsdmx.Rows[dgvXsdmx.CurrentCell.RowIndex].Cells["数量"].Value.ToString(), out iSl))
                     {
                         MessageBox.Show(ComValueResx.input_int);
                         dgvXsdmx.BeginEdit(true);
@@ -704,7 +932,7 @@ namespace Sd.UI.Selling
                     dgvXsdmx.CurrentCell =
                         dgvXsdmx.Rows[dgvXsdmx.CurrentCell.RowIndex].Cells[dgvXsdmx.CurrentCell.ColumnIndex + 1];
                     break;
-            }
+            }*/
         }
 
         private void dgvXsdmx_Leave(object sender, EventArgs e)
@@ -867,6 +1095,8 @@ namespace Sd.UI.Selling
 
             txtSdr.Text = "";
 
+            txtBz.Text = "";
+
             txtBz3.Text = "";
 
             combKhid.Text = "";
@@ -888,7 +1118,7 @@ namespace Sd.UI.Selling
             btnExit.Enabled = true;
             btnPrint.Enabled = true;
             btnQuit.Enabled = true;
-            btnRefund.Enabled = true;
+            btnRefund.Enabled = false;
             btnReview.Enabled = false;
             btnSave.Enabled = true;
             btnSearch.Enabled = true;
@@ -925,6 +1155,35 @@ namespace Sd.UI.Selling
         }
 
         /// <summary>
+        /// 退货处理
+        /// </summary>
+        private void RefundXsdInfo()
+        {
+            IXsdService xsdService = new XsdService();
+
+            var xsdAdd = xsdService.Add(GetXsdInfoFromFrm());
+            if (null == xsdAdd)
+            {
+                MessageBox.Show(MsgResx.refund_fail);
+                return;
+            }
+
+            IXsdmxService xsdmxService = new XsdmxService();
+
+            //TODO 退货CHK 数量是否不超过原单
+
+            if (xsdmxService.PatchById(GetXsdmxInfoFromDgv(), "add"))
+            {
+                MessageBox.Show(MsgResx.refund_success);
+            }
+            else
+            {
+                xsdService.Delete(xsdAdd);
+                MessageBox.Show(MsgResx.refund_fail);
+            }
+        }
+
+        /// <summary>
         /// 更新销售单信息
         /// </summary>
         private void UpdateXsdInfo()
@@ -946,13 +1205,14 @@ namespace Sd.UI.Selling
                 return;
             }
 
-            // 先更新销售单明细
+            // 先更新销售单明细, 删除 => 添加
             IXsdmxService xsdmxService = new XsdmxService();
 
             if (xsdmxService.PatchDelete(u => u.xsdid == txtXsdid.Text))
             {
                 if (xsdmxService.PatchById(GetXsdmxInfoFromDgv(), "add"))
                 {
+                    // 更新 销售单
                     if (xsdService.NewUpdate(t => t.xsdid == txtXsdid.Text, u => new xsd()
                     {
                         sgddh = txtSgddh.Text,
@@ -983,6 +1243,8 @@ namespace Sd.UI.Selling
                         zz = decimal.Parse(txtZz.Text),
                         ys = decimal.Parse(txtYs.Text),
                         syy = txtSyy.Text,
+                        bz3 = txtBz3.Text,
+                        bz = txtBz.Text,
                         sjsid = "yll"
                     }))
                     {
@@ -990,7 +1252,7 @@ namespace Sd.UI.Selling
 
                         btnAdd.Enabled = true;
 
-                        btnRefund.Enabled = true;
+                        btnRefund.Enabled = false;
 
                         btnUpdate.Enabled = true;
 
@@ -1046,6 +1308,8 @@ namespace Sd.UI.Selling
                 zz = decimal.Parse(txtZz.Text),
                 ys = decimal.Parse(txtYs.Text),
                 syy = txtSyy.Text,
+                bz3 = txtBz3.Text,
+                bz = txtBz.Text,
                 sjsid = "yll"
             };
         }

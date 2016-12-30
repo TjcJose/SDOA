@@ -100,6 +100,8 @@
             this.lblXsrq = new System.Windows.Forms.Label();
             this.txtXsdid = new System.Windows.Forms.TextBox();
             this.lblXsdid = new System.Windows.Forms.Label();
+            this.txtBz = new System.Windows.Forms.TextBox();
+            this.lblBz = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvXsdmx)).BeginInit();
             this.panel2.SuspendLayout();
@@ -117,6 +119,8 @@
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.txtBz);
+            this.panel1.Controls.Add(this.lblBz);
             this.panel1.Controls.Add(this.txtSyy);
             this.panel1.Controls.Add(this.txtBz3);
             this.panel1.Controls.Add(this.lblBz3);
@@ -603,6 +607,7 @@
             // 
             // btnRefund
             // 
+            this.btnRefund.Enabled = false;
             this.btnRefund.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnRefund.Location = new System.Drawing.Point(105, 13);
             this.btnRefund.Name = "btnRefund";
@@ -610,6 +615,7 @@
             this.btnRefund.TabIndex = 2;
             this.btnRefund.Text = "退货";
             this.btnRefund.UseVisualStyleBackColor = true;
+            this.btnRefund.Click += new System.EventHandler(this.btnRefund_Click);
             // 
             // combSjsid
             // 
@@ -731,35 +737,36 @@
             // txtMpssm
             // 
             this.txtMpssm.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtMpssm.Location = new System.Drawing.Point(835, 70);
+            this.txtMpssm.Location = new System.Drawing.Point(832, 70);
             this.txtMpssm.Multiline = true;
             this.txtMpssm.Name = "txtMpssm";
-            this.txtMpssm.Size = new System.Drawing.Size(161, 76);
+            this.txtMpssm.Size = new System.Drawing.Size(164, 29);
             this.txtMpssm.TabIndex = 10;
             // 
             // lblMpssm
             // 
-            this.lblMpssm.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblMpssm.Location = new System.Drawing.Point(794, 74);
+            this.lblMpssm.AutoSize = true;
+            this.lblMpssm.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblMpssm.Location = new System.Drawing.Point(787, 75);
             this.lblMpssm.Name = "lblMpssm";
-            this.lblMpssm.Size = new System.Drawing.Size(40, 72);
+            this.lblMpssm.Size = new System.Drawing.Size(47, 19);
             this.lblMpssm.TabIndex = 13;
-            this.lblMpssm.Text = "备注或者说明";
+            this.lblMpssm.Text = "备注";
             // 
             // txtAddress
             // 
             this.txtAddress.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtAddress.Location = new System.Drawing.Point(639, 70);
+            this.txtAddress.Location = new System.Drawing.Point(691, 117);
             this.txtAddress.Multiline = true;
             this.txtAddress.Name = "txtAddress";
-            this.txtAddress.Size = new System.Drawing.Size(144, 76);
+            this.txtAddress.Size = new System.Drawing.Size(305, 29);
             this.txtAddress.TabIndex = 6;
             // 
             // lblAddress
             // 
             this.lblAddress.AutoSize = true;
             this.lblAddress.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblAddress.Location = new System.Drawing.Point(588, 73);
+            this.lblAddress.Location = new System.Drawing.Point(638, 121);
             this.lblAddress.Name = "lblAddress";
             this.lblAddress.Size = new System.Drawing.Size(47, 19);
             this.lblAddress.TabIndex = 11;
@@ -862,6 +869,26 @@
             this.lblXsdid.TabIndex = 1;
             this.lblXsdid.Text = "销售单号";
             // 
+            // txtBz
+            // 
+            this.txtBz.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtBz.Location = new System.Drawing.Point(648, 70);
+            this.txtBz.Name = "txtBz";
+            this.txtBz.ReadOnly = true;
+            this.txtBz.Size = new System.Drawing.Size(136, 29);
+            this.txtBz.TabIndex = 56;
+            this.txtBz.TabStop = false;
+            // 
+            // lblBz
+            // 
+            this.lblBz.AutoSize = true;
+            this.lblBz.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblBz.Location = new System.Drawing.Point(579, 75);
+            this.lblBz.Name = "lblBz";
+            this.lblBz.Size = new System.Drawing.Size(66, 19);
+            this.lblBz.TabIndex = 55;
+            this.lblBz.Text = "原单号";
+            // 
             // SellingFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -953,5 +980,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn 单位;
         private System.Windows.Forms.DataGridViewTextBoxColumn 数量;
         private System.Windows.Forms.DataGridViewTextBoxColumn 金额;
+        private System.Windows.Forms.TextBox txtBz;
+        private System.Windows.Forms.Label lblBz;
     }
 }
