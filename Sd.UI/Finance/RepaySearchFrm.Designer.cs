@@ -85,7 +85,6 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(134, 22);
             this.comboBox1.TabIndex = 35;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // label2
             // 
@@ -97,7 +96,6 @@
             this.label2.Size = new System.Drawing.Size(56, 16);
             this.label2.TabIndex = 33;
             this.label2.Text = "收银员";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // dataGridView2
             // 
@@ -263,7 +261,6 @@
             this.label9.Size = new System.Drawing.Size(72, 16);
             this.label9.TabIndex = 24;
             this.label9.Text = "回款部门";
-            this.label9.Click += new System.EventHandler(this.label9_Click);
             // 
             // comboBox7
             // 
@@ -274,7 +271,6 @@
             this.comboBox7.Name = "comboBox7";
             this.comboBox7.Size = new System.Drawing.Size(133, 22);
             this.comboBox7.TabIndex = 38;
-            this.comboBox7.SelectedIndexChanged += new System.EventHandler(this.comboBox7_SelectedIndexChanged);
             // 
             // RepaySearchFrm
             // 
