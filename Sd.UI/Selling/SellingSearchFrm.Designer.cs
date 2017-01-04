@@ -349,6 +349,7 @@
             this.Controls.Add(this.panel1);
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "SellingSearchFrm";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "销售单查询";
             this.Load += new System.EventHandler(this.SellingSearchFrm_Load);
