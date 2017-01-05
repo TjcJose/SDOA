@@ -69,7 +69,7 @@
             this.txtZtyf = new System.Windows.Forms.TextBox();
             this.txtCgzk = new System.Windows.Forms.TextBox();
             this.btnXssr = new System.Windows.Forms.Button();
-            this.button4 = new System.Windows.Forms.Button();
+            this.btnDjsr = new System.Windows.Forms.Button();
             this.button5 = new System.Windows.Forms.Button();
             this.button6 = new System.Windows.Forms.Button();
             this.button7 = new System.Windows.Forms.Button();
@@ -77,6 +77,11 @@
             this.button10 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.button2 = new System.Windows.Forms.Button();
+            this.txtSyzf = new System.Windows.Forms.TextBox();
+            this.label14 = new System.Windows.Forms.Label();
+            this.label21 = new System.Windows.Forms.Label();
+            this.txtZyye = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
             this.txtGzzf = new System.Windows.Forms.TextBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -88,11 +93,6 @@
             this.rbZz = new System.Windows.Forms.RadioButton();
             this.rbXj = new System.Windows.Forms.RadioButton();
             this.rbZh = new System.Windows.Forms.RadioButton();
-            this.txtZyye = new System.Windows.Forms.TextBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.txtSyzf = new System.Windows.Forms.TextBox();
-            this.label14 = new System.Windows.Forms.Label();
-            this.label21 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -489,15 +489,16 @@
             this.btnXssr.UseVisualStyleBackColor = true;
             this.btnXssr.Click += new System.EventHandler(this.btnXssr_Click);
             // 
-            // button4
+            // btnDjsr
             // 
-            this.button4.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button4.Location = new System.Drawing.Point(669, 64);
-            this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(85, 34);
-            this.button4.TabIndex = 39;
-            this.button4.Text = "详细";
-            this.button4.UseVisualStyleBackColor = true;
+            this.btnDjsr.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnDjsr.Location = new System.Drawing.Point(669, 64);
+            this.btnDjsr.Name = "btnDjsr";
+            this.btnDjsr.Size = new System.Drawing.Size(85, 34);
+            this.btnDjsr.TabIndex = 39;
+            this.btnDjsr.Text = "详细";
+            this.btnDjsr.UseVisualStyleBackColor = true;
+            this.btnDjsr.Click += new System.EventHandler(this.btnDjsr_Click);
             // 
             // button5
             // 
@@ -583,7 +584,7 @@
             this.panel2.Controls.Add(this.button10);
             this.panel2.Controls.Add(this.button6);
             this.panel2.Controls.Add(this.button5);
-            this.panel2.Controls.Add(this.button4);
+            this.panel2.Controls.Add(this.btnDjsr);
             this.panel2.Controls.Add(this.btnXssr);
             this.panel2.Controls.Add(this.txtQtfy);
             this.panel2.Controls.Add(this.txtZtyf);
@@ -621,6 +622,57 @@
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(814, 507);
             this.panel2.TabIndex = 47;
+            // 
+            // button2
+            // 
+            this.button2.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.button2.Location = new System.Drawing.Point(669, 456);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(85, 34);
+            this.button2.TabIndex = 62;
+            this.button2.Text = "详细";
+            this.button2.UseVisualStyleBackColor = true;
+            // 
+            // txtSyzf
+            // 
+            this.txtSyzf.BackColor = System.Drawing.Color.White;
+            this.txtSyzf.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtSyzf.Location = new System.Drawing.Point(485, 459);
+            this.txtSyzf.Name = "txtSyzf";
+            this.txtSyzf.ReadOnly = true;
+            this.txtSyzf.Size = new System.Drawing.Size(141, 29);
+            this.txtSyzf.TabIndex = 61;
+            this.txtSyzf.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            // 
+            // label14
+            // 
+            this.label14.AutoSize = true;
+            this.label14.Location = new System.Drawing.Point(339, 466);
+            this.label14.Name = "label14";
+            this.label14.Size = new System.Drawing.Size(41, 12);
+            this.label14.TabIndex = 60;
+            this.label14.Text = "------";
+            // 
+            // label21
+            // 
+            this.label21.AutoSize = true;
+            this.label21.Font = new System.Drawing.Font("宋体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label21.Location = new System.Drawing.Point(385, 462);
+            this.label21.Name = "label21";
+            this.label21.Size = new System.Drawing.Size(94, 21);
+            this.label21.TabIndex = 59;
+            this.label21.Text = "收银支付";
+            // 
+            // txtZyye
+            // 
+            this.txtZyye.BackColor = System.Drawing.Color.White;
+            this.txtZyye.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtZyye.Location = new System.Drawing.Point(21, 249);
+            this.txtZyye.Name = "txtZyye";
+            this.txtZyye.ReadOnly = true;
+            this.txtZyye.Size = new System.Drawing.Size(141, 29);
+            this.txtZyye.TabIndex = 58;
+            this.txtZyye.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // button1
             // 
@@ -745,57 +797,6 @@
             this.rbZh.UseVisualStyleBackColor = true;
             this.rbZh.CheckedChanged += new System.EventHandler(this.rbZh_CheckedChanged);
             // 
-            // txtZyye
-            // 
-            this.txtZyye.BackColor = System.Drawing.Color.White;
-            this.txtZyye.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtZyye.Location = new System.Drawing.Point(21, 249);
-            this.txtZyye.Name = "txtZyye";
-            this.txtZyye.ReadOnly = true;
-            this.txtZyye.Size = new System.Drawing.Size(141, 29);
-            this.txtZyye.TabIndex = 58;
-            this.txtZyye.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // button2
-            // 
-            this.button2.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button2.Location = new System.Drawing.Point(669, 456);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(85, 34);
-            this.button2.TabIndex = 62;
-            this.button2.Text = "详细";
-            this.button2.UseVisualStyleBackColor = true;
-            // 
-            // txtSyzf
-            // 
-            this.txtSyzf.BackColor = System.Drawing.Color.White;
-            this.txtSyzf.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtSyzf.Location = new System.Drawing.Point(485, 459);
-            this.txtSyzf.Name = "txtSyzf";
-            this.txtSyzf.ReadOnly = true;
-            this.txtSyzf.Size = new System.Drawing.Size(141, 29);
-            this.txtSyzf.TabIndex = 61;
-            this.txtSyzf.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
-            // 
-            // label14
-            // 
-            this.label14.AutoSize = true;
-            this.label14.Location = new System.Drawing.Point(339, 466);
-            this.label14.Name = "label14";
-            this.label14.Size = new System.Drawing.Size(41, 12);
-            this.label14.TabIndex = 60;
-            this.label14.Text = "------";
-            // 
-            // label21
-            // 
-            this.label21.AutoSize = true;
-            this.label21.Font = new System.Drawing.Font("宋体", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.label21.Location = new System.Drawing.Point(385, 462);
-            this.label21.Name = "label21";
-            this.label21.Size = new System.Drawing.Size(94, 21);
-            this.label21.TabIndex = 59;
-            this.label21.Text = "收银支付";
-            // 
             // OverallQueryFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -863,7 +864,7 @@
         private System.Windows.Forms.TextBox txtZtyf;
         private System.Windows.Forms.TextBox txtCgzk;
         private System.Windows.Forms.Button btnXssr;
-        private System.Windows.Forms.Button button4;
+        private System.Windows.Forms.Button btnDjsr;
         private System.Windows.Forms.Button button5;
         private System.Windows.Forms.Button button6;
         private System.Windows.Forms.Button button7;

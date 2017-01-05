@@ -17,7 +17,7 @@ namespace Sd.UI.Selling
 {
     public partial class SellingSearchFrm : Form
     {
-        private readonly SellingFrm _sellingFrm;
+        private SellingFrm _sellingFrm;
 
         private readonly IXsdmxService _xsdmxService = new XsdmxService();
 
@@ -47,8 +47,6 @@ namespace Sd.UI.Selling
             }
 
             IQueryable<xsd> xsdList;
-
-
 
             switch (iMode)
             {
@@ -155,7 +153,7 @@ namespace Sd.UI.Selling
 
             combKhid.Text = "";
             //dtpXsrqFrom.Value = DateTime.Parse(DateTime.Now.ToString("yyyy-MM-01")).AddYears(-1);  
-
+            btnSearch.Focus();
         }
 
         private void btnSearch_Click(object sender, EventArgs e)
@@ -279,9 +277,19 @@ namespace Sd.UI.Selling
 
             IXsdService xsdService = new XsdService();
 
-            _sellingFrm.XsdInfo = xsdService.Find(u => u.xsdid.Equals(xsdid));
+            if (null == _sellingFrm)
+            {
+                _sellingFrm = new SellingFrm {XsdInfo = xsdService.Find(u => u.xsdid.Equals(xsdid))};
+                Close();
+                _sellingFrm.ShowDialog();
+            }
+            else
+            {
+                _sellingFrm.XsdInfo = xsdService.Find(u => u.xsdid.Equals(xsdid));
 
-            Close();
+                Close();
+            }
+
         }
 
     }

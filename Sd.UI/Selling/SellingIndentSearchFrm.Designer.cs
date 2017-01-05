@@ -28,10 +28,11 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SellingIndentSearchFrm));
             this.checkBox1 = new System.Windows.Forms.CheckBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.dgvXsdmx = new System.Windows.Forms.DataGridView();
-            this.dgvXsd = new System.Windows.Forms.DataGridView();
+            this.dgvXsdhdmx = new System.Windows.Forms.DataGridView();
+            this.dgvXsdhd = new System.Windows.Forms.DataGridView();
             this.btnQuit = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.txtTel = new System.Windows.Forms.TextBox();
@@ -42,7 +43,7 @@
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
             this.textBox3 = new System.Windows.Forms.TextBox();
-            this.dtpXsrqTo = new System.Windows.Forms.DateTimePicker();
+            this.dtpDhrqTo = new System.Windows.Forms.DateTimePicker();
             this.combYyy = new System.Windows.Forms.ComboBox();
             this.lblYyy = new System.Windows.Forms.Label();
             this.combXsbid = new System.Windows.Forms.ComboBox();
@@ -56,8 +57,8 @@
             this.lblSgddh = new System.Windows.Forms.Label();
             this.txtXsdid = new System.Windows.Forms.TextBox();
             this.lblXsdid = new System.Windows.Forms.Label();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.checkBox2 = new System.Windows.Forms.CheckBox();
+            this.dtpDhrqFrom = new System.Windows.Forms.DateTimePicker();
+            this.chkDhrq = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
             this.dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             this.checkBox3 = new System.Windows.Forms.CheckBox();
@@ -72,8 +73,8 @@
             this.checkBox6 = new System.Windows.Forms.CheckBox();
             this.checkBox7 = new System.Windows.Forms.CheckBox();
             this.label12 = new System.Windows.Forms.Label();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvXsdmx)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvXsd)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvXsdhdmx)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvXsdhd)).BeginInit();
             this.SuspendLayout();
             // 
             // checkBox1
@@ -100,39 +101,40 @@
             this.label2.TabIndex = 75;
             this.label2.Text = "销  售  订  货  明  细  ";
             // 
-            // dgvXsdmx
+            // dgvXsdhdmx
             // 
-            this.dgvXsdmx.AllowUserToAddRows = false;
-            this.dgvXsdmx.AllowUserToDeleteRows = false;
-            this.dgvXsdmx.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            this.dgvXsdmx.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvXsdmx.Location = new System.Drawing.Point(13, 545);
-            this.dgvXsdmx.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvXsdmx.MultiSelect = false;
-            this.dgvXsdmx.Name = "dgvXsdmx";
-            this.dgvXsdmx.ReadOnly = true;
-            this.dgvXsdmx.RowHeadersWidth = 20;
-            this.dgvXsdmx.RowTemplate.Height = 23;
-            this.dgvXsdmx.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvXsdmx.Size = new System.Drawing.Size(1063, 333);
-            this.dgvXsdmx.TabIndex = 74;
+            this.dgvXsdhdmx.AllowUserToAddRows = false;
+            this.dgvXsdhdmx.AllowUserToDeleteRows = false;
+            this.dgvXsdhdmx.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
+            this.dgvXsdhdmx.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvXsdhdmx.Location = new System.Drawing.Point(13, 545);
+            this.dgvXsdhdmx.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvXsdhdmx.MultiSelect = false;
+            this.dgvXsdhdmx.Name = "dgvXsdhdmx";
+            this.dgvXsdhdmx.ReadOnly = true;
+            this.dgvXsdhdmx.RowHeadersWidth = 20;
+            this.dgvXsdhdmx.RowTemplate.Height = 23;
+            this.dgvXsdhdmx.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvXsdhdmx.Size = new System.Drawing.Size(1063, 333);
+            this.dgvXsdhdmx.TabIndex = 74;
             // 
-            // dgvXsd
+            // dgvXsdhd
             // 
-            this.dgvXsd.AllowUserToAddRows = false;
-            this.dgvXsd.AllowUserToDeleteRows = false;
-            this.dgvXsd.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvXsd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvXsd.Location = new System.Drawing.Point(13, 193);
-            this.dgvXsd.Margin = new System.Windows.Forms.Padding(4);
-            this.dgvXsd.MultiSelect = false;
-            this.dgvXsd.Name = "dgvXsd";
-            this.dgvXsd.ReadOnly = true;
-            this.dgvXsd.RowHeadersWidth = 20;
-            this.dgvXsd.RowTemplate.Height = 23;
-            this.dgvXsd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvXsd.Size = new System.Drawing.Size(1063, 320);
-            this.dgvXsd.TabIndex = 73;
+            this.dgvXsdhd.AllowUserToAddRows = false;
+            this.dgvXsdhd.AllowUserToDeleteRows = false;
+            this.dgvXsdhd.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
+            this.dgvXsdhd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvXsdhd.Location = new System.Drawing.Point(13, 193);
+            this.dgvXsdhd.Margin = new System.Windows.Forms.Padding(4);
+            this.dgvXsdhd.MultiSelect = false;
+            this.dgvXsdhd.Name = "dgvXsdhd";
+            this.dgvXsdhd.ReadOnly = true;
+            this.dgvXsdhd.RowHeadersWidth = 20;
+            this.dgvXsdhd.RowTemplate.Height = 23;
+            this.dgvXsdhd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvXsdhd.Size = new System.Drawing.Size(1063, 320);
+            this.dgvXsdhd.TabIndex = 73;
+            this.dgvXsdhd.SelectionChanged += new System.EventHandler(this.dgvXsdhd_SelectionChanged);
             // 
             // btnQuit
             // 
@@ -144,6 +146,7 @@
             this.btnQuit.TabIndex = 69;
             this.btnQuit.Text = "退出";
             this.btnQuit.UseVisualStyleBackColor = true;
+            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
             // btnSearch
             // 
@@ -155,6 +158,7 @@
             this.btnSearch.TabIndex = 68;
             this.btnSearch.Text = "查询";
             this.btnSearch.UseVisualStyleBackColor = true;
+            this.btnSearch.Click += new System.EventHandler(this.btnSearch_Click);
             // 
             // txtTel
             // 
@@ -164,7 +168,6 @@
             this.txtTel.Name = "txtTel";
             this.txtTel.Size = new System.Drawing.Size(116, 29);
             this.txtTel.TabIndex = 61;
-            this.txtTel.TextChanged += new System.EventHandler(this.txtTel_TextChanged);
             // 
             // lblTel
             // 
@@ -176,7 +179,6 @@
             this.lblTel.Size = new System.Drawing.Size(88, 16);
             this.lblTel.TabIndex = 63;
             this.lblTel.Text = "通用票号查";
-            this.lblTel.Click += new System.EventHandler(this.lblTel_Click);
             // 
             // combKhid
             // 
@@ -210,7 +212,6 @@
             this.label1.Size = new System.Drawing.Size(88, 16);
             this.label1.TabIndex = 63;
             this.label1.Text = "销售单编号";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBox2
             // 
@@ -220,7 +221,6 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(119, 29);
             this.textBox2.TabIndex = 61;
-            this.textBox2.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
             // label3
             // 
@@ -232,7 +232,6 @@
             this.label3.Size = new System.Drawing.Size(88, 16);
             this.label3.TabIndex = 63;
             this.label3.Text = "手工账票号";
-            this.label3.Click += new System.EventHandler(this.label1_Click);
             // 
             // textBox3
             // 
@@ -242,18 +241,17 @@
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(128, 29);
             this.textBox3.TabIndex = 61;
-            this.textBox3.TextChanged += new System.EventHandler(this.textBox2_TextChanged);
             // 
-            // dtpXsrqTo
+            // dtpDhrqTo
             // 
-            this.dtpXsrqTo.CustomFormat = "yyyy-MM-dd";
-            this.dtpXsrqTo.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.dtpXsrqTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpXsrqTo.Location = new System.Drawing.Point(641, 70);
-            this.dtpXsrqTo.Margin = new System.Windows.Forms.Padding(4);
-            this.dtpXsrqTo.Name = "dtpXsrqTo";
-            this.dtpXsrqTo.Size = new System.Drawing.Size(147, 29);
-            this.dtpXsrqTo.TabIndex = 79;
+            this.dtpDhrqTo.CustomFormat = "yyyy-MM-dd";
+            this.dtpDhrqTo.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.dtpDhrqTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDhrqTo.Location = new System.Drawing.Point(641, 70);
+            this.dtpDhrqTo.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpDhrqTo.Name = "dtpDhrqTo";
+            this.dtpDhrqTo.Size = new System.Drawing.Size(147, 29);
+            this.dtpDhrqTo.TabIndex = 79;
             // 
             // combYyy
             // 
@@ -355,7 +353,6 @@
             this.txtSgddh.Name = "txtSgddh";
             this.txtSgddh.Size = new System.Drawing.Size(119, 29);
             this.txtSgddh.TabIndex = 81;
-            this.txtSgddh.TextChanged += new System.EventHandler(this.txtSgddh_TextChanged);
             // 
             // lblSgddh
             // 
@@ -367,7 +364,6 @@
             this.lblSgddh.Size = new System.Drawing.Size(72, 16);
             this.lblSgddh.TabIndex = 90;
             this.lblSgddh.Text = "商品编码";
-            this.lblSgddh.Click += new System.EventHandler(this.lblSgddh_Click);
             // 
             // txtXsdid
             // 
@@ -379,7 +375,6 @@
             this.txtXsdid.Size = new System.Drawing.Size(94, 29);
             this.txtXsdid.TabIndex = 84;
             this.txtXsdid.TabStop = false;
-            this.txtXsdid.TextChanged += new System.EventHandler(this.txtXsdid_TextChanged);
             // 
             // lblXsdid
             // 
@@ -391,30 +386,29 @@
             this.lblXsdid.Size = new System.Drawing.Size(56, 16);
             this.lblXsdid.TabIndex = 82;
             this.lblXsdid.Text = "订单号";
-            this.lblXsdid.Click += new System.EventHandler(this.lblXsdid_Click);
             // 
-            // dateTimePicker1
+            // dtpDhrqFrom
             // 
-            this.dateTimePicker1.CustomFormat = "yyyy-MM-dd";
-            this.dateTimePicker1.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.dateTimePicker1.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dateTimePicker1.Location = new System.Drawing.Point(458, 70);
-            this.dateTimePicker1.Margin = new System.Windows.Forms.Padding(4);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(147, 29);
-            this.dateTimePicker1.TabIndex = 77;
+            this.dtpDhrqFrom.CustomFormat = "yyyy-MM-dd";
+            this.dtpDhrqFrom.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.dtpDhrqFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpDhrqFrom.Location = new System.Drawing.Point(458, 70);
+            this.dtpDhrqFrom.Margin = new System.Windows.Forms.Padding(4);
+            this.dtpDhrqFrom.Name = "dtpDhrqFrom";
+            this.dtpDhrqFrom.Size = new System.Drawing.Size(147, 29);
+            this.dtpDhrqFrom.TabIndex = 77;
             // 
-            // checkBox2
+            // chkDhrq
             // 
-            this.checkBox2.AutoSize = true;
-            this.checkBox2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.checkBox2.Location = new System.Drawing.Point(367, 74);
-            this.checkBox2.Margin = new System.Windows.Forms.Padding(4);
-            this.checkBox2.Name = "checkBox2";
-            this.checkBox2.Size = new System.Drawing.Size(91, 20);
-            this.checkBox2.TabIndex = 78;
-            this.checkBox2.Text = "订货日期";
-            this.checkBox2.UseVisualStyleBackColor = true;
+            this.chkDhrq.AutoSize = true;
+            this.chkDhrq.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.chkDhrq.Location = new System.Drawing.Point(367, 74);
+            this.chkDhrq.Margin = new System.Windows.Forms.Padding(4);
+            this.chkDhrq.Name = "chkDhrq";
+            this.chkDhrq.Size = new System.Drawing.Size(91, 20);
+            this.chkDhrq.TabIndex = 78;
+            this.chkDhrq.Text = "订货日期";
+            this.chkDhrq.UseVisualStyleBackColor = true;
             // 
             // label5
             // 
@@ -597,19 +591,19 @@
             this.Controls.Add(this.label6);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.dateTimePicker3);
-            this.Controls.Add(this.dtpXsrqTo);
+            this.Controls.Add(this.dtpDhrqTo);
             this.Controls.Add(this.checkBox3);
-            this.Controls.Add(this.checkBox2);
+            this.Controls.Add(this.chkDhrq);
             this.Controls.Add(this.dateTimePicker2);
-            this.Controls.Add(this.dateTimePicker1);
+            this.Controls.Add(this.dtpDhrqFrom);
             this.Controls.Add(this.checkBox4);
             this.Controls.Add(this.checkBox6);
             this.Controls.Add(this.checkBox5);
             this.Controls.Add(this.checkBox7);
             this.Controls.Add(this.checkBox1);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.dgvXsdmx);
-            this.Controls.Add(this.dgvXsd);
+            this.Controls.Add(this.dgvXsdhdmx);
+            this.Controls.Add(this.dgvXsdhd);
             this.Controls.Add(this.btnQuit);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.textBox3);
@@ -621,12 +615,14 @@
             this.Controls.Add(this.combKhid);
             this.Controls.Add(this.lblKhid);
             this.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "SellingIndentSearchFrm";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "销售订货单查询";
-            this.Load += new System.EventHandler(this.SellingIndentSearchFrm_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvXsdmx)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvXsd)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvXsdhdmx)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvXsdhd)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -636,8 +632,8 @@
 
         private System.Windows.Forms.CheckBox checkBox1;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.DataGridView dgvXsdmx;
-        private System.Windows.Forms.DataGridView dgvXsd;
+        private System.Windows.Forms.DataGridView dgvXsdhdmx;
+        private System.Windows.Forms.DataGridView dgvXsdhd;
         private System.Windows.Forms.Button btnQuit;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox txtTel;
@@ -648,7 +644,7 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox textBox3;
-        private System.Windows.Forms.DateTimePicker dtpXsrqTo;
+        private System.Windows.Forms.DateTimePicker dtpDhrqTo;
         private System.Windows.Forms.ComboBox combYyy;
         private System.Windows.Forms.Label lblYyy;
         private System.Windows.Forms.ComboBox combXsbid;
@@ -662,8 +658,8 @@
         private System.Windows.Forms.Label lblSgddh;
         private System.Windows.Forms.TextBox txtXsdid;
         private System.Windows.Forms.Label lblXsdid;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.CheckBox checkBox2;
+        private System.Windows.Forms.DateTimePicker dtpDhrqFrom;
+        private System.Windows.Forms.CheckBox chkDhrq;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.CheckBox checkBox3;

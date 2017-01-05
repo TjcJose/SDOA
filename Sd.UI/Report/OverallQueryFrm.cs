@@ -194,5 +194,11 @@ namespace Sd.UI.Report
             var sellingSearchFrm = new SellingSearchFrm(dtpFrom.Value, dtpTo.Value, _iHzlbMode);
             sellingSearchFrm.ShowDialog();
         }
+
+        private void btnDjsr_Click(object sender, EventArgs e)
+        {
+            var frm = new SellingIndentSearchFrm(dtpFrom.Value, dtpTo.Value, _iHzlbMode);
+            frm.ShowDialog();
+        }
     }
 }
