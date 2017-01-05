@@ -8,5 +8,10 @@ namespace Sd.UI.Finance
         {
             InitializeComponent();
         }
+
+        public RepaySearchFrm()
+        {
+            InitializeComponent();
+        }
     }
 }
