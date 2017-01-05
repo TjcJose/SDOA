@@ -8,5 +8,7 @@ namespace Sd.UI.Finance
         {
             InitializeComponent();
         }
+
+       
     }
 }
