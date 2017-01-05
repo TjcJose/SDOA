@@ -146,6 +146,9 @@ namespace Sd.UI.SystemAdmin
         {
             if (0 == tnParent.Nodes.Count)
             {
+                // 没有子节点时
+                tnParent.Checked = nodeChk;
+                ChangeUserCompetence(tnParent, nodeChk);
                 return;
             }
 

@@ -28,12 +28,13 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AuthorityFrm));
             this.lblUser = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.textBox2 = new System.Windows.Forms.TextBox();
             this.combUser = new System.Windows.Forms.ComboBox();
             this.gbAuthority = new System.Windows.Forms.GroupBox();
-            this.tvCompetence = new TreeViewEnhanced();
+            this.tvCompetence = new Sd.UI.SystemAdmin.TreeViewEnhanced();
             this.btnUpdate = new System.Windows.Forms.Button();
             this.btnExit = new System.Windows.Forms.Button();
             this.gbAuthority.SuspendLayout();
@@ -130,7 +131,9 @@
             this.Controls.Add(this.textBox2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.lblUser);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "AuthorityFrm";
+            this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "权限画面";
             this.Load += new System.EventHandler(this.AuthorityFrm_Load);
@@ -147,8 +150,8 @@
         private System.Windows.Forms.TextBox textBox2;
         private System.Windows.Forms.ComboBox combUser;
         private System.Windows.Forms.GroupBox gbAuthority;
-        private System.Windows.Forms.TreeView tvCompetence;
         private System.Windows.Forms.Button btnUpdate;
         private System.Windows.Forms.Button btnExit;
+        private TreeViewEnhanced tvCompetence;
     }
 }
