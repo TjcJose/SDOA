@@ -92,7 +92,6 @@
             this.label2.Size = new System.Drawing.Size(85, 19);
             this.label2.TabIndex = 1;
             this.label2.Text = "收入单号";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
             // 
             // textBox1
             // 
@@ -101,7 +100,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(147, 29);
             this.textBox1.TabIndex = 2;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // label3
             // 
@@ -112,7 +110,6 @@
             this.label3.Size = new System.Drawing.Size(85, 19);
             this.label3.TabIndex = 3;
             this.label3.Text = "收入日期";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // label4
             // 
@@ -123,7 +120,6 @@
             this.label4.Size = new System.Drawing.Size(85, 19);
             this.label4.TabIndex = 5;
             this.label4.Text = "单据类型";
-            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // comboBox2
             // 
@@ -133,7 +129,6 @@
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(147, 27);
             this.comboBox2.TabIndex = 4;
-            this.comboBox2.SelectedIndexChanged += new System.EventHandler(this.comboBox2_SelectedIndexChanged);
             // 
             // panel1
             // 
@@ -226,9 +221,8 @@
             this.dataGridView1.Location = new System.Drawing.Point(31, 283);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(974, 316);
+            this.dataGridView1.Size = new System.Drawing.Size(974, 323);
             this.dataGridView1.TabIndex = 9;
-            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
             // panel4
             // 
@@ -249,9 +243,9 @@
             this.panel4.Controls.Add(this.comboBox12);
             this.panel4.Controls.Add(this.comboBox13);
             this.panel4.Controls.Add(this.comboBox14);
-            this.panel4.Location = new System.Drawing.Point(31, 605);
+            this.panel4.Location = new System.Drawing.Point(31, 612);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(974, 127);
+            this.panel4.Size = new System.Drawing.Size(974, 120);
             this.panel4.TabIndex = 18;
             // 
             // textBox13
@@ -409,7 +403,6 @@
             this.textBox17.Name = "textBox17";
             this.textBox17.Size = new System.Drawing.Size(176, 29);
             this.textBox17.TabIndex = 2;
-            this.textBox17.TextChanged += new System.EventHandler(this.textBox17_TextChanged);
             // 
             // label32
             // 
@@ -420,7 +413,6 @@
             this.label32.Size = new System.Drawing.Size(66, 19);
             this.label32.TabIndex = 7;
             this.label32.Text = "操作员";
-            this.label32.Click += new System.EventHandler(this.label32_Click);
             // 
             // textBox2
             // 
@@ -439,7 +431,6 @@
             this.label5.Size = new System.Drawing.Size(161, 19);
             this.label5.TabIndex = 8;
             this.label5.Text = "记现金银行帐摘要";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // label6
             // 
@@ -495,7 +486,6 @@
             this.ShowInTaskbar = false;
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "收入进账单";
-            this.Load += new System.EventHandler(this.InCome_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel4.ResumeLayout(false);
