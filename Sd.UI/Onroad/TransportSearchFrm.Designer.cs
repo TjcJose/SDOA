@@ -199,7 +199,6 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(184, 29);
             this.textBox1.TabIndex = 66;
-            this.textBox1.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
             // lblSjsid
             // 
@@ -210,7 +209,6 @@
             this.lblSjsid.Size = new System.Drawing.Size(85, 19);
             this.lblSjsid.TabIndex = 64;
             this.lblSjsid.Text = "商品编码";
-            this.lblSjsid.Click += new System.EventHandler(this.lblSjsid_Click);
             // 
             // txtTel
             // 
@@ -259,7 +257,6 @@
             this.combKhid.Name = "combKhid";
             this.combKhid.Size = new System.Drawing.Size(184, 27);
             this.combKhid.TabIndex = 57;
-            this.combKhid.SelectedIndexChanged += new System.EventHandler(this.combKhid_SelectedIndexChanged);
             // 
             // lblKhid
             // 
@@ -270,8 +267,7 @@
             this.lblKhid.Size = new System.Drawing.Size(66, 19);
             this.lblKhid.TabIndex = 58;
             this.lblKhid.Text = "运输商";
-            this.lblKhid.Click += new System.EventHandler(this.lblKhid_Click);
-            // 
+             // 
             // comboBox1
             // 
             this.comboBox1.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));

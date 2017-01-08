@@ -15,25 +15,5 @@ namespace Sd.UI.Onroad
         {
             InitializeComponent();
         }
-
-        private void lblSjsid_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblKhid_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void combKhid_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }

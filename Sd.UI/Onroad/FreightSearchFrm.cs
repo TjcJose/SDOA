@@ -15,30 +15,5 @@ namespace Sd.UI.Onroad
         {
             InitializeComponent();
         }
-
-        private void FreightSearchFrm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void lblEjkh_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void comboBox1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void checkBox2_CheckedChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label2_Click(object sender, EventArgs e)
-        {
-
-        }
     }
 }

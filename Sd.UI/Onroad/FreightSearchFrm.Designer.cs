@@ -32,6 +32,7 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FreightSearchFrm));
             this.label1 = new System.Windows.Forms.Label();
             this.dtpXsrqTo = new System.Windows.Forms.DateTimePicker();
             this.chkXsrq = new System.Windows.Forms.CheckBox();
@@ -83,7 +84,7 @@
             // 
             // btnQuit
             // 
-            this.btnQuit.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnQuit.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnQuit.Location = new System.Drawing.Point(954, 33);
             this.btnQuit.Name = "btnQuit";
             this.btnQuit.Size = new System.Drawing.Size(99, 47);
@@ -93,7 +94,7 @@
             // 
             // btnSearch
             // 
-            this.btnSearch.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnSearch.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.btnSearch.Location = new System.Drawing.Point(824, 33);
             this.btnSearch.Name = "btnSearch";
             this.btnSearch.Size = new System.Drawing.Size(99, 47);
@@ -120,16 +121,15 @@
             this.lblEjkh.Size = new System.Drawing.Size(85, 19);
             this.lblEjkh.TabIndex = 80;
             this.lblEjkh.Text = "考核部门";
-            this.lblEjkh.Click += new System.EventHandler(this.lblEjkh_Click);
             // 
             // dtpXsrqFrom
             // 
             this.dtpXsrqFrom.CustomFormat = "yyyy-MM-dd";
-            this.dtpXsrqFrom.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.dtpXsrqFrom.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.dtpXsrqFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpXsrqFrom.Location = new System.Drawing.Point(143, 66);
             this.dtpXsrqFrom.Name = "dtpXsrqFrom";
-            this.dtpXsrqFrom.Size = new System.Drawing.Size(187, 30);
+            this.dtpXsrqFrom.Size = new System.Drawing.Size(187, 29);
             this.dtpXsrqFrom.TabIndex = 79;
             // 
             // comboBox1
@@ -141,7 +141,6 @@
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(184, 27);
             this.comboBox1.TabIndex = 77;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
             // combKhid
             // 
@@ -163,20 +162,18 @@
             this.checkBox1.TabIndex = 87;
             this.checkBox1.Text = "仅查未审单据";
             this.checkBox1.UseVisualStyleBackColor = true;
-            this.checkBox1.CheckedChanged += new System.EventHandler(this.checkBox2_CheckedChanged);
             // 
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.label2.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.label2.ForeColor = System.Drawing.Color.DarkRed;
             this.label2.Location = new System.Drawing.Point(466, 455);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(170, 20);
+            this.label2.Size = new System.Drawing.Size(155, 19);
             this.label2.TabIndex = 90;
             this.label2.Text = " 明  细  内  容";
-            this.label2.Click += new System.EventHandler(this.label2_Click);
-            // 
+             // 
             // dgvXsdmx
             // 
             this.dgvXsdmx.AllowUserToAddRows = false;
@@ -260,9 +257,11 @@
             this.Controls.Add(this.dtpXsrqFrom);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.combKhid);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "FreightSearchFrm";
+            this.ShowInTaskbar = false;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "在途运费付款查询";
-            this.Load += new System.EventHandler(this.FreightSearchFrm_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvXsdmx)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dgvXsd)).EndInit();
             this.ResumeLayout(false);

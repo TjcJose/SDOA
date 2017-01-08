@@ -15,20 +15,5 @@ namespace Sd.UI.Onroad
         {
             InitializeComponent();
         }
-
-        private void dgvXsd_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void lblEjkh_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void txtEjkh_TextChanged(object sender, EventArgs e)
-        {
-
-        }
     }
 }
