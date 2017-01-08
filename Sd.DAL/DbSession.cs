@@ -307,6 +307,84 @@ namespace Sd.DAL
                 return new XsdmxDal();
             }
         }
+
+        /// <summary>
+        /// 销售订货单
+        /// <remarks>
+        /// 创建：2017.01.04 高振亮<br />
+        /// 修改：2017.01.04 高振亮
+        /// </remarks>
+        /// </summary>
+        public static IXsdhdDal XsdhdDal
+        {
+            get
+            {
+                return new XsdhdDal();
+            }
+        }
+
+        /// <summary>
+        /// 销售订货单明细
+        /// <remarks>
+        /// 创建：2017.01.04 高振亮<br />
+        /// 修改：2017.01.04 高振亮
+        /// </remarks>
+        /// </summary>
+        public static IXsdhdmxDal XsdhdmxDal
+        {
+            get
+            {
+                return new XsdhdmxDal();
+            }
+        }
+        #endregion
+
+        #region 财务系统
+        /// <summary>
+        /// 回收货款单
+        /// <remarks>
+        /// 创建：2017.01.05 高振亮<br />
+        /// 修改：2017.01.05 高振亮
+        /// </remarks>
+        /// </summary>
+        public static IHshkdDal HshkdDal
+        {
+            get
+            {
+                return new HshkdDal();
+            }
+        }
+        #endregion
+
+        #region 报表系统
+        /// <summary>
+        /// 进款单
+        /// <remarks>
+        /// 创建：2017.01.03 高振亮<br />
+        /// 修改：2017.01.03 高振亮
+        /// </remarks>
+        /// </summary>
+        public static IJkdsrDal JkdsrDal
+        {
+            get
+            {
+                return new JkdsrDal();
+            }
+        }
+        /// <summary>
+        /// 付款单
+        /// <remarks>
+        /// 创建：2017.01.03 高振亮<br />
+        /// 修改：2017.01.03 高振亮
+        /// </remarks>
+        /// </summary>
+        public static IFkdsrDal FkdsrDal
+        {
+            get
+            {
+                return new FkdsrDal();
+            }
+        }
         #endregion
     }
 }

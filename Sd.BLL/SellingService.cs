@@ -66,4 +66,28 @@ namespace Sd.BLL
     {
         public XsdmxService() : base(DbSession.XsdmxDal) { }
     }
+
+    /// <summary>
+    /// 销售订货单
+    /// <remarks>
+    /// 创建：2017.01.04 高振亮
+    /// 修改：2017.01.04 高振亮
+    /// </remarks>
+    /// </summary>
+    public class XsdhdService : BaseService<xsdhd>, IXsdhdService
+    {
+        public XsdhdService() : base(DbSession.XsdhdDal) { }
+    }
+
+    /// <summary>
+    /// 销售订货单明细
+    /// <remarks>
+    /// 创建：2017.01.04 高振亮
+    /// 修改：2017.01.04 高振亮
+    /// </remarks>
+    /// </summary>
+    public class XsdhdmxService : BaseService<xsdhdmx>, IXsdhdmxService
+    {
+        public XsdhdmxService() : base(DbSession.XsdhdmxDal) { }
+    }
 }

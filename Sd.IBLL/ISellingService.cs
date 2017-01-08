@@ -42,4 +42,26 @@ namespace Sd.IBLL
     public interface IXsdmxService : IBaseService<xsdmx>
     {
     }
+
+    /// <summary>
+    /// 销售订货单  
+    /// <remarks>
+    /// 创建：2017.01.04 高振亮
+    /// 修改：2017.01.04 高振亮
+    /// </remarks>
+    /// </summary>
+    public interface IXsdhdService : IBaseService<xsdhd>
+    {
+    }
+
+    /// <summary>
+    /// 销售订货单明细  
+    /// <remarks>
+    /// 创建：2017.01.04 高振亮
+    /// 修改：2017.01.04 高振亮
+    /// </remarks>
+    /// </summary>
+    public interface IXsdhdmxService : IBaseService<xsdhdmx>
+    {
+    }
 }

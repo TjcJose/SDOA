@@ -30,4 +30,25 @@ namespace Sd.IDAL
     public interface IXsdmxDal : IBaseDal<xsdmx>
     {
     }
+
+    /// <summary>
+    /// 销售订货单信息
+    /// <remarks>
+    /// 创建：2017.01.04 高振亮
+    /// 修改：2017.01.04 高振亮
+    /// </remarks>
+    /// </summary>
+    public interface IXsdhdDal : IBaseDal<xsdhd>
+    {
+    }
+    /// <summary>
+    /// 销售订货单明细信息
+    /// <remarks>
+    /// 创建：2017.01.04 高振亮
+    /// 修改：2017.01.04 高振亮
+    /// </remarks>
+    /// </summary>
+    public interface IXsdhdmxDal : IBaseDal<xsdhdmx>
+    {
+    }
 }
