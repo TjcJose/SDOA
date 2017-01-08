@@ -14,12 +14,6 @@ namespace Sd.UI.Finance
         public PaymentSearchFrm()
         {
             InitializeComponent();
-        }
-
-        
-
-       
-
-        
+        }     
     }
 }
