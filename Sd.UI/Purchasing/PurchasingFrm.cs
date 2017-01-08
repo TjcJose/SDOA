@@ -9,11 +9,16 @@ using System.Windows.Forms;
 
 namespace Sd.UI.Purchasing
 {
-    public partial class PurchasingSearchFrm : Form
+    public partial class PurchasingFrm : Form
     {
-        public PurchasingSearchFrm()
+        public PurchasingFrm()
         {
             InitializeComponent();
+        }
+
+        private void groupBox1_Enter(object sender, EventArgs e)
+        {
+
         }
     }
 }

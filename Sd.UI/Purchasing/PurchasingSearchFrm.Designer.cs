@@ -200,7 +200,6 @@
             this.label5.Size = new System.Drawing.Size(85, 19);
             this.label5.TabIndex = 24;
             this.label5.Text = "商品编码";
-            this.label5.Click += new System.EventHandler(this.label5_Click);
             // 
             // textBox1
             // 
