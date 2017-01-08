@@ -14,6 +14,11 @@ namespace Sd.Model
     
     public partial class khxx
     {
+        public khxx()
+        {
+            this.hshkd = new HashSet<hshkd>();
+        }
+    
         public string khid { get; set; }
         public string khmc { get; set; }
         public string tel { get; set; }
@@ -75,5 +80,7 @@ namespace Sd.Model
         public Nullable<System.DateTime> sxjsrq { get; set; }
         public string sxr { get; set; }
         public string sxczy { get; set; }
+    
+        public virtual ICollection<hshkd> hshkd { get; set; }
     }
 }

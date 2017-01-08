@@ -47,6 +47,11 @@ namespace Sd.Model
         public virtual DbSet<xsd> xsd { get; set; }
         public virtual DbSet<xsdmx> xsdmx { get; set; }
         public virtual DbSet<spxx> spxx { get; set; }
+        public virtual DbSet<fkdsr> fkdsr { get; set; }
+        public virtual DbSet<jkdsr> jkdsr { get; set; }
+        public virtual DbSet<xsdhd> xsdhd { get; set; }
+        public virtual DbSet<xsdhdmx> xsdhdmx { get; set; }
+        public virtual DbSet<hshkd> hshkd { get; set; }
     
         public virtual ObjectResult<string> proc_PH(string djlb, string xsbmc, ObjectParameter result)
         {

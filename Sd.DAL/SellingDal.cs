@@ -5,8 +5,6 @@
 // 修改：2016.11.30 高振亮
 //-----------------------------------------------
 
-using System.Data.Entity;
-using EntityFramework.Extensions;
 using Sd.IDAL;
 using Sd.Model;
 
@@ -31,6 +29,28 @@ namespace Sd.DAL
     /// </remarks>
     /// </summary>
     public class XsdmxDal : BaseDal<xsdmx>, IXsdmxDal
+    {
+    }
+
+    /// <summary>
+    /// 销售订货单信息  
+    /// <remarks>
+    /// 创建：2017.01.04 高振亮
+    /// 修改：2017.01.04 高振亮
+    /// </remarks>
+    /// </summary>
+    public class XsdhdDal : BaseDal<xsdhd>, IXsdhdDal
+    {
+    }
+
+    /// <summary>
+    /// 销售订货单明细信息  
+    /// <remarks>
+    /// 创建：2017.01.04 高振亮
+    /// 修改：2017.01.04 高振亮
+    /// </remarks>
+    /// </summary>
+    public class XsdhdmxDal : BaseDal<xsdhdmx>, IXsdhdmxDal
     {
     }
 }

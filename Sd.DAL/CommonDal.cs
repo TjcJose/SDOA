@@ -35,7 +35,7 @@ namespace Sd.DAL
             var singleOrDefault = DContext.Database.SqlQuery<object>(strProc,
                 parameters).SingleOrDefault();
 
-            return ((System.Data.SqlClient.SqlParameter)parameters[2]).Value;
+            return ((System.Data.SqlClient.SqlParameter)parameters[parameters.Length-1]).Value;
         }
 
 
