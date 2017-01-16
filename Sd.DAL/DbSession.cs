@@ -11,6 +11,38 @@ namespace Sd.DAL
     /// </summary>
     public static class DbSession
     {
+        #region 在途系统
+        /// <summary>
+        /// 在涂运输单
+        /// <remarks>
+        /// 创建：2017.01.08 高振亮<br />
+        /// 修改：2017.01.08 高振亮
+        /// </remarks>
+        /// </summary>
+        public static IZtysdDal ZtysdDal
+        {
+            get
+            {
+                return new ZtysdDal();
+            }
+        }
+
+        /// <summary>
+        /// 在涂运输单明细
+        /// <remarks>
+        /// 创建：2017.01.08 高振亮<br />
+        /// 修改：2017.01.08 高振亮
+        /// </remarks>
+        /// </summary>
+        public static IZtysdmxDal ZtysdmxDal
+        {
+            get
+            {
+                return new ZtysdmxDal();
+            }
+        }
+        #endregion
+
         #region 系统管理
         /// <summary>
         /// 权限组
@@ -277,6 +309,7 @@ namespace Sd.DAL
             }
         }
         #endregion
+
         #region 销售系统
         /// <summary>
         /// 销售单
@@ -352,6 +385,111 @@ namespace Sd.DAL
             get
             {
                 return new HshkdDal();
+            }
+        }
+
+        /// <summary>
+        /// 在途运费付款单
+        /// <remarks>
+        /// 创建：2017.01.08 高振亮<br />
+        /// 修改：2017.01.08 高振亮
+        /// </remarks>
+        /// </summary>
+        public static IJhyfbDal JhyfbDal
+        {
+            get
+            {
+                return new JhyfbDal();
+            }
+        }
+
+        /// <summary>
+        /// 在途运费付款明细单
+        /// <remarks>
+        /// 创建：2017.01.08 高振亮<br />
+        /// 修改：2017.01.08 高振亮
+        /// </remarks>
+        /// </summary>
+        public static IJhyfmxbDal JhyfmxbDal
+        {
+            get
+            {
+                return new JhyfmxbDal();
+            }
+        }
+
+        /// <summary>
+        /// 收入进账单
+        /// <remarks>
+        /// 创建：2017.01.09 高振亮<br />
+        /// 修改：2017.01.09 高振亮
+        /// </remarks>
+        /// </summary>
+        public static IQtsrdDal QtsrdDal
+        {
+            get
+            {
+                return new QtsrdDal();
+            }
+        }
+
+        /// <summary>
+        /// 收入进账单明细
+        /// <remarks>
+        /// 创建：2017.01.09 高振亮<br />
+        /// 修改：2017.01.09 高振亮
+        /// </remarks>
+        /// </summary>
+        public static IQtsrmxDal QtsrmxDal
+        {
+            get
+            {
+                return new QtsrmxDal();
+            }
+        }
+
+        /// <summary>
+        /// 货款结算单
+        /// <remarks>
+        /// 创建：2017.01.09 高振亮<br />
+        /// 修改：2017.01.09 高振亮
+        /// </remarks>
+        /// </summary>
+        public static IHkjsdDal HkjsdDal
+        {
+            get
+            {
+                return new HkjsdDal();
+            }
+        }
+
+        /// <summary>
+        /// 费用开支单
+        /// <remarks>
+        /// 创建：2017.01.10 高振亮<br />
+        /// 修改：2017.01.10 高振亮
+        /// </remarks>
+        /// </summary>
+        public static IFykzdDal FykzdDal
+        {
+            get
+            {
+                return new FykzdDal();
+            }
+        }
+
+        /// <summary>
+        /// 费用开支单明细
+        /// <remarks>
+        /// 创建：2017.01.10 高振亮<br />
+        /// 修改：2017.01.10 高振亮
+        /// </remarks>
+        /// </summary>
+        public static IFykzdmxDal FykzdmxDal
+        {
+            get
+            {
+                return new FykzdmxDal();
             }
         }
         #endregion

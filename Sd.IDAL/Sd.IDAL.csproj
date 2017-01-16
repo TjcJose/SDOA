@@ -45,7 +45,10 @@
   <ItemGroup>
     <Compile Include="IBaseDal.cs" />
     <Compile Include="ICommonDal.cs" />
+    <Compile Include="IReportDal.cs" />
     <Compile Include="ISellingDal.cs" />
+    <Compile Include="IFinanceDal.cs" />
+    <Compile Include="IOnroadDal.cs" />
     <Compile Include="ISupplyDal.cs" />
     <Compile Include="IGoodsDal.cs" />
     <Compile Include="IDepartmentDa.cs" />

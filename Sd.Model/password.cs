@@ -65,6 +65,7 @@ namespace Sd.Model
         public string ypjeq_flag { get; set; }
         public string jmpw { get; set; }
         public string stopSign { get; set; }
+        public string pwd { get; set; }
     
         public virtual ICollection<CompetenceSet> CompetenceSet { get; set; }
     }

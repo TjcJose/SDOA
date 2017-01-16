@@ -232,6 +232,33 @@ namespace Sd.UI.Properties {
         }
         
         /// <summary>
+        ///   查找类似 退货失败，请检查字段后重试。 的本地化字符串。
+        /// </summary>
+        internal static string refund_fail {
+            get {
+                return ResourceManager.GetString("refund_fail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 退货成功！ 的本地化字符串。
+        /// </summary>
+        internal static string refund_success {
+            get {
+                return ResourceManager.GetString("refund_success", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 重置成功 的本地化字符串。
+        /// </summary>
+        internal static string reset_success {
+            get {
+                return ResourceManager.GetString("reset_success", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   查找类似 本单已审核 的本地化字符串。
         /// </summary>
         internal static string review_already {
@@ -291,6 +318,15 @@ namespace Sd.UI.Properties {
         internal static string update_success {
             get {
                 return ResourceManager.GetString("update_success", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   查找类似 用户已经存在 的本地化字符串。
+        /// </summary>
+        internal static string user_add_chk {
+            get {
+                return ResourceManager.GetString("user_add_chk", resourceCulture);
             }
         }
         

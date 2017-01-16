@@ -1,6 +1,8 @@
 ﻿using System;
+using System.Drawing.Imaging;
 using System.Windows.Forms;
 using Sd.BLL;
+using Sd.Common;
 using Sd.IBLL;
 using Sd.UI.Properties;
 
@@ -36,6 +38,27 @@ namespace Sd.UI
 
             lblMsg.Text =MsgResx.login_btn_logining;
             Refresh();
+            
+            if (userService.Exist(u => u.gh.Equals(txtUser.Text)))
+            {
+                var user = userService.Find(u=>u.gh.Equals(txtUser.Text));
+
+                if (Security.Check(txtPwd.Text, user.jmpw))
+                {
+                    Hide();
+                    var mainFrm = new MainFrm(user)
+                    {
+                        Text = Text,
+                        tsslCzy = { Text = user.czy }
+                    };
+                    mainFrm.Show();
+                    return;
+                }
+            }
+
+            lblMsg.Text = MsgResx.login_error_001;
+            txtUser.Focus();
+            txtPwd.SelectAll();
 
             /*if (userService.Exist(u => u.gh.Equals(txtUser.Text) && u.pwd.Equals(txtPwd.Text)))
             {

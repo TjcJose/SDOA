@@ -123,7 +123,6 @@
             this.dgvXsdhd.AllowUserToAddRows = false;
             this.dgvXsdhd.AllowUserToDeleteRows = false;
             this.dgvXsdhd.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.AllCells;
-            this.dgvXsdhd.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvXsdhd.Location = new System.Drawing.Point(13, 193);
             this.dgvXsdhd.Margin = new System.Windows.Forms.Padding(4);
             this.dgvXsdhd.MultiSelect = false;

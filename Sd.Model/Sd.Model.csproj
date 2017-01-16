@@ -66,6 +66,15 @@
     <Compile Include="cpxllx.cs">
       <DependentUpon>Server.tt</DependentUpon>
     </Compile>
+    <Compile Include="fkdsr.cs">
+      <DependentUpon>Server.tt</DependentUpon>
+    </Compile>
+    <Compile Include="fykzd.cs">
+      <DependentUpon>Server.tt</DependentUpon>
+    </Compile>
+    <Compile Include="fykzdmx.cs">
+      <DependentUpon>Server.tt</DependentUpon>
+    </Compile>
     <Compile Include="ggxxb.cs">
       <DependentUpon>Server.tt</DependentUpon>
     </Compile>
@@ -73,6 +82,18 @@
       <DependentUpon>Server.tt</DependentUpon>
     </Compile>
     <Compile Include="gsxx.cs">
+      <DependentUpon>Server.tt</DependentUpon>
+    </Compile>
+    <Compile Include="hshkd.cs">
+      <DependentUpon>Server.tt</DependentUpon>
+    </Compile>
+    <Compile Include="jhyfb.cs">
+      <DependentUpon>Server.tt</DependentUpon>
+    </Compile>
+    <Compile Include="jhyfmxb.cs">
+      <DependentUpon>Server.tt</DependentUpon>
+    </Compile>
+    <Compile Include="jkdsr.cs">
       <DependentUpon>Server.tt</DependentUpon>
     </Compile>
     <Compile Include="jldwb.cs">
@@ -85,6 +106,12 @@
       <DependentUpon>Server.tt</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="qtsrd.cs">
+      <DependentUpon>Server.tt</DependentUpon>
+    </Compile>
+    <Compile Include="qtsrmx.cs">
+      <DependentUpon>Server.tt</DependentUpon>
+    </Compile>
     <Compile Include="Rdlc\SellingDetail.cs" />
     <Compile Include="Relation\UserCompetence.cs" />
     <Compile Include="Server.Context.cs">
@@ -123,10 +150,25 @@
     <Compile Include="xsd.cs">
       <DependentUpon>Server.tt</DependentUpon>
     </Compile>
+    <Compile Include="xsdhd.cs">
+      <DependentUpon>Server.tt</DependentUpon>
+    </Compile>
+    <Compile Include="xsdhdmx.cs">
+      <DependentUpon>Server.tt</DependentUpon>
+    </Compile>
     <Compile Include="xsdmx.cs">
       <DependentUpon>Server.tt</DependentUpon>
     </Compile>
     <Compile Include="zlb.cs">
+      <DependentUpon>Server.tt</DependentUpon>
+    </Compile>
+    <Compile Include="zt_hkyfjsd.cs">
+      <DependentUpon>Server.tt</DependentUpon>
+    </Compile>
+    <Compile Include="zt_ysd.cs">
+      <DependentUpon>Server.tt</DependentUpon>
+    </Compile>
+    <Compile Include="zt_ysdmx.cs">
       <DependentUpon>Server.tt</DependentUpon>
     </Compile>
     <Compile Include="zyxx.cs">

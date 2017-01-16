@@ -290,7 +290,7 @@
             this.dgvXsd.RowTemplate.Height = 23;
             this.dgvXsd.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
             this.dgvXsd.Size = new System.Drawing.Size(986, 259);
-            this.dgvXsd.TabIndex = 36;
+            this.dgvXsd.TabIndex = 0;
             this.dgvXsd.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvXsd_CellMouseDoubleClick);
             this.dgvXsd.SelectionChanged += new System.EventHandler(this.dgvXsd_SelectionChanged);
             this.dgvXsd.PreviewKeyDown += new System.Windows.Forms.PreviewKeyDownEventHandler(this.dgvXsd_PreviewKeyDown);

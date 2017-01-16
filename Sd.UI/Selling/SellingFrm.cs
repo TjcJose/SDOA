@@ -30,6 +30,15 @@ namespace Sd.UI.Selling
             InitializeComponent();
         }
 
+        public SellingFrm(xsd xsdInfo)
+        {
+            InitializeComponent();
+
+            XsdInfo = xsdInfo;
+
+            SearchEndShow();
+        }
+
         private void SellingFrm_Load(object sender, EventArgs e)
         {
             // 下拉框数据绑定
@@ -421,78 +430,7 @@ namespace Sd.UI.Selling
             var sellingSearchFrm = new SellingSearchFrm(this);
             sellingSearchFrm.ShowDialog();
 
-            if (null == XsdInfo)
-            {
-                return;
-            }
-
-            // 是否已经审核，1：已审核
-            if ("1".Equals(XsdInfo.flag))
-            {
-                btnRefund.Enabled = true;
-                btnUpdate.Enabled = false;
-                btnReview.Enabled = false;
-            }
-            else
-            {
-                btnRefund.Enabled = false;
-                btnUpdate.Enabled = true;
-                btnReview.Enabled = true;
-            }
-
-            txtXsdid.Text = XsdInfo.xsdid.TrimEnd();
-            txtSgddh.Text = null == XsdInfo.sgddh ? "": XsdInfo.sgddh.TrimEnd();
-            combKhid.Text = XsdInfo.khmc.TrimEnd();
-            combXsbid.Text = XsdInfo.xsbxx.xsbmc.TrimEnd();
-            combZl.Text = XsdInfo.zl.TrimEnd();
-            combYyy.Text = XsdInfo.yyy.TrimEnd();
-            combYyy.Text = XsdInfo.ywy.TrimEnd();
-            txtEjkh.Text = XsdInfo.ejkh.TrimEnd();
-            txtTel.Text = XsdInfo.tel.TrimEnd();
-            txtAddress.Text = XsdInfo.address.TrimEnd();
-            txtMpssm.Text = XsdInfo.mpssm;
-            txtHjzje.Text = null == XsdInfo.hjzje ? "0": XsdInfo.hjzje.Value.ToString("F1");
-            txtSr.Text = null == XsdInfo.sr ? "0" : XsdInfo.sr.Value.ToString("F1");
-            txtSsze.Text = null == XsdInfo.ssze ? "0" : XsdInfo.ssze.Value.ToString("F1");
-            txtXj.Text = null == XsdInfo.xj ? "0" : XsdInfo.xj.Value.ToString("F1");
-            txtZz.Text = null == XsdInfo.zz ? "0" : XsdInfo.zz.Value.ToString("F1");
-            txtYs.Text = null == XsdInfo.ys ? "0" : XsdInfo.ys.Value.ToString("F1");
-            txtSdr.Text = XsdInfo.sdr;
-            txtBz.Text = XsdInfo.bz;
-
-            var xsdid = XsdInfo.xsdid.TrimEnd();
-
-             IXsdmxService xsdmxService = new XsdmxService();
-
-            var xsdmxList = xsdmxService.FindList(u =>
-                u.xsdid.Equals(xsdid), "xsdlsh", true);
-            dgvXsdmx.Rows.Clear();
-
-            new Thread(delegate()
-            {
-                dgvXsdmx.Invoke((MethodInvoker) delegate
-                {
-                    foreach (var item in xsdmxList)
-                    {
-                        if (null == item.spxx)
-                        {
-                            continue;
-                        }
-                        dgvXsdmx.Rows.Add();
-                        dgvXsdmx.Rows[dgvXsdmx.RowCount - 1].Cells["商品编码"].Value = item.spid.TrimEnd();
-                        dgvXsdmx.Rows[dgvXsdmx.RowCount - 1].Cells["编码型号"].Value = item.spxx.pm.TrimEnd();
-                        dgvXsdmx.Rows[dgvXsdmx.RowCount - 1].Cells["原单价"].Value = item.spxx.db1;
-                        dgvXsdmx.Rows[dgvXsdmx.RowCount - 1].Cells["折扣"].Value = item.spxx.zkl1;
-                        dgvXsdmx.Rows[dgvXsdmx.RowCount - 1].Cells["销售价"].Value = null == item.spxx.xsj
-                            ? "0"
-                            : item.spxx.xsj.Value.ToString("F1");
-                        dgvXsdmx.Rows[dgvXsdmx.RowCount - 1].Cells["单位"].Value = item.dw;
-                        dgvXsdmx.Rows[dgvXsdmx.RowCount - 1].Cells["数量"].Value = item.xssl.ToString("F0");
-                        dgvXsdmx.Rows[dgvXsdmx.RowCount - 1].Cells["金额"].Value = item.xsje.ToString("F1");
-                    }
-                });
-            }){IsBackground = true}.Start();
-
+            SearchEndShow();
         }
 
         private void btnQuit_Click(object sender, EventArgs e)
@@ -1346,6 +1284,80 @@ namespace Sd.UI.Selling
                 }).ToList();
         }
 
+        private void SearchEndShow()
+        {
+            if (null == XsdInfo)
+            {
+                return;
+            }
+
+            // 是否已经审核，1：已审核
+            if ("1".Equals(XsdInfo.flag))
+            {
+                btnRefund.Enabled = true;
+                btnUpdate.Enabled = false;
+                btnReview.Enabled = false;
+            }
+            else
+            {
+                btnRefund.Enabled = false;
+                btnUpdate.Enabled = true;
+                btnReview.Enabled = true;
+            }
+
+            txtXsdid.Text = XsdInfo.xsdid.TrimEnd();
+            txtSgddh.Text = null == XsdInfo.sgddh ? "" : XsdInfo.sgddh.TrimEnd();
+            combKhid.Text = XsdInfo.khmc.TrimEnd();
+            combXsbid.Text = XsdInfo.xsbxx.xsbmc.TrimEnd();
+            combZl.Text = XsdInfo.zl.TrimEnd();
+            combYyy.Text = XsdInfo.yyy.TrimEnd();
+            combYyy.Text = XsdInfo.ywy.TrimEnd();
+            txtEjkh.Text = XsdInfo.ejkh.TrimEnd();
+            txtTel.Text = XsdInfo.tel.TrimEnd();
+            txtAddress.Text = XsdInfo.address.TrimEnd();
+            txtMpssm.Text = XsdInfo.mpssm;
+            txtHjzje.Text = null == XsdInfo.hjzje ? "0" : XsdInfo.hjzje.Value.ToString("F1");
+            txtSr.Text = null == XsdInfo.sr ? "0" : XsdInfo.sr.Value.ToString("F1");
+            txtSsze.Text = null == XsdInfo.ssze ? "0" : XsdInfo.ssze.Value.ToString("F1");
+            txtXj.Text = null == XsdInfo.xj ? "0" : XsdInfo.xj.Value.ToString("F1");
+            txtZz.Text = null == XsdInfo.zz ? "0" : XsdInfo.zz.Value.ToString("F1");
+            txtYs.Text = null == XsdInfo.ys ? "0" : XsdInfo.ys.Value.ToString("F1");
+            txtSdr.Text = XsdInfo.sdr;
+            txtBz.Text = XsdInfo.bz;
+
+            var xsdid = XsdInfo.xsdid.TrimEnd();
+
+            IXsdmxService xsdmxService = new XsdmxService();
+
+            var xsdmxList = xsdmxService.FindList(u =>
+                u.xsdid.Equals(xsdid), "xsdlsh", true);
+            dgvXsdmx.Rows.Clear();
+
+            new Thread(delegate()
+            {
+                dgvXsdmx.Invoke((MethodInvoker)delegate
+                {
+                    foreach (var item in xsdmxList)
+                    {
+                        if (null == item.spxx)
+                        {
+                            continue;
+                        }
+                        dgvXsdmx.Rows.Add();
+                        dgvXsdmx.Rows[dgvXsdmx.RowCount - 1].Cells["商品编码"].Value = item.spid.TrimEnd();
+                        dgvXsdmx.Rows[dgvXsdmx.RowCount - 1].Cells["编码型号"].Value = item.spxx.pm.TrimEnd();
+                        dgvXsdmx.Rows[dgvXsdmx.RowCount - 1].Cells["原单价"].Value = item.spxx.db1;
+                        dgvXsdmx.Rows[dgvXsdmx.RowCount - 1].Cells["折扣"].Value = item.spxx.zkl1;
+                        dgvXsdmx.Rows[dgvXsdmx.RowCount - 1].Cells["销售价"].Value = null == item.spxx.xsj
+                            ? "0"
+                            : item.spxx.xsj.Value.ToString("F1");
+                        dgvXsdmx.Rows[dgvXsdmx.RowCount - 1].Cells["单位"].Value = item.dw;
+                        dgvXsdmx.Rows[dgvXsdmx.RowCount - 1].Cells["数量"].Value = item.xssl.ToString("F0");
+                        dgvXsdmx.Rows[dgvXsdmx.RowCount - 1].Cells["金额"].Value = item.xsje.ToString("F1");
+                    }
+                });
+            }) { IsBackground = true }.Start();
+        }
         #endregion
     }
 }

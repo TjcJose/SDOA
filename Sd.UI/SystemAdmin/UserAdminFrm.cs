@@ -41,10 +41,6 @@ namespace Sd.UI.SystemAdmin
             btnClear.Enabled = true;
             btnExit.Enabled = true;
             ResetFrm();
-            
-           
-           
-
           
         }
         /// <summary>
@@ -221,7 +217,7 @@ namespace Sd.UI.SystemAdmin
             mimaReset();
             if(txtOldPwd.Text=="000000")
             {
-                MessageBox.Show(MsgResx.Reset_success, ComValueResx.confrim, MessageBoxButtons.OK, MessageBoxIcon.Information);
+                MessageBox.Show(MsgResx.reset_success, ComValueResx.confrim, MessageBoxButtons.OK, MessageBoxIcon.Information);
                 ResetFrm();
                 combUserId.DataSource = _userService.FindList(u => true, "gh", true).Select(u => new { u.gh, u.czy }).ToList();//提取数据
                 combUserId.DisplayMember = "gh";

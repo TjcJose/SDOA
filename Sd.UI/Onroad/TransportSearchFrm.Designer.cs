@@ -38,8 +38,8 @@
             this.dgvXsdmx = new System.Windows.Forms.DataGridView();
             this.dgvXsd = new System.Windows.Forms.DataGridView();
             this.label1 = new System.Windows.Forms.Label();
-            this.dtpXsrqTo = new System.Windows.Forms.DateTimePicker();
-            this.chkXsrq = new System.Windows.Forms.CheckBox();
+            this.dtpYsrqTo = new System.Windows.Forms.DateTimePicker();
+            this.chkYsrq = new System.Windows.Forms.CheckBox();
             this.btnQuit = new System.Windows.Forms.Button();
             this.btnSearch = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
@@ -47,7 +47,7 @@
             this.txtTel = new System.Windows.Forms.TextBox();
             this.lblTel = new System.Windows.Forms.Label();
             this.lblEjkh = new System.Windows.Forms.Label();
-            this.dtpXsrqFrom = new System.Windows.Forms.DateTimePicker();
+            this.dtpYsrqFrom = new System.Windows.Forms.DateTimePicker();
             this.combKhid = new System.Windows.Forms.ComboBox();
             this.lblKhid = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
@@ -151,26 +151,26 @@
             this.label1.TabIndex = 72;
             this.label1.Text = "至";
             // 
-            // dtpXsrqTo
+            // dtpYsrqTo
             // 
-            this.dtpXsrqTo.CustomFormat = "yyyy-MM-dd";
-            this.dtpXsrqTo.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.dtpXsrqTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpXsrqTo.Location = new System.Drawing.Point(681, 69);
-            this.dtpXsrqTo.Name = "dtpXsrqTo";
-            this.dtpXsrqTo.Size = new System.Drawing.Size(184, 29);
-            this.dtpXsrqTo.TabIndex = 71;
+            this.dtpYsrqTo.CustomFormat = "yyyy-MM-dd";
+            this.dtpYsrqTo.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.dtpYsrqTo.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpYsrqTo.Location = new System.Drawing.Point(681, 69);
+            this.dtpYsrqTo.Name = "dtpYsrqTo";
+            this.dtpYsrqTo.Size = new System.Drawing.Size(184, 29);
+            this.dtpYsrqTo.TabIndex = 71;
             // 
-            // chkXsrq
+            // chkYsrq
             // 
-            this.chkXsrq.AutoSize = true;
-            this.chkXsrq.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.chkXsrq.Location = new System.Drawing.Point(319, 72);
-            this.chkXsrq.Name = "chkXsrq";
-            this.chkXsrq.Size = new System.Drawing.Size(104, 23);
-            this.chkXsrq.TabIndex = 70;
-            this.chkXsrq.Text = "运输日期";
-            this.chkXsrq.UseVisualStyleBackColor = true;
+            this.chkYsrq.AutoSize = true;
+            this.chkYsrq.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.chkYsrq.Location = new System.Drawing.Point(319, 72);
+            this.chkYsrq.Name = "chkYsrq";
+            this.chkYsrq.Size = new System.Drawing.Size(104, 23);
+            this.chkYsrq.TabIndex = 70;
+            this.chkYsrq.Text = "运输日期";
+            this.chkYsrq.UseVisualStyleBackColor = true;
             // 
             // btnQuit
             // 
@@ -181,6 +181,7 @@
             this.btnQuit.TabIndex = 69;
             this.btnQuit.Text = "退出";
             this.btnQuit.UseVisualStyleBackColor = true;
+            this.btnQuit.Click += new System.EventHandler(this.btnQuit_Click);
             // 
             // btnSearch
             // 
@@ -238,15 +239,15 @@
             this.lblEjkh.TabIndex = 62;
             this.lblEjkh.Text = "核算部门";
             // 
-            // dtpXsrqFrom
+            // dtpYsrqFrom
             // 
-            this.dtpXsrqFrom.CustomFormat = "yyyy-MM-dd";
-            this.dtpXsrqFrom.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.dtpXsrqFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
-            this.dtpXsrqFrom.Location = new System.Drawing.Point(423, 69);
-            this.dtpXsrqFrom.Name = "dtpXsrqFrom";
-            this.dtpXsrqFrom.Size = new System.Drawing.Size(184, 29);
-            this.dtpXsrqFrom.TabIndex = 59;
+            this.dtpYsrqFrom.CustomFormat = "yyyy-MM-dd";
+            this.dtpYsrqFrom.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.dtpYsrqFrom.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.dtpYsrqFrom.Location = new System.Drawing.Point(423, 69);
+            this.dtpYsrqFrom.Name = "dtpYsrqFrom";
+            this.dtpYsrqFrom.Size = new System.Drawing.Size(184, 29);
+            this.dtpYsrqFrom.TabIndex = 59;
             // 
             // combKhid
             // 
@@ -267,7 +268,7 @@
             this.lblKhid.Size = new System.Drawing.Size(66, 19);
             this.lblKhid.TabIndex = 58;
             this.lblKhid.Text = "运输商";
-             // 
+            // 
             // comboBox1
             // 
             this.comboBox1.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
@@ -288,8 +289,8 @@
             this.Controls.Add(this.dgvXsdmx);
             this.Controls.Add(this.dgvXsd);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.dtpXsrqTo);
-            this.Controls.Add(this.chkXsrq);
+            this.Controls.Add(this.dtpYsrqTo);
+            this.Controls.Add(this.chkYsrq);
             this.Controls.Add(this.btnQuit);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.textBox1);
@@ -297,7 +298,7 @@
             this.Controls.Add(this.txtTel);
             this.Controls.Add(this.lblTel);
             this.Controls.Add(this.lblEjkh);
-            this.Controls.Add(this.dtpXsrqFrom);
+            this.Controls.Add(this.dtpYsrqFrom);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.combKhid);
             this.Controls.Add(this.lblKhid);
@@ -320,8 +321,8 @@
         private System.Windows.Forms.DataGridView dgvXsdmx;
         private System.Windows.Forms.DataGridView dgvXsd;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DateTimePicker dtpXsrqTo;
-        private System.Windows.Forms.CheckBox chkXsrq;
+        private System.Windows.Forms.DateTimePicker dtpYsrqTo;
+        private System.Windows.Forms.CheckBox chkYsrq;
         private System.Windows.Forms.Button btnQuit;
         private System.Windows.Forms.Button btnSearch;
         private System.Windows.Forms.TextBox textBox1;
@@ -329,7 +330,7 @@
         private System.Windows.Forms.TextBox txtTel;
         private System.Windows.Forms.Label lblTel;
         private System.Windows.Forms.Label lblEjkh;
-        private System.Windows.Forms.DateTimePicker dtpXsrqFrom;
+        private System.Windows.Forms.DateTimePicker dtpYsrqFrom;
         private System.Windows.Forms.ComboBox combKhid;
         private System.Windows.Forms.Label lblKhid;
         private System.Windows.Forms.ComboBox comboBox1;

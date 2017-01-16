@@ -9,6 +9,7 @@ using System;
 using System.Linq;
 using System.Windows.Forms;
 using Sd.BLL;
+using Sd.Common;
 using Sd.IBLL;
 using Sd.Model;
 using Sd.UI.Properties;
@@ -109,21 +110,23 @@ namespace Sd.UI.Selling
                 return;
             }
 
-            var searchResult = xsdList.Select(u => new
+            var result = xsdList.ToList();
+
+            var searchResult = result.Select(u => new
             {
                 销售单编号 = u.xsdid.TrimEnd(),
-                打印 = u.print_bz.TrimEnd(),
-                合同号 = u.sgddh.TrimEnd(),
-                营业员 = u.yyy.TrimEnd(),
-                业务员 = u.ywy.TrimEnd(),
+                打印 = StringUtil.StrTrimEnd(u.print_bz),
+                合同号 = StringUtil.StrTrimEnd(u.sgddh),
+                营业员 = StringUtil.StrTrimEnd(u.yyy),
+                业务员 = StringUtil.StrTrimEnd(u.ywy),
                 日期 = u.xsrq,
-                实收 = u.ssze,
-                现金 = u.xj,
-                转账 = u.zz,
-                应收 = u.ys,
-                二级客户 = u.ejkh.TrimEnd(),
-                电话 = u.tel.TrimEnd(),
-                地址 = u.address.TrimEnd()
+                实收 = u.ssze.Value.ToString("F"),
+                现金 = u.xj.Value.ToString("F"),
+                转账 = u.zz.Value.ToString("F"),
+                应收 = u.ys.Value.ToString("F"),
+                二级客户 = StringUtil.StrTrimEnd(u.ejkh),
+                电话 = u.tel,
+                地址 = u.address
             }).ToList();
 
             if (0 == searchResult.Count)
@@ -135,10 +138,6 @@ namespace Sd.UI.Selling
 
             dgvXsd.DataSource = searchResult;
 
-            if (null != dgvXsd.CurrentRow)
-            {
-                dgvXsd.Tag = dgvXsd.CurrentRow.Index;
-            }
         }
 
         private void SellingSearchFrm_Load(object sender, EventArgs e)
@@ -193,13 +192,15 @@ namespace Sd.UI.Selling
                 return;
             }
 
-            var searchResult = xsdList.Select(u => new
+            var result = xsdList.ToList();
+
+            var searchResult = result.Select(u => new
             {
                 销售单编号 = u.xsdid.TrimEnd(),
-                打印 = u.print_bz.TrimEnd(),
-                合同号 = u.sgddh.TrimEnd(),
-                营业员 = u.yyy.TrimEnd(),
-                业务员 = u.ywy.TrimEnd(),
+                打印 = StringUtil.StrTrimEnd(u.print_bz),
+                合同号 = StringUtil.StrTrimEnd(u.sgddh),
+                营业员 = StringUtil.StrTrimEnd(u.yyy),
+                业务员 = StringUtil.StrTrimEnd(u.ywy),
                 日期 = u.xsrq,
                 实收 = u.ssze,
                 二级客户 = u.ejkh.TrimEnd(),
@@ -216,10 +217,6 @@ namespace Sd.UI.Selling
 
             dgvXsd.DataSource = searchResult;
 
-            if (null != dgvXsd.CurrentRow)
-            {
-                dgvXsd.Tag = dgvXsd.CurrentRow.Index;
-            }
         }
 
         private void dgvXsd_SelectionChanged(object sender, EventArgs e)
@@ -232,18 +229,19 @@ namespace Sd.UI.Selling
             var xsdid = dgvXsd.CurrentRow.Cells["销售单编号"].Value.ToString();
 
             var xsdmxList = _xsdmxService.FindList(u =>
-                u.xsdid.Equals(xsdid), "xsdlsh", true);
+                u.xsdid.Equals(xsdid), "xsdlsh", true).ToList();
             dgvXsdmx.DataSource = xsdmxList.Select(u=> new
             {
                 销售单编号 = u.xsdid.TrimEnd(),
                 商品编码 = u.spid.TrimEnd(),
                 单位 = u.dw,
-                销售价 = u.spxx.xsj,
-                数量 = u.xssl,
-                金额 = u.xsje
+                销售价 = u.spxx.xsj.Value.ToString("F"),
+                数量 = u.xssl.ToString("F0"),
+                金额 = u.xsje.ToString("F0")
             }).ToList();
 
             dgvXsdmx.ClearSelection();
+
         }
 
         private void btnQuit_Click(object sender, EventArgs e)
@@ -279,18 +277,13 @@ namespace Sd.UI.Selling
 
             if (null == _sellingFrm)
             {
-                _sellingFrm = new SellingFrm {XsdInfo = xsdService.Find(u => u.xsdid.Equals(xsdid))};
-                Close();
+                _sellingFrm = new SellingFrm (xsdService.Find(u => u.xsdid.Equals(xsdid)));
                 _sellingFrm.ShowDialog();
             }
             else
             {
                 _sellingFrm.XsdInfo = xsdService.Find(u => u.xsdid.Equals(xsdid));
-
-                Close();
             }
-
         }
-
     }
 }

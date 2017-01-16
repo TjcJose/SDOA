@@ -5,6 +5,9 @@
 // 修改：2016.10.05 高振亮
 //-----------------------------------------------
 
+using System;
+using System.Security.Cryptography;
+using System.Text;
 using Microsoft.International.Converters.PinYinConverter;
 
 namespace Sd.Common
@@ -34,6 +37,26 @@ namespace Sd.Common
                 }
             }
             return r;
+        }
+
+        /// <summary>
+        /// MD5 64位加密
+        /// </summary>
+        /// <param name="password"></param>
+        /// <returns></returns>
+        public static string Md5Encrypt64(string password)
+        {
+            var cl = password;
+            //string pwd = "";
+            var md5 = MD5.Create(); //实例化一个md5对像
+            // 加密后是一个字节类型的数组，这里要注意编码UTF8/Unicode等的选择　
+            var s = md5.ComputeHash(Encoding.UTF8.GetBytes(cl));
+            return Convert.ToBase64String(s);
+        }
+
+        public static string StrTrimEnd(string str)
+        {
+            return str == null ? "" : str.TrimEnd();
         }
     }
 }

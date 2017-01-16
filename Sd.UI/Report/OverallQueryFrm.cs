@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Windows.Forms;
 using Sd.Model;
+using Sd.UI.Finance;
 using Sd.UI.Selling;
 
 namespace Sd.UI.Report
@@ -67,7 +68,7 @@ namespace Sd.UI.Report
                 txtQtsr.Text = _jkdsrInfo.qthj == null ? "0" : _jkdsrInfo.qthj.Value.ToString("F");
 
                 txtZzc.Text = _fkdsrInfo.hj1_fss==null? "0":_fkdsrInfo.hj1_fss.Value.ToString("F");
-                txtCgzk.Text = _fkdsrInfo.hkhj_sjs == null ? "0" : _fkdsrInfo.hkhj_sjs.Value.ToString("F");
+                txtFghk.Text = _fkdsrInfo.hkhj_sjs == null ? "0" : _fkdsrInfo.hkhj_sjs.Value.ToString("F");
                 txtZtyf.Text = _fkdsrInfo.yfhj_sjs == null ? "0" : _fkdsrInfo.yfhj_sjs.Value.ToString("F"); 
                 txtQtfy.Text = _fkdsrInfo.kzhj_sjs == null ? "0" : _fkdsrInfo.kzhj_sjs.Value.ToString("F");
                 txtGzzf.Text = _fkdsrInfo.gzhj_sjs == null ? "0" : _fkdsrInfo.gzhj_sjs.Value.ToString("F");
@@ -103,7 +104,7 @@ namespace Sd.UI.Report
                 txtQtsr.Text = _jkdsrInfo.qtxj == null ? "0" : _jkdsrInfo.qtxj.Value.ToString("F");
 
                 txtZzc.Text = _fkdsrInfo.shxj_fss == null ? "0" : _fkdsrInfo.shxj_fss.Value.ToString("F");
-                txtCgzk.Text = _fkdsrInfo.hkxj_fss == null ? "0" : _fkdsrInfo.hkxj_fss.Value.ToString("F");
+                txtFghk.Text = _fkdsrInfo.hkxj_fss == null ? "0" : _fkdsrInfo.hkxj_fss.Value.ToString("F");
                 txtZtyf.Text = _fkdsrInfo.yfxj_fss == null ? "0" : _fkdsrInfo.yfxj_fss.Value.ToString("F");
                 txtQtfy.Text = _fkdsrInfo.qtxj_fss == null ? "0" : _fkdsrInfo.qtxj_fss.Value.ToString("F");
                 txtGzzf.Text = _fkdsrInfo.gzxj_fss == null ? "0" : _fkdsrInfo.gzxj_fss.Value.ToString("F");
@@ -140,7 +141,7 @@ namespace Sd.UI.Report
                 txtQtsr.Text = _jkdsrInfo.qtzz == null ? "0" : _jkdsrInfo.qtzz.Value.ToString("F");
 
                 txtZzc.Text = _fkdsrInfo.zzsr_fss == null ? "0" : _fkdsrInfo.zzsr_fss.Value.ToString("F");
-                txtCgzk.Text = _fkdsrInfo.hkzz_fss == null ? "0" : _fkdsrInfo.hkzz_fss.Value.ToString("F");
+                txtFghk.Text = _fkdsrInfo.hkzz_fss == null ? "0" : _fkdsrInfo.hkzz_fss.Value.ToString("F");
                 txtZtyf.Text = _fkdsrInfo.yfzz_fss == null ? "0" : _fkdsrInfo.yfzz_fss.Value.ToString("F");
                 txtQtfy.Text = _fkdsrInfo.qtzz_fss == null ? "0" : _fkdsrInfo.qtzz_fss.Value.ToString("F");
                 txtGzzf.Text = _fkdsrInfo.gzzz_fss == null ? "0" : _fkdsrInfo.gzzz_fss.Value.ToString("F");
@@ -177,7 +178,7 @@ namespace Sd.UI.Report
                 txtQtsr.Text = "";
 
                 txtZzc.Text = "";
-                txtCgzk.Text = "";
+                txtFghk.Text = "";
                 txtZtyf.Text = "";
                 txtQtfy.Text = "";
                 txtGzzf.Text = "";
@@ -198,6 +199,61 @@ namespace Sd.UI.Report
         private void btnDjsr_Click(object sender, EventArgs e)
         {
             var frm = new SellingIndentSearchFrm(dtpFrom.Value, dtpTo.Value, _iHzlbMode);
+            frm.ShowDialog();
+        }
+
+        private void btnHksr_Click(object sender, EventArgs e)
+        {
+            if (4 == _iHzlbMode)
+            {
+                return;
+            }
+
+            var frm = new RepaySearchFrm(dtpFrom.Value, dtpTo.Value, _iHzlbMode);
+            frm.ShowDialog();
+        }
+
+        private void btnQtsr_Click(object sender, EventArgs e)
+        {
+            if (4 == _iHzlbMode)
+            {
+                return;
+            }
+
+            var frm = new InComeSearchFrm(dtpFrom.Value, dtpTo.Value, _iHzlbMode);
+            frm.ShowDialog();
+        }
+
+        private void btnFghk_Click(object sender, EventArgs e)
+        {
+            if (4 == _iHzlbMode)
+            {
+                return;
+            }
+
+            var frm = new PaymentSearchFrm(dtpFrom.Value, dtpTo.Value, _iHzlbMode);
+            frm.ShowDialog();
+        }
+
+        private void btnZtyf_Click(object sender, EventArgs e)
+        {
+            if (4 == _iHzlbMode)
+            {
+                return;
+            }
+
+            var frm = new FreightSearchFrm(dtpFrom.Value, dtpTo.Value, _iHzlbMode);
+            frm.ShowDialog();
+        }
+
+        private void btnQtfy_Click(object sender, EventArgs e)
+        {
+            if (4 == _iHzlbMode)
+            {
+                return;
+            }
+
+            var frm = new CostSearchfrm(dtpFrom.Value, dtpTo.Value, _iHzlbMode);
             frm.ShowDialog();
         }
     }

@@ -1,8 +1,11 @@
 ﻿using System;
+using System.Linq;
 using System.Windows.Forms;
+using Sd.Model;
 using Sd.UI.Info.Customer;
 using Sd.UI.Info.Department;
 using Sd.UI.Info.Goods;
+using Sd.UI.Report;
 using Sd.UI.Selling;
 using Sd.UI.SystemAdmin;
 
@@ -10,11 +13,27 @@ namespace Sd.UI
 {
     public partial class MainFrm : Form
     {
-        public MainFrm()
+        public MainFrm(password user)
         {
             InitializeComponent();
             // 开启双缓存，解决加载图片闪烁
             SetStyle(ControlStyles.AllPaintingInWmPaint | ControlStyles.UserPaint | ControlStyles.OptimizedDoubleBuffer, true);
+
+            var competenceList = user.CompetenceSet.Where(u=> u.CompetenceID.ToString().Contains("000000") && u.Valid).Select(u=>u.CompetenceName).ToList();
+
+            foreach (ToolStripItem item in menuStrip1.Items)
+            {
+                if (competenceList.Contains(item.Name))
+                {
+                    item.Enabled = true;
+                }
+                else
+                {
+                    item.Enabled = false;
+                }
+            }
+
+            menuStrip1.Items[menuStrip1.Items.Count - 1].Enabled = true;
         }
         private void MainFrm_Load(object sender, EventArgs e)
         {
@@ -58,9 +77,16 @@ namespace Sd.UI
             var sellingFrm = new SellingFrm();
             sellingFrm.ShowDialog();
         }
+        private void 综合查询ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var overallQueryFrm = new OverallQueryFrm();
+            overallQueryFrm.ShowDialog();
+        }
 
         private void 用户管理ToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            var userAdminFrm = new UserAdminFrm();
+            userAdminFrm.ShowDialog();
         }
 
         private void 退出ToolStripMenuItem_Click(object sender, EventArgs e)

@@ -29,19 +29,19 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.comboBox1 = new System.Windows.Forms.ComboBox();
+            this.combUserId = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.textBox1 = new System.Windows.Forms.TextBox();
-            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.txtOldPwd = new System.Windows.Forms.TextBox();
+            this.txtNewPwd = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.button1 = new System.Windows.Forms.Button();
-            this.button2 = new System.Windows.Forms.Button();
-            this.button3 = new System.Windows.Forms.Button();
-            this.textBox3 = new System.Windows.Forms.TextBox();
+            this.btnSave = new System.Windows.Forms.Button();
+            this.btnPwdReset = new System.Windows.Forms.Button();
+            this.btnExit = new System.Windows.Forms.Button();
+            this.txtUserName = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
+            this.btnDel = new System.Windows.Forms.Button();
+            this.btnClear = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // label1
@@ -54,14 +54,14 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "工  号";
             // 
-            // comboBox1
+            // combUserId
             // 
-            this.comboBox1.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(183, 40);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(148, 27);
-            this.comboBox1.TabIndex = 1;
+            this.combUserId.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.combUserId.FormattingEnabled = true;
+            this.combUserId.Location = new System.Drawing.Point(183, 40);
+            this.combUserId.Name = "combUserId";
+            this.combUserId.Size = new System.Drawing.Size(148, 27);
+            this.combUserId.TabIndex = 1;
             // 
             // label2
             // 
@@ -73,21 +73,21 @@
             this.label2.TabIndex = 2;
             this.label2.Text = "原密码";
             // 
-            // textBox1
+            // txtOldPwd
             // 
-            this.textBox1.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox1.Location = new System.Drawing.Point(183, 125);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(148, 29);
-            this.textBox1.TabIndex = 3;
+            this.txtOldPwd.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtOldPwd.Location = new System.Drawing.Point(183, 125);
+            this.txtOldPwd.Name = "txtOldPwd";
+            this.txtOldPwd.Size = new System.Drawing.Size(148, 29);
+            this.txtOldPwd.TabIndex = 3;
             // 
-            // textBox2
+            // txtNewPwd
             // 
-            this.textBox2.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox2.Location = new System.Drawing.Point(183, 172);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(148, 29);
-            this.textBox2.TabIndex = 5;
+            this.txtNewPwd.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtNewPwd.Location = new System.Drawing.Point(183, 172);
+            this.txtNewPwd.Name = "txtNewPwd";
+            this.txtNewPwd.Size = new System.Drawing.Size(148, 29);
+            this.txtNewPwd.TabIndex = 5;
             // 
             // label3
             // 
@@ -99,43 +99,43 @@
             this.label3.TabIndex = 4;
             this.label3.Text = "新密码";
             // 
-            // button1
+            // btnSave
             // 
-            this.button1.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button1.Location = new System.Drawing.Point(318, 222);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(86, 32);
-            this.button1.TabIndex = 6;
-            this.button1.Text = "保存";
-            this.button1.UseVisualStyleBackColor = true;
+            this.btnSave.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnSave.Location = new System.Drawing.Point(318, 222);
+            this.btnSave.Name = "btnSave";
+            this.btnSave.Size = new System.Drawing.Size(86, 32);
+            this.btnSave.TabIndex = 6;
+            this.btnSave.Text = "保存";
+            this.btnSave.UseVisualStyleBackColor = true;
             // 
-            // button2
+            // btnPwdReset
             // 
-            this.button2.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button2.Location = new System.Drawing.Point(185, 273);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(86, 32);
-            this.button2.TabIndex = 7;
-            this.button2.Text = "密码重置";
-            this.button2.UseVisualStyleBackColor = true;
+            this.btnPwdReset.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnPwdReset.Location = new System.Drawing.Point(185, 273);
+            this.btnPwdReset.Name = "btnPwdReset";
+            this.btnPwdReset.Size = new System.Drawing.Size(86, 32);
+            this.btnPwdReset.TabIndex = 7;
+            this.btnPwdReset.Text = "密码重置";
+            this.btnPwdReset.UseVisualStyleBackColor = true;
             // 
-            // button3
+            // btnExit
             // 
-            this.button3.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button3.Location = new System.Drawing.Point(318, 273);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(86, 32);
-            this.button3.TabIndex = 8;
-            this.button3.Text = "退出";
-            this.button3.UseVisualStyleBackColor = true;
+            this.btnExit.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnExit.Location = new System.Drawing.Point(318, 273);
+            this.btnExit.Name = "btnExit";
+            this.btnExit.Size = new System.Drawing.Size(86, 32);
+            this.btnExit.TabIndex = 8;
+            this.btnExit.Text = "退出";
+            this.btnExit.UseVisualStyleBackColor = true;
             // 
-            // textBox3
+            // txtUserName
             // 
-            this.textBox3.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox3.Location = new System.Drawing.Point(183, 79);
-            this.textBox3.Name = "textBox3";
-            this.textBox3.Size = new System.Drawing.Size(148, 29);
-            this.textBox3.TabIndex = 10;
+            this.txtUserName.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtUserName.Location = new System.Drawing.Point(183, 79);
+            this.txtUserName.Name = "txtUserName";
+            this.txtUserName.Size = new System.Drawing.Size(148, 29);
+            this.txtUserName.TabIndex = 10;
             // 
             // label4
             // 
@@ -157,44 +157,44 @@
             this.btnAdd.Text = "增加";
             this.btnAdd.UseVisualStyleBackColor = true;
             // 
-            // button5
+            // btnDel
             // 
-            this.button5.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button5.Location = new System.Drawing.Point(183, 222);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(86, 32);
-            this.button5.TabIndex = 12;
-            this.button5.Text = "删除";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnDel.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnDel.Location = new System.Drawing.Point(183, 222);
+            this.btnDel.Name = "btnDel";
+            this.btnDel.Size = new System.Drawing.Size(86, 32);
+            this.btnDel.TabIndex = 12;
+            this.btnDel.Text = "删除";
+            this.btnDel.UseVisualStyleBackColor = true;
             // 
-            // button6
+            // btnClear
             // 
-            this.button6.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button6.Location = new System.Drawing.Point(48, 273);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(86, 32);
-            this.button6.TabIndex = 13;
-            this.button6.Text = "取消";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnClear.Font = new System.Drawing.Font("宋体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnClear.Location = new System.Drawing.Point(48, 273);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(86, 32);
+            this.btnClear.TabIndex = 13;
+            this.btnClear.Text = "清空";
+            this.btnClear.UseVisualStyleBackColor = true;
             // 
             // UserAdminFrm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(443, 336);
-            this.Controls.Add(this.button6);
-            this.Controls.Add(this.button5);
+            this.Controls.Add(this.btnClear);
+            this.Controls.Add(this.btnDel);
             this.Controls.Add(this.btnAdd);
-            this.Controls.Add(this.textBox3);
+            this.Controls.Add(this.txtUserName);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.button3);
-            this.Controls.Add(this.button2);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.textBox2);
+            this.Controls.Add(this.btnExit);
+            this.Controls.Add(this.btnPwdReset);
+            this.Controls.Add(this.btnSave);
+            this.Controls.Add(this.txtNewPwd);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtOldPwd);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.comboBox1);
+            this.Controls.Add(this.combUserId);
             this.Controls.Add(this.label1);
             this.Name = "UserAdminFrm";
             this.Text = "用户管理";
@@ -206,18 +206,18 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.ComboBox comboBox1;
+        private System.Windows.Forms.ComboBox combUserId;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox txtOldPwd;
+        private System.Windows.Forms.TextBox txtNewPwd;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button3;
-        private System.Windows.Forms.TextBox textBox3;
+        private System.Windows.Forms.Button btnSave;
+        private System.Windows.Forms.Button btnPwdReset;
+        private System.Windows.Forms.Button btnExit;
+        private System.Windows.Forms.TextBox txtUserName;
         private System.Windows.Forms.Label label4;
         private System.Windows.Forms.Button btnAdd;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
+        private System.Windows.Forms.Button btnDel;
+        private System.Windows.Forms.Button btnClear;
     }
 }

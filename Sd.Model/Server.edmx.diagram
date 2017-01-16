@@ -38,6 +38,19 @@
         <AssociationConnector Association="ccxnfModel.FK__xsdhdmx__xsdhdid__12FDD1B2" />
         <EntityTypeShape EntityType="ccxnfModel.hshkd" Width="1.5" PointX="3.875" PointY="13.75" />
         <AssociationConnector Association="ccxnfModel.FK__hshkd__khid__73BA3083" />
+        <EntityTypeShape EntityType="ccxnfModel.zt_ysd" Width="1.5" PointX="3.875" PointY="24.625" />
+        <EntityTypeShape EntityType="ccxnfModel.zt_ysdmx" Width="1.5" PointX="5.625" PointY="24.625" />
+        <AssociationConnector Association="ccxnfModel.FK__zt_ysdmx__ysdid__11D4A34F" />
+        <EntityTypeShape EntityType="ccxnfModel.jhyfb" Width="1.5" PointX="5.625" PointY="13.375" />
+        <EntityTypeShape EntityType="ccxnfModel.jhyfmxb" Width="1.5" PointX="7.25" PointY="13.375" />
+        <AssociationConnector Association="ccxnfModel.FK__jhyfmxb__jhyfdid__08B54D69" />
+        <EntityTypeShape EntityType="ccxnfModel.qtsrd" Width="1.5" PointX="5.625" PointY="19.75" />
+        <EntityTypeShape EntityType="ccxnfModel.qtsrmx" Width="1.5" PointX="7.25" PointY="18.625" />
+        <AssociationConnector Association="ccxnfModel.FK__qtsrmx__qtsrdid__3F115E1A" />
+        <EntityTypeShape EntityType="ccxnfModel.zt_hkyfjsd" Width="1.5" PointX="7.25" PointY="25.25" />
+        <EntityTypeShape EntityType="ccxnfModel.fykzd" Width="1.5" PointX="8.875" PointY="25.5" />
+        <EntityTypeShape EntityType="ccxnfModel.fykzdmx" Width="1.5" PointX="11" PointY="25.25" />
+        <AssociationConnector Association="ccxnfModel.FK__fykzdmx__fykzdid__534D60F1" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

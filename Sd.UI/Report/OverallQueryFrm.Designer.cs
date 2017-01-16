@@ -67,14 +67,14 @@
             this.txtHksr = new System.Windows.Forms.TextBox();
             this.txtQtfy = new System.Windows.Forms.TextBox();
             this.txtZtyf = new System.Windows.Forms.TextBox();
-            this.txtCgzk = new System.Windows.Forms.TextBox();
+            this.txtFghk = new System.Windows.Forms.TextBox();
             this.btnXssr = new System.Windows.Forms.Button();
             this.btnDjsr = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button9 = new System.Windows.Forms.Button();
-            this.button10 = new System.Windows.Forms.Button();
+            this.btnHksr = new System.Windows.Forms.Button();
+            this.btnQtsr = new System.Windows.Forms.Button();
+            this.btnQtfy = new System.Windows.Forms.Button();
+            this.btnZtyf = new System.Windows.Forms.Button();
+            this.btnFghk = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button2 = new System.Windows.Forms.Button();
@@ -273,7 +273,7 @@
             this.label16.Name = "label16";
             this.label16.Size = new System.Drawing.Size(94, 21);
             this.label16.TabIndex = 15;
-            this.label16.Text = "采购砖款";
+            this.label16.Text = "付购货款";
             // 
             // label17
             // 
@@ -467,16 +467,16 @@
             this.txtZtyf.TabIndex = 35;
             this.txtZtyf.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
-            // txtCgzk
+            // txtFghk
             // 
-            this.txtCgzk.BackColor = System.Drawing.Color.White;
-            this.txtCgzk.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.txtCgzk.Location = new System.Drawing.Point(485, 245);
-            this.txtCgzk.Name = "txtCgzk";
-            this.txtCgzk.ReadOnly = true;
-            this.txtCgzk.Size = new System.Drawing.Size(141, 29);
-            this.txtCgzk.TabIndex = 34;
-            this.txtCgzk.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
+            this.txtFghk.BackColor = System.Drawing.Color.White;
+            this.txtFghk.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.txtFghk.Location = new System.Drawing.Point(485, 245);
+            this.txtFghk.Name = "txtFghk";
+            this.txtFghk.ReadOnly = true;
+            this.txtFghk.Size = new System.Drawing.Size(141, 29);
+            this.txtFghk.TabIndex = 34;
+            this.txtFghk.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             // 
             // btnXssr
             // 
@@ -500,55 +500,60 @@
             this.btnDjsr.UseVisualStyleBackColor = true;
             this.btnDjsr.Click += new System.EventHandler(this.btnDjsr_Click);
             // 
-            // button5
+            // btnHksr
             // 
-            this.button5.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button5.Location = new System.Drawing.Point(669, 115);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(85, 34);
-            this.button5.TabIndex = 40;
-            this.button5.Text = "详细";
-            this.button5.UseVisualStyleBackColor = true;
+            this.btnHksr.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnHksr.Location = new System.Drawing.Point(669, 115);
+            this.btnHksr.Name = "btnHksr";
+            this.btnHksr.Size = new System.Drawing.Size(85, 34);
+            this.btnHksr.TabIndex = 40;
+            this.btnHksr.Text = "详细";
+            this.btnHksr.UseVisualStyleBackColor = true;
+            this.btnHksr.Click += new System.EventHandler(this.btnHksr_Click);
             // 
-            // button6
+            // btnQtsr
             // 
-            this.button6.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button6.Location = new System.Drawing.Point(669, 167);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(85, 34);
-            this.button6.TabIndex = 41;
-            this.button6.Text = "详细";
-            this.button6.UseVisualStyleBackColor = true;
+            this.btnQtsr.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnQtsr.Location = new System.Drawing.Point(669, 167);
+            this.btnQtsr.Name = "btnQtsr";
+            this.btnQtsr.Size = new System.Drawing.Size(85, 34);
+            this.btnQtsr.TabIndex = 41;
+            this.btnQtsr.Text = "详细";
+            this.btnQtsr.UseVisualStyleBackColor = true;
+            this.btnQtsr.Click += new System.EventHandler(this.btnQtsr_Click);
             // 
-            // button7
+            // btnQtfy
             // 
-            this.button7.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button7.Location = new System.Drawing.Point(669, 352);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(85, 34);
-            this.button7.TabIndex = 45;
-            this.button7.Text = "详细";
-            this.button7.UseVisualStyleBackColor = true;
+            this.btnQtfy.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnQtfy.Location = new System.Drawing.Point(669, 352);
+            this.btnQtfy.Name = "btnQtfy";
+            this.btnQtfy.Size = new System.Drawing.Size(85, 34);
+            this.btnQtfy.TabIndex = 45;
+            this.btnQtfy.Text = "详细";
+            this.btnQtfy.UseVisualStyleBackColor = true;
+            this.btnQtfy.Click += new System.EventHandler(this.btnQtfy_Click);
             // 
-            // button9
+            // btnZtyf
             // 
-            this.button9.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button9.Location = new System.Drawing.Point(669, 296);
-            this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(85, 34);
-            this.button9.TabIndex = 43;
-            this.button9.Text = "详细";
-            this.button9.UseVisualStyleBackColor = true;
+            this.btnZtyf.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnZtyf.Location = new System.Drawing.Point(669, 296);
+            this.btnZtyf.Name = "btnZtyf";
+            this.btnZtyf.Size = new System.Drawing.Size(85, 34);
+            this.btnZtyf.TabIndex = 43;
+            this.btnZtyf.Text = "详细";
+            this.btnZtyf.UseVisualStyleBackColor = true;
+            this.btnZtyf.Click += new System.EventHandler(this.btnZtyf_Click);
             // 
-            // button10
+            // btnFghk
             // 
-            this.button10.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button10.Location = new System.Drawing.Point(669, 243);
-            this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(85, 34);
-            this.button10.TabIndex = 42;
-            this.button10.Text = "详细";
-            this.button10.UseVisualStyleBackColor = true;
+            this.btnFghk.Font = new System.Drawing.Font("宋体", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.btnFghk.Location = new System.Drawing.Point(669, 243);
+            this.btnFghk.Name = "btnFghk";
+            this.btnFghk.Size = new System.Drawing.Size(85, 34);
+            this.btnFghk.TabIndex = 42;
+            this.btnFghk.Text = "详细";
+            this.btnFghk.UseVisualStyleBackColor = true;
+            this.btnFghk.Click += new System.EventHandler(this.btnFghk_Click);
             // 
             // panel1
             // 
@@ -579,16 +584,16 @@
             this.panel2.Controls.Add(this.txtZzc);
             this.panel2.Controls.Add(this.txtZsr);
             this.panel2.Controls.Add(this.groupBox1);
-            this.panel2.Controls.Add(this.button7);
-            this.panel2.Controls.Add(this.button9);
-            this.panel2.Controls.Add(this.button10);
-            this.panel2.Controls.Add(this.button6);
-            this.panel2.Controls.Add(this.button5);
+            this.panel2.Controls.Add(this.btnQtfy);
+            this.panel2.Controls.Add(this.btnZtyf);
+            this.panel2.Controls.Add(this.btnFghk);
+            this.panel2.Controls.Add(this.btnQtsr);
+            this.panel2.Controls.Add(this.btnHksr);
             this.panel2.Controls.Add(this.btnDjsr);
             this.panel2.Controls.Add(this.btnXssr);
             this.panel2.Controls.Add(this.txtQtfy);
             this.panel2.Controls.Add(this.txtZtyf);
-            this.panel2.Controls.Add(this.txtCgzk);
+            this.panel2.Controls.Add(this.txtFghk);
             this.panel2.Controls.Add(this.txtHksr);
             this.panel2.Controls.Add(this.txtQtsr);
             this.panel2.Controls.Add(this.txtDjsr);
@@ -801,7 +806,7 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(887, 675);
+            this.ClientSize = new System.Drawing.Size(887, 691);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label1);
@@ -862,14 +867,14 @@
         private System.Windows.Forms.TextBox txtHksr;
         private System.Windows.Forms.TextBox txtQtfy;
         private System.Windows.Forms.TextBox txtZtyf;
-        private System.Windows.Forms.TextBox txtCgzk;
+        private System.Windows.Forms.TextBox txtFghk;
         private System.Windows.Forms.Button btnXssr;
         private System.Windows.Forms.Button btnDjsr;
-        private System.Windows.Forms.Button button5;
-        private System.Windows.Forms.Button button6;
-        private System.Windows.Forms.Button button7;
-        private System.Windows.Forms.Button button9;
-        private System.Windows.Forms.Button button10;
+        private System.Windows.Forms.Button btnHksr;
+        private System.Windows.Forms.Button btnQtsr;
+        private System.Windows.Forms.Button btnQtfy;
+        private System.Windows.Forms.Button btnZtyf;
+        private System.Windows.Forms.Button btnFghk;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.RadioButton rbYs;

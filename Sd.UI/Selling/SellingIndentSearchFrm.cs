@@ -1,7 +1,14 @@
-﻿using System;
+﻿//-----------------------------------------------
+// 销售系统-销售定金单
+// 销售定金单查询画面
+// 创建：2017.01.04 高振亮
+// 修改：2017.01.04 高振亮
+//-----------------------------------------------
+
+using System;
 using System.Linq;
 using System.Windows.Forms;
-using Sd.BLL;
+using Sd.Common;
 using Sd.Model;
 using Sd.UI.Properties;
 
@@ -17,6 +24,8 @@ namespace Sd.UI.Selling
         public SellingIndentSearchFrm(DateTime dtFrom, DateTime dtTo, int iMode)
         {
             InitializeComponent();
+
+            dgvXsdhd.TabIndex = 0;
 
             dtpDhrqFrom.Value = dtFrom;
             dtpDhrqTo.Value = dtTo;
@@ -63,21 +72,23 @@ namespace Sd.UI.Selling
                 return;
             }
 
-            var searchResult = xsdhdList.Select(u => new
+            var result = xsdhdList.ToList();
+
+            var searchResult = result.Select(u => new
             {
                 销售订货单号 = u.xsdhdid.TrimEnd(),
-                打印 = u.print_bz.TrimEnd(),
-                合同号 = u.ddh.TrimEnd(),
-                营业员 = u.yyy.TrimEnd(),
-                业务员 = u.ywy.TrimEnd(),
+                打印 = StringUtil.StrTrimEnd(u.print_bz),
+                合同号 = StringUtil.StrTrimEnd(u.ddh),
+                营业员 = StringUtil.StrTrimEnd(u.yyy),
+                业务员 = StringUtil.StrTrimEnd(u.ywy),
                 日期 = u.dhrq,
-                实收 = u.ssze,
-                现金 = u.xj,
-                转账 = u.zz,
-                应收 = u.ys,
-                二级客户 = u.ejkh.TrimEnd(),
-                电话 = u.tel.TrimEnd(),
-                地址 = u.address.TrimEnd()
+                实收 = u.ssze.Value.ToString("F"),
+                现金 = u.xj.Value.ToString("F"),
+                转账 = u.zz.Value.ToString("F"),
+                应收 = u.ys.Value.ToString("F"),
+                二级客户 = StringUtil.StrTrimEnd(u.ejkh),
+                电话 = u.tel,
+                地址 = u.address
             }).ToList();
 
             if (0 == searchResult.Count)
@@ -111,18 +122,18 @@ namespace Sd.UI.Selling
 
             var xsdhdid = dgvXsdhd.CurrentRow.Cells["销售订货单号"].Value.ToString();
 
-            var xsdhdmxService = new XsdhdmxService();
+            var xsdhdmxService = new BLL.XsdhdmxService();
 
             var xsdhdmxList = xsdhdmxService.FindList(u =>
-                u.xsdhdid.Equals(xsdhdid), "lsh", true);
+                u.xsdhdid.Equals(xsdhdid), "lsh", true).ToList();
             dgvXsdhdmx.DataSource = xsdhdmxList.Select(u => new
             {
                 销售订货单号 = u.xsdhdid.TrimEnd(),
                 商品编码 = u.spid.TrimEnd(),
                 单位 = u.dw,
-                单价 = u.dbj,
-                数量 = u.xssl,
-                金额 = u.xsje
+                单价 = u.dbj.Value.ToString("F"),
+                数量 = u.xssl.ToString("F0"),
+                金额 = u.xsje.ToString("F")
             }).ToList();
 
             dgvXsdhdmx.ClearSelection();

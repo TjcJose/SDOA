@@ -44,6 +44,9 @@
     <Compile Include="IBaseService.cs" />
     <Compile Include="ICommonService.cs" />
     <Compile Include="ISellingService.cs" />
+    <Compile Include="IReportService.cs" />
+    <Compile Include="IFinanceService.cs" />
+    <Compile Include="IOnroadService.cs" />
     <Compile Include="ISupplyService.cs" />
     <Compile Include="IGoodsService.cs" />
     <Compile Include="IDepartmentService.cs" />

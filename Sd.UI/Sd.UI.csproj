@@ -84,6 +84,54 @@
     <Compile Include="Finance\CostFrm.Designer.cs">
       <DependentUpon>CostFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Finance\CostSearchfrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finance\CostSearchfrm.Designer.cs">
+      <DependentUpon>CostSearchfrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\FreightSearchFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finance\FreightSearchFrm.Designer.cs">
+      <DependentUpon>FreightSearchFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\InComeFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finance\InComeFrm.Designer.cs">
+      <DependentUpon>InComeFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\InComeSearchFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finance\InComeSearchFrm.Designer.cs">
+      <DependentUpon>InComeSearchFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\PaymentSearchFrm .cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finance\PaymentSearchFrm .Designer.cs">
+      <DependentUpon>PaymentSearchFrm .cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\RepayFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finance\RepayFrm.Designer.cs">
+      <DependentUpon>RepayFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\RepaymentFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finance\RepaymentFrm.Designer.cs">
+      <DependentUpon>RepaymentFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Finance\RepaySearchFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Finance\RepaySearchFrm.Designer.cs">
+      <DependentUpon>RepaySearchFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Info\Customer\CustomerFrm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +162,18 @@
     <Compile Include="MainFrm.Designer.cs">
       <DependentUpon>MainFrm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Onroad\InvoiceSearchFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Onroad\InvoiceSearchFrm.Designer.cs">
+      <DependentUpon>InvoiceSearchFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Onroad\TransportSearchFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Onroad\TransportSearchFrm.Designer.cs">
+      <DependentUpon>TransportSearchFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Properties\ComValueResx.Designer.cs">
       <DependentUpon>ComValueResx.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -126,11 +186,29 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Report\OverallQueryFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Report\OverallQueryFrm.Designer.cs">
+      <DependentUpon>OverallQueryFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Selling\OutGoingFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Selling\OutGoingFrm.Designer.cs">
+      <DependentUpon>OutGoingFrm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Selling\SellingFrm.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="Selling\SellingFrm.Designer.cs">
       <DependentUpon>SellingFrm.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Selling\SellingIndentSearchFrm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Selling\SellingIndentSearchFrm.Designer.cs">
+      <DependentUpon>SellingIndentSearchFrm.cs</DependentUpon>
     </Compile>
     <Compile Include="Selling\SellingInfoFrm.cs">
       <SubType>Form</SubType>
@@ -168,6 +246,24 @@
     <EmbeddedResource Include="Finance\CostFrm.resx">
       <DependentUpon>CostFrm.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="Finance\CostSearchfrm.resx">
+      <DependentUpon>CostSearchfrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\FreightSearchFrm.resx">
+      <DependentUpon>FreightSearchFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\InComeFrm.resx">
+      <DependentUpon>InComeFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\InComeSearchFrm.resx">
+      <DependentUpon>InComeSearchFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\PaymentSearchFrm .resx">
+      <DependentUpon>PaymentSearchFrm .cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Finance\RepaySearchFrm.resx">
+      <DependentUpon>RepaySearchFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Info\Customer\CustomerFrm.resx">
       <DependentUpon>CustomerFrm.cs</DependentUpon>
     </EmbeddedResource>
@@ -182,6 +278,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainFrm.resx">
       <DependentUpon>MainFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Onroad\InvoiceSearchFrm.resx">
+      <DependentUpon>InvoiceSearchFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Onroad\TransportSearchFrm.resx">
+      <DependentUpon>TransportSearchFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\ComValueResx.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -203,8 +305,17 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="Report\OverallQueryFrm.resx">
+      <DependentUpon>OverallQueryFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Selling\OutGoingFrm.resx">
+      <DependentUpon>OutGoingFrm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Selling\SellingFrm.resx">
       <DependentUpon>SellingFrm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Selling\SellingIndentSearchFrm.resx">
+      <DependentUpon>SellingIndentSearchFrm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Selling\SellingInfoFrm.resx">
       <DependentUpon>SellingInfoFrm.cs</DependentUpon>
@@ -280,6 +391,9 @@
   <ItemGroup>
     <Content Include="Icon_222.ico" />
     <Content Include="img\resultset_next.png" />
+    <None Include="Resources\主画面02.jpg" />
+    <None Include="Resources\主画面01.jpg" />
+    <None Include="Resources\主画面.jpg" />
     <None Include="img\report_stack.png" />
     <None Include="img\visual_basic.png" />
     <None Include="img\table_money.png" />
@@ -298,7 +412,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Info\Supply\" />
-    <Folder Include="Onroad\" />
+    <Folder Include="Inventory\" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
